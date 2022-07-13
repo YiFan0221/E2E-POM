@@ -2,8 +2,13 @@ import logging
 import time
 
 import sys,os
-sys.path.append('..')
+
+from numpy import NaN
 sys.path.append(os.getcwd())
+sys.path.append('..')
+sys.path.append('..\\beTestedPage')
+
+
 from base_locators import *
 import beTestedPage.ProjectPage.Project_page_actions as ProjectAction
 import beTestedPage.DetailPage.Detail_page_actions as DetailAction
@@ -35,37 +40,37 @@ logger.addHandler(fh)
 
 #各測試個別產生瀏覽器，或一個瀏覽器走到底
 Flg_KeepBrowser = True
-#False 個別開啟瀏覽器
-#True  維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
+#False : 個別開啟瀏覽器
+#True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
+
+def get_Project_WebObject(): #寫成單例
+    
+    if ProjectAction.get_project_page_obj()==NaN or Flg_KeepBrowser==False:
+        ProjectAction.Init_Project_page("chrome")
+        
+    Project_obj = ProjectAction.get_project_page_obj()    
+    ProjectAction.set_project_page_obj(Project_obj)
+
+    return Project_obj
 
 #使用chrome進介面
 
 #region ===============================page1===============================
 def test_turnOnBrowser():    
     if Flg_KeepBrowser==True:
-        ProjectAction.Init_Project_page("chrome")
-        Project_obj = ProjectAction.get_project_page_obj()
-        ProjectAction.set_project_page_obj(Project_obj)
-        Project_obj.get_Project_page() 
+        Project_obj = get_Project_WebObject()         
         assert True  
     else:
     #直接By Pass
         assert True 
 
-def test_checkElemt():            
+def test_checkElemt():     
+           
     #依序檢查每個Elemt是否能夠找到?
+    Project_obj = get_Project_WebObject()
 
-    Project_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Project_obj = ProjectAction.Init_Project_page("chrome")
-        Project_obj.get_Project_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Project_obj = ProjectAction.get_project_page_obj()
     
     #取出Locator容器中的大小
-    
     number = len(Project_obj.UI_List)
     st = "List Size:"+str(number)
     logging.info(st)
@@ -89,15 +94,8 @@ def test_checkElemt():
 #進入畫面二前抓取當下狀態
 def test_ClicktoNextPage():
 
-    Project_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Project_obj = ProjectAction.Init_Project_page("chrome")
-        Project_obj.get_Project_page() 
-    else:
-    ##setup 從過去取得網頁做控制
-        ProjectAction.setup_Project_page()
-        Project_obj = ProjectAction.get_project_page_obj()
+    Project_obj = get_Project_WebObject()
+        
     try:               
         Project_obj.click("Project_radio_0")        
         Project_obj.click_Button_Next()   
@@ -111,10 +109,10 @@ def test_ClicktoNextPage():
 
 
 #region ===============================page2===============================
-#等待讀取 跳頁後必須執行此
-def test_WaitForLoading():
+
+def get_Detail_WebObject():
     if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
+        ##Init 直接對取得物件做控制
         Detail_obj = DetailAction.Init_Detail_page("chrome")
         Detail_obj.get_Detail_page()
     else:
@@ -123,20 +121,19 @@ def test_WaitForLoading():
         Detail_obj = DetailAction.get_Detail_page_obj()
     
     DetailAction.set_Detail_page_obj(Detail_obj)
+    
+    return Detail_obj
+
+#等待讀取 跳頁後必須執行此
+def test_WaitForLoading():
+    Detail_obj = get_Detail_WebObject()    
+    DetailAction.set_Detail_page_obj(Detail_obj)
 
 #切換播放/暫停
 #點擊按鈕後再次抓取狀態比對得知是否切換成功
 def test_PlayPause():   
 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()   
     
     time.sleep(6)
     try:   
@@ -168,14 +165,7 @@ def test_PlayPause():
 #進入畫面二展開摺疊介面
 #滑動LED Mode拉條
 def test_SwitchLED():    
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Detail_page_obj()
+    Detail_obj = get_Detail_WebObject()   
     
     time.sleep(6)
     try:               
