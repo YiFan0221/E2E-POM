@@ -1,0 +1,16 @@
+
+# Ignore `bin` dir
+*/bin/*
+
+# Unignore all `.jar` in `bin` dir
+#!*/bin/*.jar
+
+# Ignore all .so files
+*.so
+*.o
+*.in
+*.la
+*.lo
+
+# Ignore all .pyc files
+*.pyc
