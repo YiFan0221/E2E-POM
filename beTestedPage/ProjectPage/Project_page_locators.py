@@ -52,7 +52,7 @@ class cProjectPageLocators:
         self.Project_radio_1                 = LocatorsObj(self.UI_List,"Project_radio_1",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[2]/td[1]/label/span/input')
         
         #Main button        
-        self.Button_Global_Settings          = LocatorsObj(self.UI_List,"Button_Global_Settings",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[3]/span/button[1]/span/svg')
+        self.Button_Global_Settings          = LocatorsObj(self.UI_List,"Button_Global_Settings",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[3]/span/button[1]/span/svg/path')
         #class ClsGlobal_Settings:
         
         #class Device_IP_Settings:      
@@ -87,7 +87,7 @@ class cProjectPageLocators:
         self.List_Trigger_Mode_Select2       = LocatorsObj(self.UI_List,"List_Trigger_Mode_Select2",EnumUIType.ComboBox,'/html/body/div[6]/div/div/div/div[2]/div[1]/div/div/div[3]/div')
         self.Button_New_Project_Cancel       = LocatorsObj(self.UI_List,"Button_New_Project_Cancel",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[3]/button[1]')
         self.Button_New_Project_Comfirm      = LocatorsObj(self.UI_List,"Button_New_Project_Comfirm",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[3]/button[2]/span')    
-        self.Button_Next                     = LocatorsObj(self.UI_List,"Button_Next",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/button')
+        self.Button_Next                     = LocatorsObj(self.UI_List,"Button_Next",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[4]/button')
 
         #List轉Dict
         for i in range(len(self.UI_List)):

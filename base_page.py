@@ -11,11 +11,11 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 #從RobotDataStore 存取Driver
-def set_Icam_driver(driver):
+def set_Browser_driver(driver):
     RobotDataStore.set_env_var("driver",driver)
 
 
-def get_Icam_driver():
+def get_Browser_driver():
     driver = RobotDataStore.get_env_var("driver")
     return driver
 class BasePage:
@@ -192,7 +192,7 @@ class BasePage:
         if elemt== None:
             return False
         try:
-            move = ActionChains(get_Icam_driver())
+            move = ActionChains(get_Browser_driver())
             Slider = self.find_element(elemt)            
             move.click_and_hold(Slider).move_by_offset(moveposX, moveposY).release().perform()
             self.wait_page_until_loading()
@@ -265,7 +265,7 @@ class BasePage:
         if self== None:
             return False
         try:
-            move = ActionChains(get_Icam_driver())      
+            move = ActionChains(get_Browser_driver())      
             move.move_by_offset(PosX, PosX)
             move.click().release().perform()
             self.wait_page_until_loading()

@@ -33,9 +33,13 @@ def set_Detail_page_obj(SrcObj):
     RobotDataStore.set_env_var("Detail_page_obj",SrcObj)
 
 def get_Detail_page_obj()->cDetailPage:
-    Detail_page = RobotDataStore.get_env_var("Detail_page_obj")
-    return Detail_page
-
+    
+    try:
+        Detail_page = RobotDataStore.get_env_var("Detail_page_obj")
+        return Detail_page
+    except KeyError:
+        return False
+    
 #Launch
 def Init_Detail_page(browser_type)->cDetailPage:
     browser_map = {

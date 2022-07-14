@@ -1,5 +1,8 @@
 #Project
+import re
 import sys,os
+
+from numpy import NaN
 sys.path.append(os.getcwd())
 
 from base_page import *
@@ -53,8 +56,11 @@ def set_project_page_obj(SrcObj):
     RobotDataStore.set_env_var("Project_page_obj",SrcObj)
 
 def get_project_page_obj()->cProjectPage:
-    project_page = RobotDataStore.get_env_var("Project_page_obj")
-    return project_page 
+    try:
+        project_page = RobotDataStore.get_env_var("Project_page_obj")        
+        return project_page 
+    except KeyError:
+        return False
 
 #Launch
 def Init_Project_page(browser_type)->cProjectPage:

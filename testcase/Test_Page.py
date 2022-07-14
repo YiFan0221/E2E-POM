@@ -2,6 +2,7 @@ import logging
 import time
 
 import sys,os
+from turtle import goto
 
 from numpy import NaN
 sys.path.append(os.getcwd())
@@ -22,13 +23,16 @@ formatter = logging.Formatter(
 	'[%(levelname)1.1s %(asctime)s %(module)s:%(lineno)d] %(message)s',
 	datefmt='%Y%m%d %H:%M:%S')
 
+
+#輸出到控制台
 ch = logging.StreamHandler()
 ch.setLevel(logging.INFO)
 ch.setFormatter(formatter)
 
+
+#輸出到檔案
 #log_filename = datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S.log") #按照時間命名
 log_filename = "E2ETesting.log"
-
 fh = logging.FileHandler(log_filename)
 fh.setLevel(logging.INFO)
 fh.setFormatter(formatter)
@@ -39,16 +43,19 @@ logger.addHandler(fh)
 #endregion ===============================Logger===============================
 
 #各測試個別產生瀏覽器，或一個瀏覽器走到底
-Flg_KeepBrowser = True
+Flg_KeepBrowser =False
 #False : 個別開啟瀏覽器
 #True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
 
 def get_Project_WebObject(): #寫成單例
     
-    if ProjectAction.get_project_page_obj()==NaN or Flg_KeepBrowser==False:
-        ProjectAction.Init_Project_page("chrome")
+    global Project_obj;
+    if ProjectAction.get_project_page_obj()==False or Flg_KeepBrowser==False:
+        Project_obj=ProjectAction.Init_Project_page("chrome")
+        Project_obj.get_Project_page()
+    else:        
+        Project_obj = ProjectAction.get_project_page_obj()    
         
-    Project_obj = ProjectAction.get_project_page_obj()    
     ProjectAction.set_project_page_obj(Project_obj)
 
     return Project_obj
@@ -57,13 +64,9 @@ def get_Project_WebObject(): #寫成單例
 
 #region ===============================page1===============================
 def test_turnOnBrowser():    
-    if Flg_KeepBrowser==True:
-        Project_obj = get_Project_WebObject()         
-        assert True  
-    else:
-    #直接By Pass
-        assert True 
-
+    Project_obj = get_Project_WebObject()         
+    assert True  
+    
 def test_checkElemt():     
            
     #依序檢查每個Elemt是否能夠找到?
@@ -85,10 +88,10 @@ def test_checkElemt():
         
         if Project_obj.check(mElemt)==True:
             st="[O]"+st
-            logging.info(st)
+            logging.debug(st)
         else:
             st="[X]"+st
-            logging.info(st)
+            logging.debug(st)
 
 
 #進入畫面二前抓取當下狀態
@@ -109,8 +112,9 @@ def test_ClicktoNextPage():
 
 
 #region ===============================page2===============================
-
-def get_Detail_WebObject():
+def get_Detail_WebObject(): #寫成單例
+    global Detail_obj;
+    
     if Flg_KeepBrowser==False:
         ##Init 直接對取得物件做控制
         Detail_obj = DetailAction.Init_Detail_page("chrome")
@@ -132,17 +136,8 @@ def test_WaitForLoading():
 #切換播放/暫停
 #點擊按鈕後再次抓取狀態比對得知是否切換成功
 def test_PlayPause():   
+    Detail_obj = get_Detail_WebObject()
 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
-    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -176,20 +171,12 @@ def test_PlayPause():
     finally:
         Detail_obj.click("Button_DisconnectConnect")
         Detail_obj.click("Button_Popup_Window_Ok")
-        DetailAction.set_Icam_Detail_page_obj(Detail_obj)
+        DetailAction.set_Detail_page_obj(Detail_obj)
 
 
 #Softtrigger Acquisition 
 def test_SoftwareTriggerAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -238,15 +225,7 @@ def test_SoftwareTriggerAcq():
 
 #Hardware Trigger
 def test_HardwareTriggerAcq(): 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -308,15 +287,7 @@ def test_HardwareTriggerAcq():
 
 #Set Focus Acquisition
 def test_SetFocusAcq(): 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -359,15 +330,7 @@ def test_SetFocusAcq():
 
 #Reset Focus Acquisition
 def test_ResetFocusAcq(): 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -408,14 +371,7 @@ def test_ResetFocusAcq():
 
 #Set FPS and Acquisition
 def test_SetFPSAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
+    Detail_obj = get_Detail_WebObject()
     time.sleep(6)
 
     try:   
@@ -462,15 +418,7 @@ def test_SetFPSAcq():
 
 #Set ROI 1280*960 Acquisition
 def test_SetROI1280Acq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -519,15 +467,8 @@ def test_SetROI1280Acq():
 
 #Set ROI 640*480 Acquisition
 def test_SetROI640Acq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -576,15 +517,8 @@ def test_SetROI640Acq():
 
 #Set ROI 320*240 Acquisition
 def test_SetROI320Acq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -632,15 +566,9 @@ def test_SetROI320Acq():
         Detail_obj.click("Tab_ROI_Settings_Output_Resolution")
 
 def test_SetBrightnessMAXInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -686,15 +614,9 @@ def test_SetBrightnessMAXInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetBrightnessMiniInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -740,15 +662,9 @@ def test_SetBrightnessMiniInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetBrightnessAnyInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -794,15 +710,9 @@ def test_SetBrightnessAnyInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessMAXInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -848,15 +758,9 @@ def test_SetSharpnessMAXInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessMiniInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -902,15 +806,9 @@ def test_SetSharpnessMiniInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessAnyInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -956,15 +854,9 @@ def test_SetSharpnessAnyInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGammaMAXInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1010,15 +902,9 @@ def test_SetGammaMAXInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGammaMiniInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1064,15 +950,9 @@ def test_SetGammaMiniInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGammaAnyInputAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1118,15 +998,9 @@ def test_SetGammaAnyInputAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetBrightnessSliderAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1171,15 +1045,9 @@ def test_SetBrightnessSliderAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessSliderAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1224,15 +1092,9 @@ def test_SetSharpnessSliderAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGammaSliderAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1277,15 +1139,9 @@ def test_SetGammaSliderAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetMirrorXAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1329,15 +1185,9 @@ def test_SetMirrorXAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetExposureTimeMaxAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1382,15 +1232,9 @@ def test_SetExposureTimeMaxAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetExposureTimeMinAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1435,15 +1279,9 @@ def test_SetExposureTimeMinAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetExposureTimeAnyValueAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1488,15 +1326,9 @@ def test_SetExposureTimeAnyValueAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetAutoExposureAcq(): 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1546,15 +1378,9 @@ def test_SetAutoExposureAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_ResetAutoExposureAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1604,15 +1430,9 @@ def test_ResetAutoExposureAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGainMinAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1657,15 +1477,9 @@ def test_SetGainMinAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGainMaxAcq():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1711,15 +1525,9 @@ def test_SetGainMaxAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetGainSliderAcq(): 
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制 
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1764,15 +1572,9 @@ def test_SetGainSliderAcq():
         Detail_obj.click("Tab_Generic_Settings")
 
 def test_SetStrobeMode():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1817,15 +1619,9 @@ def test_SetStrobeMode():
         Detail_obj.click("Tab_CameraAcq_Settings")
     
 def test_SetStrobeGainMode():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1873,15 +1669,9 @@ def test_SetStrobeGainMode():
 
 #Set LED Color Green
 def test_SetLEDColorGreen():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1929,15 +1719,9 @@ def test_SetLEDColorGreen():
 
 #Set LED Color Orange
 def test_SetLEDColorOrange():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -1984,15 +1768,9 @@ def test_SetLEDColorOrange():
 
 #Set LED Color Yellow
 def test_SetLEDColorYellow():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -2040,15 +1818,9 @@ def test_SetLEDColorYellow():
 
 #DIO Setting
 def test_DO0UserOutput():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -2088,15 +1860,9 @@ def test_DO0UserOutput():
         Detail_obj.click("Tab_IO_Settings")
 
 def test_DO1UserOutput():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -2136,15 +1902,9 @@ def test_DO1UserOutput():
         Detail_obj.click("Tab_IO_Settings")
 
 def test_DO0InvertUserOutput():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
@@ -2186,15 +1946,9 @@ def test_DO0InvertUserOutput():
         Detail_obj.click("Tab_IO_Settings")
 
 def test_DO1InvertUserOutput():
-    Detail_obj = None
-    if Flg_KeepBrowser==False:
-    ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Icam_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        Detail_obj = DetailAction.get_Icam_Detail_page_obj()
-
+    Detail_obj = get_Detail_WebObject()
+    
+    
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
