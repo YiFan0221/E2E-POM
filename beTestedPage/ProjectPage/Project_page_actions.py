@@ -1,8 +1,5 @@
 #Project
-import re
 import sys,os
-
-from numpy import NaN
 sys.path.append(os.getcwd())
 
 from base_page import *
@@ -17,7 +14,7 @@ class cProjectPage(BasePage,cProjectPageLocators):
          cProjectPageLocators.__init__(self)
 
     def get_Project_page(self):
-        url = "http://172.17.12.25:5000/"
+        url = "http://172.17.12.33:3000/"
         self.get_page(url)
         #self.wait_for_browser_title("OOXX)
 
@@ -31,24 +28,6 @@ class cProjectPage(BasePage,cProjectPageLocators):
         RobotDataStore.set_env_var("Detail_driver", Detail_driver)
         time.sleep(5)
 
-#==================================== Delete Project =======================================    
-    def delete_Specific_Project(self,ProjectNo):
-        btnDel_Xpath = '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[{}]/td[6]/div/div[1]/button'.format(ProjectNo)
-
-        try:
-            btnDelete = self.driver.find_element(By.XPATH,btnDel_Xpath)
-            btnDelete.click()
-            btnDel_Xpath = '/html/body/div[{}]/div/div[6]/button[1]'.format(ProjectNo)
-            btnDelete = self.driver.find_element(By.XPATH,btnDel_Xpath)
-            btnDelete.click()
-            btnOK_Xpath = "/html/body/div[{}]/div/div[6]/button[1]".format(ProjectNo)
-            btnOK = self.driver.find_element(By.XPATH,btnOK_Xpath)
-            btnOK.click()
-            return True
-        except:
-            logging.debug('GetTable warning.')
-            return None
-    
 #==================================== Adapter & Launch =======================================
 
 #Get&Set PageObj from env var
@@ -82,3 +61,22 @@ def setup_Project_page():
     Project_driver = get_Browser_driver()
     Project_page_obj = cProjectPage(Project_driver)
     set_project_page_obj(Project_page_obj)    
+    
+#==================================== Delete Project =======================================    
+def delete_Specific_Project(self,ProjectNo):
+    btnDel_Xpath = '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[{}]/td[6]/div/div[1]/button'.format(ProjectNo)
+
+    try:
+        btnDelete = self.driver.find_element(By.XPATH,btnDel_Xpath)
+        btnDelete.click()
+        btnDel_Xpath = '/html/body/div[{}]/div/div[6]/button[1]'.format(ProjectNo)
+        btnDelete = self.driver.find_element(By.XPATH,btnDel_Xpath)
+        btnDelete.click()
+        btnOK_Xpath = "/html/body/div[{}]/div/div[6]/button[1]".format(ProjectNo)
+        btnOK = self.driver.find_element(By.XPATH,btnOK_Xpath)
+        btnOK.click()
+        return True
+    except:
+        logging.debug('GetTable warning.')
+        return None
+    

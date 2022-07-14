@@ -55,6 +55,8 @@ class LocatorsObj():
         #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
         #(2)用ClassName找
         #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'ant-radio-input',By.CLASS_NAME)
+        #(3)用id找
+        #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'ant-radio-input',By.ID)
 
         self.elemt = (LocatorsType,locatorStr)
 

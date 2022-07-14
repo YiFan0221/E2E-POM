@@ -43,7 +43,7 @@ logger.addHandler(fh)
 #endregion ===============================Logger===============================
 
 #各測試個別產生瀏覽器，或一個瀏覽器走到底
-Flg_KeepBrowser =False
+Flg_KeepBrowser =True
 #False : 個別開啟瀏覽器
 #True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
 
@@ -67,31 +67,31 @@ def test_turnOnBrowser():
     Project_obj = get_Project_WebObject()         
     assert True  
     
-def test_checkElemt():     
+# def test_checkElemt():     
            
-    #依序檢查每個Elemt是否能夠找到?
-    Project_obj = get_Project_WebObject()
+#     #依序檢查每個Elemt是否能夠找到?
+#     Project_obj = get_Project_WebObject()
 
     
-    #取出Locator容器中的大小
-    number = len(Project_obj.UI_List)
-    st = "List Size:"+str(number)
-    logging.info(st)
-    print(st)
+#     #取出Locator容器中的大小
+#     number = len(Project_obj.UI_List)
+#     st = "List Size:"+str(number)
+#     logging.info(st)
+#     print(st)
 
-    #巡訪所有元件
-    for i in range(number):
-        oLocatorsObj = Project_obj.UI_List[i]
-        mInfoJson=json.loads(oLocatorsObj.InfoJson) #取Json
-        mElemt = oLocatorsObj.elemt
-        st = "["+str(i)+"]:"+mInfoJson["Name"]    
+#     #巡訪所有元件
+#     for i in range(number):
+#         oLocatorsObj = Project_obj.UI_List[i]
+#         mInfoJson=json.loads(oLocatorsObj.InfoJson) #取Json
+#         mElemt = oLocatorsObj.elemt
+#         st = "["+str(i)+"]:"+mInfoJson["Name"]    
         
-        if Project_obj.check(mElemt)==True:
-            st="[O]"+st
-            logging.debug(st)
-        else:
-            st="[X]"+st
-            logging.debug(st)
+#         if Project_obj.check(mElemt)==True:
+#             st="[O]"+st
+#             logging.debug(st)
+#         else:
+#             st="[X]"+st
+#             logging.debug(st)
 
 
 #進入畫面二前抓取當下狀態

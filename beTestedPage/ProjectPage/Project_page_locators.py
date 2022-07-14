@@ -2,6 +2,7 @@
 import sys,os
 sys.path.append(os.getcwd())
 from base_locators import LocatorsObj , EnumUIType , logging ,json , Tuple ,TypeVar ,Generic
+from selenium.webdriver.common.by import By
 #By 可以選擇要使用的篩選器 有NAME、ID、XPATH
 #必須依照介面位置排放，以免找不到元件
 
@@ -66,9 +67,13 @@ class cProjectPageLocators:
         #class ClsFirmware:          
         self.Tab_Firmware                    = LocatorsObj(self.UI_List,"Tab_Firmware",EnumUIType.Tab,'/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]')
         self.Button_Load_FW_File             = LocatorsObj(self.UI_List,"Button_Load_FW_File",EnumUIType.Button,' /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/span/div[1]/span/button')
-
-        self.Button_Global_Cancel            = LocatorsObj(self.UI_List,"Button_Global_Cancel",EnumUIType.Button,'/html/body/div[2]/div/div[2]/div/div[2]/div[3]/button[1]')
+        self.Button_StartUpload              = LocatorsObj(self.UI_List,"Button_StartUpload",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/button')        
+        self.Tab_Reset                       = LocatorsObj(self.UI_List,"Tab_Reset",EnumUIType.Tab,'/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div[3]/div[1]')
+        self.Button_Reboot                   = LocatorsObj(self.UI_List,"Button_Reboot",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div[3]/div[2]/div/div[2]/button/span')
+        
         self.Button_Global_OK                = LocatorsObj(self.UI_List,"Button_Global_OK",EnumUIType.Button,'/html/body/div[2]/div/div[2]/div/div[2]/div[3]/button[2]')
+        self.Button_Global_Cancel            = LocatorsObj(self.UI_List,"Button_Global_Cancel",EnumUIType.Button,'/html/body/div[2]/div/div[2]/div/div[2]/div[3]/button[1]')
+        
 
         #New Project button
         self.Button_New_Project              = LocatorsObj(self.UI_List,"Button_New_Project",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[1]/span')
@@ -81,13 +86,20 @@ class cProjectPageLocators:
         self.List_Output_Resolutions_Select0 = LocatorsObj(self.UI_List,"List_Output_Resolutions_Select0",EnumUIType.ComboBox,'/html/body/div[5]/div/div/div/div[2]/div[1]/div/div/div[1]/div')        
         self.List_Output_Resolutions_Select1 = LocatorsObj(self.UI_List,"List_Output_Resolutions_Select1",EnumUIType.ComboBox,'/html/body/div[5]/div/div/div/div[2]/div[1]/div/div/div[2]/div')
         self.List_Output_Resolutions_Select2 = LocatorsObj(self.UI_List,"List_Output_Resolutions_Select2",EnumUIType.ComboBox,'/html/body/div[5]/div/div/div/div[2]/div[1]/div/div/div[3]/div')
+        self.List_Output_Resolutions_Select3 = LocatorsObj(self.UI_List,"List_Output_Resolutions_Select3",EnumUIType.ComboBox,'/html/body/div[5]/div/div/div/div[2]/div[1]/div/div/div[4]/div')
+        self.List_Pixel_Format               = LocatorsObj(self.UI_List,"List_Pixel_Format",EnumUIType.Button,'')
+        self.List_Pixel_Format_Select0       = LocatorsObj(self.UI_List,"List_Pixel_Format_Select0",EnumUIType.ComboBox,'')
+        self.List_Pixel_Format_Select1       = LocatorsObj(self.UI_List,"List_Pixel_Format_Select1",EnumUIType.ComboBox,'')
+        self.List_Pixel_Format_Select2       = LocatorsObj(self.UI_List,"List_Pixel_Format_Select2",EnumUIType.ComboBox,'')
+        
+        
         self.List_Trigger_Mode               = LocatorsObj(self.UI_List,"List_Trigger_Mode",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div[5]/div/div/span[2]')
         self.List_Trigger_Mode_Select0       = LocatorsObj(self.UI_List,"List_Trigger_Mode_Select0",EnumUIType.ComboBox,'/html/body/div[6]/div/div/div/div[2]/div[1]/div/div/div[1]/div')
         self.List_Trigger_Mode_Select1       = LocatorsObj(self.UI_List,"List_Trigger_Mode_Select1",EnumUIType.ComboBox,'/html/body/div[6]/div/div/div/div[2]/div[1]/div/div/div[2]/div')
         self.List_Trigger_Mode_Select2       = LocatorsObj(self.UI_List,"List_Trigger_Mode_Select2",EnumUIType.ComboBox,'/html/body/div[6]/div/div/div/div[2]/div[1]/div/div/div[3]/div')
         self.Button_New_Project_Cancel       = LocatorsObj(self.UI_List,"Button_New_Project_Cancel",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[3]/button[1]')
         self.Button_New_Project_Comfirm      = LocatorsObj(self.UI_List,"Button_New_Project_Comfirm",EnumUIType.Button,'/html/body/div[4]/div/div[2]/div/div[2]/div[3]/button[2]/span')    
-        self.Button_Next                     = LocatorsObj(self.UI_List,"Button_Next",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[4]/button')
+        self.Button_Next                     = LocatorsObj(self.UI_List,"Button_Next",EnumUIType.Button,"Button_Next",By.ID)
 
         #List轉Dict
         for i in range(len(self.UI_List)):

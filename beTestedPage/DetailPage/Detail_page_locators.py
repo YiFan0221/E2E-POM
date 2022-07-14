@@ -2,6 +2,7 @@
 import sys,os
 sys.path.append(os.getcwd())
 from base_locators import LocatorsObj , EnumUIType ,logging ,json ,Tuple ,TypeVar ,Generic
+from selenium.webdriver.common.by import By
 #By 可以選擇要使用的篩選器 有NAME、ID、XPATH
 #必須依照介面位置排放，以免找不到元件
 
@@ -63,10 +64,10 @@ class cDetailPagelocators:
         self.Input_Sensor_Frame_Rate                 = LocatorsObj(self.UI_List,"Input_Sensor_Frame_Rate",EnumUIType.Input,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[1]/div[2]/div/div/div[1]/span[2]/span/span/input')
     
         self.Tab_Focus_Settings                      = LocatorsObj(self.UI_List,"Tab_Focus_Settings",EnumUIType.Tab,'/html/body/div/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[2]/div[1]')
-        #class ClsFocus_Settings:
-        self.Input_Focus_Step_Distance               = LocatorsObj(self.UI_List,"Input_Focus_Step_Distance",EnumUIType.Input,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[2]/div[2]/div/div/span/span/span/input')
+        #class ClsFocus_Settings:        
         self.Button_ZoomIn                           = LocatorsObj(self.UI_List,"Button_ZoomIn",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div/button[1]')
         self.Button_ZoomOut                          = LocatorsObj(self.UI_List,"Button_ZoomOut",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[2]/div[2]/div/div/div[1]/div/button[2]')
+        self.Input_Focus_Step_Distance               = LocatorsObj(self.UI_List,"Input_Focus_Step_Distance",EnumUIType.Input,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[2]/div[2]/div/div/span/span/span/input')
         self.Button_Reset_to_Zero_Position           = LocatorsObj(self.UI_List,"Button_Reset_to_Zero_Position",EnumUIType.Button,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[2]/div[2]/div/div/div[2]/button')
     
         self.Tab_Lighting_Settings                   = LocatorsObj(self.UI_List,"Tab_Lighting_Settings",EnumUIType.Tab,'/html/body/div/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[2]/div/div/div/div[3]/div[1]')
@@ -87,11 +88,14 @@ class cDetailPagelocators:
         #class ClsGeneric_Settings:
         self.Tab_Pixel_Format                        = LocatorsObj(self.UI_List,"Tab_Pixel_Format",EnumUIType.Tab,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[2]/div[2]/div/div/div[1]/div[1]')
         #class ClsPixel_Format:
-        self.Radio_Mono8                             = LocatorsObj(self.UI_List,"Radio_Mono8",EnumUIType.Radio,'')
-        self.Radio_YUV                               = LocatorsObj(self.UI_List,"Radio_YUV",EnumUIType.Radio,'')
+        self.Radio_GRAY8                            = LocatorsObj(self.UI_List,"Radio_GRAY8",EnumUIType.Radio,'')
+        self.Radio_YUV2                               = LocatorsObj(self.UI_List,"Radio_YUV2",EnumUIType.Radio,'')
     
-        self.Tab_Image_Adjustments                   = LocatorsObj(self.UI_List,"Tab_Image_Adjustments",EnumUIType.Tab,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[2]/div[2]/div/div/div[2]/div[1]')
-        #class ClsImage_Adjustments:
+        self.Tab_Image_Parameters                   = LocatorsObj(self.UI_List,"Tab_Image_Parameters",EnumUIType.Tab,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[2]/div[2]/div/div/div[2]/div[1]')
+        #class ClsImage_Parameters:
+        #ColorHue
+        #ColorSaturation
+        
         self.Slider_Brightness                       = LocatorsObj(self.UI_List,"Slider_Brightness",EnumUIType.Slider,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div[1]/div/div[1]/div[4]')
         self.Slider_Sharpness                        = LocatorsObj(self.UI_List,"Slider_Sharpness",EnumUIType.Slider,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div[4]')
         self.Slider_Gamma                            = LocatorsObj(self.UI_List,"Slider_Gamma",EnumUIType.Slider,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div[3]/div/div[1]/div[4]')

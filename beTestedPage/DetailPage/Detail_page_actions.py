@@ -14,7 +14,7 @@ class cDetailPage(BasePage,cDetailPagelocators):
          cDetailPagelocators.__init__(self)
 
     def get_Detail_page(self):
-        url = "http://172.17.12.25:5000/camera/settings"
+        url = "http://172.17.12.33:3000/camera/settings"
         self.get_page(url)
         #self.wait_for_browser_title("OOXX")
 
@@ -59,5 +59,5 @@ def Init_Detail_page(browser_type)->cDetailPage:
 def setup_Detail_page():
     Detail_driver = get_Browser_driver()
     Detail_page_obj = cDetailPage(Detail_driver)
-    RobotDataStore.set_env_var("Detail_page_obj", Detail_page_obj)
+    set_Detail_page_obj(Detail_page_obj)
 
