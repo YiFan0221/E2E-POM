@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 #命名規則
 # 元件種類(型別)_功能_細節
-class cProjectPageLocators:
+class cOvertimePageLocators:
 
     RecvType = TypeVar('RecvType', LocatorsObj, str,Tuple)
 

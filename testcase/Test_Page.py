@@ -4,7 +4,6 @@ import time
 import sys,os
 from turtle import goto
 
-from numpy import NaN
 sys.path.append(os.getcwd())
 sys.path.append('..')
 sys.path.append('..\\beTestedPage')

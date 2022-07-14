@@ -5,7 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: 模組",
+            "name": "加班統計",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": ["./testcase/Test_WorkPage.py","--html=report.html", "--self-contained-html"]
+        }
+        ,
+        {
+            "name": "相機測試",
             "type": "python",
             "request": "launch",
             "module": "pytest",
