@@ -27,25 +27,7 @@ class cProjectPage(BasePage,cProjectPageLocators):
         Detail_driver = self.driver
         RobotDataStore.set_env_var("Detail_driver", Detail_driver)
         time.sleep(5)
-
-#==================================== Delete Project =======================================    
-    def delete_Specific_Project(self,ProjectNo):
-        btnDel_Xpath = '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[{}]/td[6]/div/div[1]/button'.format(ProjectNo)
-
-        try:
-            btnDelete = self.driver.find_element(By.XPATH,btnDel_Xpath)
-            btnDelete.click()
-            btnDel_Xpath = '/html/body/div[{}]/div/div[6]/button[1]'.format(ProjectNo)
-            btnDelete = self.driver.find_element(By.XPATH,btnDel_Xpath)
-            btnDelete.click()
-            btnOK_Xpath = "/html/body/div[{}]/div/div[6]/button[1]".format(ProjectNo)
-            btnOK = self.driver.find_element(By.XPATH,btnOK_Xpath)
-            btnOK.click()
-            return True
-        except:
-            logging.debug('GetTable warning.')
-            return None
-    
+        
 #==================================== Adapter & Launch =======================================
 
 #Get&Set PageObj from env var

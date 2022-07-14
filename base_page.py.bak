@@ -8,14 +8,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from robot_data import RobotDataStore
 from browser_drivers import *
 from selenium.webdriver import ActionChains
-from selenium.webdriver.common.keys import Keys
 
 #從RobotDataStore 存取Driver
-def set_Icam_driver(driver):
+def set_Browser_driver(driver):
     RobotDataStore.set_env_var("driver",driver)
 
 
-def get_Icam_driver():
+def get_Browser_driver():
     driver = RobotDataStore.get_env_var("driver")
     return driver
 class BasePage:
@@ -140,8 +139,7 @@ class BasePage:
             else:
                 return False
         except:
-            print("Check fail. Unexpected error:", sys.exc_info()[0])
-            logging.debug("Check fail. Unexpected error:", sys.exc_info()[0])
+            logging.debug('Check warning.')
             return False
     
     #Click方法
@@ -149,50 +147,22 @@ class BasePage:
         #判定檢索方式    
         elemt = self.GetElementType(UIInput)
         if elemt== None:
-            
             return False
-        try:            
+        try:
             elemt = self.GetElementType(UIInput)
             self.find_element(elemt).click()
             self.wait_page_until_loading()        
             return True
         except:
-            logging.debug('Click fail.')
+            logging.debug('Click warning.')
             return False
-    
-    def GetCalSliderMovePos(self,UI_Min,UI_Max)->(int):
-        #取出Min & Max的X位置，並取得兩者之間的值作為分母
-        #算出位於每一個解析度下的距離位置
-        Min_elemt       = self.GetElementType(UI_Min)
-        Max_elemt       = self.GetElementType(UI_Max)
-        Min_text        = self.find_element(Min_elemt).text
-        Max_text        = self.find_element(Max_elemt).text
-        Min_location    = self.find_element(Min_elemt).location
-        Max_location    = self.find_element(Max_elemt).location        
-
-        if Min_elemt == None or Min_elemt == None or Min_text == None or Max_text==None:
-            return False
-        try:                       
-            sum = (float(Max_text)-float(Min_text)) 
-            if sum == 0 :
-                return 0
-            else:
-                maxpos = Max_location['x']
-                minpos = Min_location['x']
-                MoveSize = ((float(maxpos) - float(minpos)) / sum )+1
-                return int(MoveSize)
-            
-
-        except:
-            logging.debug('GetCalSliderMovePos fail.')
-            return 0
     
     def MoveUp(self,UIInput,moveposX, moveposY):
         elemt = self.GetElementType(UIInput)
         if elemt== None:
             return False
         try:
-            move = ActionChains(get_Icam_driver())
+            move = ActionChains(get_Browser_driver())
             Slider = self.find_element(elemt)            
             move.click_and_hold(Slider).move_by_offset(moveposX, moveposY).release().perform()
             self.wait_page_until_loading()
@@ -202,7 +172,7 @@ class BasePage:
             logging.debug('MoveUp warning.')
             return False
 
-    def GetText(self,UIInput)->str:
+    def GetText(self,UIInput):
         elemt = self.GetElementType(UIInput)
         if elemt== None:
             return False
@@ -218,75 +188,3 @@ class BasePage:
         for i in range(0,int(exectimes)):
             time.sleep(1)
             function(arg[0])
-
-    def GetInputBoxText(self,UIInput):
-        elemt = self.GetElementType(UIInput)
-        if elemt== None:
-            return False
-        try:
-            text = self.find_element(elemt).get_attribute('value')
-            self.wait_page_until_loading()
-            return text
-        except:
-            logging.debug('GetInputBoxText warning.')
-            return None
-
-    def SetInputBoxText(self, UIInput, text):
-        elemt = self.GetElementType(UIInput)
-        if elemt== None:
-            return False
-        try:           
-            inputtext = self.find_element(elemt)
-            inputtext.send_keys(Keys.CONTROL+'a')
-            #inputtext.send_keys(Keys.DELETE)
-            inputtext.send_keys(text)
-            inputtext.send_keys(Keys.ENTER)
-            self.wait_page_until_loading()
-            return True
-        except:
-            logging.debug('SetInputBoxText warning.')
-            return None
-
-    def GetTableRows(self,UIInput):
-        elemt = self.GetElementType(UIInput)
-        if elemt== None:
-            return False
-        try:
-            rows = self.driver.find_elements_by_xpath(elemt[1]+'/tr')
-            cols = self.driver.find_elements_by_xpath(elemt[1]+'/tr[1]/td')
-            # rows = len(table)
-            self.wait_page_until_loading()
-            return rows
-        except:
-            logging.debug('GetTable warning.')
-            return None
-
-    def MouseClick(self,PosX, PosY):
-        if self== None:
-            return False
-        try:
-            move = ActionChains(get_Icam_driver())      
-            move.move_by_offset(PosX, PosX)
-            move.click().release().perform()
-            self.wait_page_until_loading()
-            time.sleep(2)        
-            return True
-        except:
-            logging.debug('Mouse Click warning.')
-            return None
-
-    def SelectList(self, UIInput, index):
-        elemt = self.GetElementType(UIInput)
-        if elemt== None:
-            return False
-        try:           
-            lstSelect = self.find_element(elemt)
-            lstSelect.select_by_index(index)
-            
-            self.wait_page_until_loading()
-            return True
-        except:
-            logging.debug('SetInputBoxText warning.')
-            return None
-
-    
