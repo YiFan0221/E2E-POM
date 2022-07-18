@@ -10,7 +10,10 @@ sys.path.append('..\\beTestedPage')
 
 
 from base_locators import *
-import beTestedPage.Overtime.Overtime_page_actions as TargetWebAction
+#import beTestedPage.Overtime.Overtime_page_actions as TargetWebAction
+import beTestedPage.ProjectPage.Project_page_actions as TargetWeb1Action
+import beTestedPage.DetailPage.Detail_page_actions as TargetWeb2Action
+
 
 #region ===============================Enable Function===============================
 #各測試個別產生瀏覽器，或一個瀏覽器走到底
@@ -24,15 +27,30 @@ def SleepAfterPlayPause():
 def SleepWaitForMachine():
     time.sleep(1)
     
-def get_WebObject(): #寫成單例 取得目前網頁資訊
+def get_Web1Object(): #寫成單例 取得目前網頁資訊
     global obj;
-    if TargetWebAction.get_page_obj()==False or Flg_KeepBrowser==False:
-        obj=TargetWebAction.Init_page("chrome")#使用chrome進介面
+    getOBJ_Success= TargetWeb1Action.get_page_obj()
+    if getOBJ_Success==False or Flg_KeepBrowser==False:
+        obj=TargetWeb1Action.Init_page("chrome")#使用chrome進介面
+        try:               
+            obj.get_page() 
+        except Exception:
+            TargetWeb1Action.set_page_obj(obj)
+    else:
+        obj = TargetWeb1Action.get_page_obj()                            
+    TargetWeb1Action.set_page_obj(obj)
+    return obj        
+
+def get_Web2Object(): #寫成單例 取得目前網頁資訊
+    global obj;
+    getOBJ_Success= TargetWeb2Action.get_page_obj()
+    if getOBJ_Success==False or Flg_KeepBrowser==False:
+        obj=TargetWeb2Action.Init_page("chrome")#使用chrome進介面
         obj.get_page()
-    else:        
-        obj = TargetWebAction.get_page_obj()    
-        
-    TargetWebAction.set_page_obj(obj)
+    else:
+        obj=TargetWeb2Action.get_page_obj()           
+                           
+    TargetWeb2Action.set_page_obj(obj)
     return obj        
 
 #endregion ===============================Enable Function===============================        
@@ -66,13 +84,14 @@ logger.addHandler(fh)
 
 #region ===============================page1===============================
 def test_turnOnBrowser():    
-    obj = get_WebObject()         
+    obj = get_Web1Object()      
+       
     assert True  
     
 # def test_checkElemt():     
            
 #     #依序檢查每個Elemt是否能夠找到?
-#     obj = get_WebObject()
+#     obj = get_Web1Object()
 
     
 #     #取出Locator容器中的大小
@@ -99,7 +118,7 @@ def test_turnOnBrowser():
 #進入畫面二前抓取當下狀態
 def test_ClicktoNextPage():
 
-    obj = get_WebObject()
+    obj = get_Web1Object()
         
     try:               
         obj.click("radio_0")        
@@ -107,17 +126,18 @@ def test_ClicktoNextPage():
     except Exception:
         assert False,Exception("Click to NextPage Fail.")              
     finally:
-        TargetWebAction.set_page_obj(obj)
+        TargetWeb1Action.set_page_obj(obj)
 
 #endregion ===============================page1===============================
 
-#region ===============================page2===============================
 
+#import beTestedPage.DetailPage.Detail_page_actions as TargetWebAction
+#region ===============================page2===============================
 
 def test_checkElemt():     
            
     #依序檢查每個Elemt是否能夠找到?
-    obj = get_WebObject()
+    obj = get_Web2Object()
 
     #取出Locator容器中的大小
     number = len(obj.UI_List)
@@ -142,13 +162,13 @@ def test_checkElemt():
 
 #等待讀取 跳頁後必須執行此
 def test_WaitForLoading():
-    obj = get_WebObject()    
+    obj = get_Web2Object()    
     TargetWebAction.set_page_obj(obj)
 
 #切換播放/暫停
 #點擊按鈕後再次抓取狀態比對得知是否切換成功
 def test_PlayPause():   
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
     
     try:   
@@ -187,7 +207,7 @@ def test_PlayPause():
 
 #Softtrigger Acquisition 
 def test_SoftwareTriggerAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
@@ -236,7 +256,7 @@ def test_SoftwareTriggerAcq():
 
 #Hardware Trigger
 def test_HardwareTriggerAcq(): 
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
@@ -298,7 +318,7 @@ def test_HardwareTriggerAcq():
 
 #Set Focus Acquisition
 def test_SetFocusAcq(): 
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
@@ -341,7 +361,7 @@ def test_SetFocusAcq():
 
 #Reset Focus Acquisition
 def test_ResetFocusAcq(): 
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
@@ -382,7 +402,7 @@ def test_ResetFocusAcq():
 
 #Set FPS and Acquisition
 def test_SetFPSAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
 
     try:   
@@ -429,7 +449,7 @@ def test_SetFPSAcq():
 
 #Set ROI 1280*960 Acquisition
 def test_SetROI1280Acq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
@@ -477,7 +497,7 @@ def test_SetROI1280Acq():
 
 #Set ROI 640*480 Acquisition
 def test_SetROI640Acq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     SleepAfterGetObj()
     try:   
@@ -527,7 +547,7 @@ def test_SetROI640Acq():
 
 #Set ROI 320*240 Acquisition
 def test_SetROI320Acq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     SleepAfterGetObj()
     try:   
@@ -576,7 +596,7 @@ def test_SetROI320Acq():
         obj.click("Tab_ROI_Settings_Output_Resolution")
 
 def test_SetBrightnessMAXInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -624,7 +644,7 @@ def test_SetBrightnessMAXInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetBrightnessMiniInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -672,7 +692,7 @@ def test_SetBrightnessMiniInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetBrightnessAnyInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -720,7 +740,7 @@ def test_SetBrightnessAnyInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessMAXInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -768,7 +788,7 @@ def test_SetSharpnessMAXInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessMiniInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -816,7 +836,7 @@ def test_SetSharpnessMiniInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessAnyInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -864,7 +884,7 @@ def test_SetSharpnessAnyInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGammaMAXInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -912,7 +932,7 @@ def test_SetGammaMAXInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGammaMiniInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -960,7 +980,7 @@ def test_SetGammaMiniInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGammaAnyInputAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1008,7 +1028,7 @@ def test_SetGammaAnyInputAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetBrightnessSliderAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1055,7 +1075,7 @@ def test_SetBrightnessSliderAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetSharpnessSliderAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1102,7 +1122,7 @@ def test_SetSharpnessSliderAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGammaSliderAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1149,7 +1169,7 @@ def test_SetGammaSliderAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetMirrorXAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1195,7 +1215,7 @@ def test_SetMirrorXAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetExposureTimeMaxAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1242,7 +1262,7 @@ def test_SetExposureTimeMaxAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetExposureTimeMinAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1289,7 +1309,7 @@ def test_SetExposureTimeMinAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetExposureTimeAnyValueAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1336,7 +1356,7 @@ def test_SetExposureTimeAnyValueAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetAutoExposureAcq(): 
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1388,7 +1408,7 @@ def test_SetAutoExposureAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_ResetAutoExposureAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1440,7 +1460,7 @@ def test_ResetAutoExposureAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGainMinAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1487,7 +1507,7 @@ def test_SetGainMinAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGainMaxAcq():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1535,7 +1555,7 @@ def test_SetGainMaxAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetGainSliderAcq(): 
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1582,7 +1602,7 @@ def test_SetGainSliderAcq():
         obj.click("Tab_Generic_Settings")
 
 def test_SetStrobeMode():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1629,7 +1649,7 @@ def test_SetStrobeMode():
         obj.click("Tab_CameraAcq_Settings")
     
 def test_SetStrobeGainMode():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1679,7 +1699,7 @@ def test_SetStrobeGainMode():
 
 #Set LED Color Green
 def test_SetLEDColorGreen():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1729,7 +1749,7 @@ def test_SetLEDColorGreen():
 
 #Set LED Color Orange
 def test_SetLEDColorOrange():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1778,7 +1798,7 @@ def test_SetLEDColorOrange():
 
 #Set LED Color Yellow
 def test_SetLEDColorYellow():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1828,7 +1848,7 @@ def test_SetLEDColorYellow():
 
 #DIO Setting
 def test_DO0UserOutput():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1872,7 +1892,7 @@ def test_DO0UserOutput():
         obj.click("Tab_IO_Settings")
 
 def test_DO1UserOutput():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1916,7 +1936,7 @@ def test_DO1UserOutput():
         obj.click("Tab_IO_Settings")
 
 def test_DO0InvertUserOutput():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()
@@ -1962,7 +1982,7 @@ def test_DO0InvertUserOutput():
         obj.click("Tab_IO_Settings")
 
 def test_DO1InvertUserOutput():
-    obj = get_WebObject()
+    obj = get_Web2Object()
     
     
     SleepAfterGetObj()

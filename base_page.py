@@ -32,20 +32,20 @@ class BasePage:
     def set_explicit_wait_timeout(self, timeout: int):
         self.wait = WebDriverWait(self.driver, timeout)
 
-    def get_page(self, url: str):
+    def basefunc_get_page(self, url: str):
         logging.info("Open URL -> %s", url)
         self.driver.get(url)
 
-    def quit_driver(self):
+    def basefunc_quit_driver(self):
         logging.info("Quit driver")
         self.driver.quit()
 
-    def find_element(self, locator: tuple):
+    def basefunc_find_element(self, locator: tuple):
         logging.debug("Find Element: %s", locator)
         _element = self.wait.until(ec.presence_of_element_located(locator))
         return _element
 
-    def wait_for_browser_title(self, exp_title: str, timeout=60):
+    def basefunc_wait_for_browser_title(self, exp_title: str, timeout=60):
         for _ in range(timeout):
             logging.debug("Wait for browser title Exp: [%s], Act: [%s]", exp_title, self.driver.title)
             if self.driver.title == exp_title:
@@ -54,7 +54,7 @@ class BasePage:
         else:
             raise TimeoutError("Wait for browser title present timeout")
 
-    def wait_for_browser_title_by_partial(self, partial_tital: str, timeout=60):
+    def basefunc_wait_for_browser_title_by_partial(self, partial_tital: str, timeout=60):
         for _ in range(timeout):
             logging.debug("Wait for browser title Exp: [%s], Act: [%s]", partial_tital, self.driver.title)
             if partial_tital in self.driver.title:
@@ -63,7 +63,7 @@ class BasePage:
         else:
             raise TimeoutError("Wait for browser title present timeout")
 
-    def is_element_present(self, locator: tuple):
+    def basefunc_is_element_present(self, locator: tuple):
         self.driver.implicitly_wait(0)
         try:
             self.driver.find_element(*locator)
@@ -73,11 +73,11 @@ class BasePage:
         finally:
             self.driver.implicitly_wait(self.implicitly_wait_timeout)
 
-    def switch_to_frame(self, locator: tuple):
+    def basefunc_switch_to_frame(self, locator: tuple):
         logging.info("Switch to frame -> [%s]", locator)
         self.wait.until(ec.frame_to_be_available_and_switch_to_it(locator))
 
-    def is_page_load_complete(self):
+    def basefunc_is_page_load_complete(self):
         js_state = ''
         retry_times = 0
         while js_state == '':
@@ -94,14 +94,14 @@ class BasePage:
 
         return js_state == 'complete'
 
-    def wait_page_until_loading(self):
+    def basefunc_wait_page_until_loading(self):
         """ Wait page until loading """
         logging.info('>>> Wait for page until loading...')
         wait_time = 0.2
         start_t = time.time()
 
         load_st_timeout = 0
-        while self.is_page_load_complete():
+        while self.basefunc_is_page_load_complete():
             logging.debug('Wait page status changed...')
             time.sleep(wait_time)
             load_st_timeout += 1
@@ -111,11 +111,11 @@ class BasePage:
         else:
             logging.info('Start Page to loading')
 
-        if not self.is_page_load_complete():
+        if not self.basefunc_is_page_load_complete():
             # wait page loading after 15 sec get timeout
             logging.info('Wait page loading...')
             try:
-                WebDriverWait(self.driver, 60).until(lambda driver: self.is_page_load_complete())
+                WebDriverWait(self.driver, 60).until(lambda driver: self.basefunc_is_page_load_complete())
             except Exception:
                 raise Exception("WAIT_PAGE_LOADING_TIMEOUT")
             else:
@@ -134,7 +134,7 @@ class BasePage:
         if elemt== None:
             return False
         try:   
-            obj = self.find_element(elemt)   
+            obj = self.basefunc_find_element(elemt)   
             if(obj!=None):
                 return True
             else:
@@ -153,8 +153,8 @@ class BasePage:
             return False
         try:            
             elemt = self.GetElementType(UIInput)
-            self.find_element(elemt).click()
-            self.wait_page_until_loading()        
+            self.basefunc_find_element(elemt).click()
+            self.basefunc_wait_page_until_loading()        
             return True
         except:
             logging.debug('Click fail.')
@@ -165,10 +165,10 @@ class BasePage:
         #算出位於每一個解析度下的距離位置
         Min_elemt       = self.GetElementType(UI_Min)
         Max_elemt       = self.GetElementType(UI_Max)
-        Min_text        = self.find_element(Min_elemt).text
-        Max_text        = self.find_element(Max_elemt).text
-        Min_location    = self.find_element(Min_elemt).location
-        Max_location    = self.find_element(Max_elemt).location        
+        Min_text        = self.basefunc_find_element(Min_elemt).text
+        Max_text        = self.basefunc_find_element(Max_elemt).text
+        Min_location    = self.basefunc_find_element(Min_elemt).location
+        Max_location    = self.basefunc_find_element(Max_elemt).location        
 
         if Min_elemt == None or Min_elemt == None or Min_text == None or Max_text==None:
             return False
@@ -193,9 +193,9 @@ class BasePage:
             return False
         try:
             move = ActionChains(get_Browser_driver())
-            Slider = self.find_element(elemt)            
+            Slider = self.basefunc_find_element(elemt)            
             move.click_and_hold(Slider).move_by_offset(moveposX, moveposY).release().perform()
-            self.wait_page_until_loading()
+            self.basefunc_wait_page_until_loading()
             time.sleep(2)        
             return True
         except:
@@ -207,8 +207,8 @@ class BasePage:
         if elemt== None:
             return False
         try:
-            text = self.find_element(elemt).text
-            self.wait_page_until_loading()
+            text = self.basefunc_find_element(elemt).text
+            self.basefunc_wait_page_until_loading()
             return text 
         except:
             logging.debug('GetText warning.')
@@ -224,8 +224,8 @@ class BasePage:
         if elemt== None:
             return False
         try:
-            text = self.find_element(elemt).get_attribute('value')
-            self.wait_page_until_loading()
+            text = self.basefunc_find_element(elemt).get_attribute('value')
+            self.basefunc_wait_page_until_loading()
             return text
         except:
             logging.debug('GetInputBoxText warning.')
@@ -236,12 +236,12 @@ class BasePage:
         if elemt== None:
             return False
         try:           
-            inputtext = self.find_element(elemt)
+            inputtext = self.basefunc_find_element(elemt)
             inputtext.send_keys(Keys.CONTROL+'a')
             #inputtext.send_keys(Keys.DELETE)
             inputtext.send_keys(text)
             inputtext.send_keys(Keys.ENTER)
-            self.wait_page_until_loading()
+            self.basefunc_wait_page_until_loading()
             return True
         except:
             logging.debug('SetInputBoxText warning.')
@@ -255,7 +255,7 @@ class BasePage:
             rows = self.driver.find_elements_by_xpath(elemt[1]+'/tr')
             cols = self.driver.find_elements_by_xpath(elemt[1]+'/tr[1]/td')
             # rows = len(table)
-            self.wait_page_until_loading()
+            self.basefunc_wait_page_until_loading()
             return rows
         except:
             logging.debug('GetTable warning.')
@@ -268,7 +268,7 @@ class BasePage:
             move = ActionChains(get_Browser_driver())      
             move.move_by_offset(PosX, PosX)
             move.click().release().perform()
-            self.wait_page_until_loading()
+            self.basefunc_wait_page_until_loading()
             time.sleep(2)        
             return True
         except:
@@ -280,10 +280,10 @@ class BasePage:
         if elemt== None:
             return False
         try:           
-            lstSelect = self.find_element(elemt)
+            lstSelect = self.basefunc_find_element(elemt)
             lstSelect.select_by_index(index)
             
-            self.wait_page_until_loading()
+            self.basefunc_wait_page_until_loading()
             return True
         except:
             logging.debug('SetInputBoxText warning.')

@@ -5,6 +5,7 @@ sys.path.append(os.getcwd())
 from base_page import *
 from browser_drivers.browser_helper import *
 from beTestedPage.Overtime.Overtime_page_locators import cOverTimePagelocators
+from selenium.webdriver.common.by import By
 
 #==================================== Class =======================================
 class cPage(BasePage,cOverTimePagelocators):
@@ -12,9 +13,9 @@ class cPage(BasePage,cOverTimePagelocators):
     def __init__(self,driver):
          BasePage.__init__(self,driver) 
          cOverTimePagelocators.__init__(self)
-
+Get_page
     def get_page(self):
-        url = "https://employeezone.advantech.com.tw/net/Account/Login?ReturnUrl=%2fnet"
+        url =Get_page//employeezone.advantech.com.tw/net/Account/Login?ReturnUrl=%2fnet"
         self.get_page(url)
         #self.wait_for_browser_title("OOXX")
 

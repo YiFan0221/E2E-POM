@@ -49,13 +49,13 @@ Flg_KeepBrowser =True
 def get_Project_WebObject(): #寫成單例
     
     global Project_obj;
-    if ProjectAction.get_project_page_obj()==False or Flg_KeepBrowser==False:
-        Project_obj=ProjectAction.Init_Project_page("chrome")
-        Project_obj.get_Project_page()
+    if ProjectAction.get_page_obj()==False or Flg_KeepBrowser==False:
+        Project_obj=ProjectAction.Init_page("chrome")
+        Project_obj.get_page()
     else:        
-        Project_obj = ProjectAction.get_project_page_obj()    
+        Project_obj = ProjectAction.get_page_obj()    
         
-    ProjectAction.set_project_page_obj(Project_obj)
+    ProjectAction.set_page_obj(Project_obj)
 
     return Project_obj
 
@@ -104,7 +104,7 @@ def test_ClicktoNextPage():
     except Exception:
         assert False,Exception("Click to NextPage Fail.")              
     finally:
-        ProjectAction.set_project_page_obj(Project_obj)
+        ProjectAction.set_page_obj(Project_obj)
 
 #endregion ===============================page1===============================
 
@@ -116,21 +116,21 @@ def get_Detail_WebObject(): #寫成單例
     
     if Flg_KeepBrowser==False:
         ##Init 直接對取得物件做控制
-        Detail_obj = DetailAction.Init_Detail_page("chrome")
-        Detail_obj.get_Detail_page()
+        Detail_obj = DetailAction.Init_page("chrome")
+        Detail_obj.get_page()
     else:
     ##setup 從過去取得網頁做控制
-        DetailAction.setup_Detail_page()
-        Detail_obj = DetailAction.get_Detail_page_obj()
+        DetailAction.setup_page()
+        Detail_obj = DetailAction.get_page_obj()
     
-    DetailAction.set_Detail_page_obj(Detail_obj)
+    DetailAction.set_page_obj(Detail_obj)
     
     return Detail_obj
 
 #等待讀取 跳頁後必須執行此
 def test_WaitForLoading():
     Detail_obj = get_Detail_WebObject()    
-    DetailAction.set_Detail_page_obj(Detail_obj)
+    DetailAction.set_page_obj(Detail_obj)
 
 #切換播放/暫停
 #點擊按鈕後再次抓取狀態比對得知是否切換成功
@@ -170,7 +170,7 @@ def test_PlayPause():
     finally:
         Detail_obj.click("Button_DisconnectConnect")
         Detail_obj.click("Button_Popup_Window_Ok")
-        DetailAction.set_Detail_page_obj(Detail_obj)
+        DetailAction.set_page_obj(Detail_obj)
 
 
 #Softtrigger Acquisition 
