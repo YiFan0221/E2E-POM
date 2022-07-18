@@ -127,12 +127,15 @@ class BasePage:
 
 
 #==================================通用方法=========================================
-
-    #CheckElemt方法
+    
+    # #CheckElemt方法
     def check(self,UIInput):
-        elemt = self.GetElementType(UIInput)
+        
+        elemt = self.GetElementType(UIInput) #先看是某有此型態的元件
         if elemt== None:
             return False
+        
+        #若有，則開始查找元件
         try:   
             obj = self.basefunc_find_element(elemt)   
             if(obj!=None):

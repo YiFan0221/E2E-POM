@@ -34,7 +34,7 @@ def GetElementType(self,UIInput):
     elif isinstance(UIInput,LocatorsObj): #定位器物件本身檢索
         elemt=UIInput.elemt    
     else:                
-        elemt=UIInput
+        elemt=UIInput   
     return elemt
 class LocatorsObj():
 
