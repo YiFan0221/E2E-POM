@@ -12,8 +12,30 @@ sys.path.append('..\\beTestedPage')
 from base_locators import *
 import beTestedPage.Overtime.Overtime_page_actions as TargetWebAction
 
+#region ===============================Enable Function===============================
+#各測試個別產生瀏覽器，或一個瀏覽器走到底
+Flg_KeepBrowser =True
+#False : 個別開啟瀏覽器
+#True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
+def SleepAfterGetObj():
+    time.sleep(4)
+def SleepAfterPlayPause():
+    time.sleep(3)
+def SleepWaitForMachine():
+    time.sleep(1)
+    
+def get_WebObject(): #寫成單例 取得目前網頁資訊
+    global obj;
+    if TargetWebAction.get_page_obj()==False or Flg_KeepBrowser==False:
+        obj=TargetWebAction.Init_page("chrome")#使用chrome進介面
+        obj.get_page()
+    else:        
+        obj = TargetWebAction.get_page_obj()    
+        
+    TargetWebAction.set_page_obj(obj)
+    return obj        
 
-#*** Test Cases ***
+#endregion ===============================Enable Function===============================        
 
 #region ===============================Logger===============================
 logger = logging.getLogger()
@@ -39,27 +61,8 @@ fh.setFormatter(formatter)
 logger.addHandler(ch)
 logger.addHandler(fh)
 
+
 #endregion ===============================Logger===============================
-
-#各測試個別產生瀏覽器，或一個瀏覽器走到底
-Flg_KeepBrowser =True
-#False : 個別開啟瀏覽器
-#True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
-
-def get_WebObject(): #寫成單例
-    
-    global obj;
-    if TargetWebAction.get_page_obj()==False or Flg_KeepBrowser==False:
-        obj=TargetWebAction.Init_page("chrome")
-        obj.get_page()
-    else:        
-        obj = TargetWebAction.get_page_obj()    
-        
-    TargetWebAction.set_page_obj(obj)
-
-    return obj
-
-#使用chrome進介面
 
 #region ===============================page1===============================
 def test_turnOnBrowser():    
@@ -108,24 +111,34 @@ def test_ClicktoNextPage():
 
 #endregion ===============================page1===============================
 
-
-
 #region ===============================page2===============================
-def get_WebObject(): #寫成單例
-    global obj;
-    
-    if Flg_KeepBrowser==False:
-        ##Init 直接對取得物件做控制
-        obj = TargetWebAction.Init_page("chrome")
-        obj.get_page()
-    else:
-    ##setup 從過去取得網頁做控制
-        TargetWebAction.setup_page()
-        obj = TargetWebAction.get_page_obj()
-    
-    TargetWebAction.set_page_obj(obj)
-    
-    return obj
+
+
+def test_checkElemt():     
+           
+    #依序檢查每個Elemt是否能夠找到?
+    obj = get_WebObject()
+
+    #取出Locator容器中的大小
+    number = len(obj.UI_List)
+    st = "List Size:"+str(number)
+    logging.info(st)
+    print(st)
+
+    #巡訪Locator容器所有元件
+    for i in range(number):
+        oLocatorsObj = obj.UI_List[i]
+        mInfoJson=json.loads(oLocatorsObj.InfoJson) #取Json
+        mElemt = oLocatorsObj.elemt
+        st = "["+str(i)+"]:"+mInfoJson["Name"]    
+        
+        if obj.check(mElemt)==True:
+            st="[O]"+st
+            logging.debug(st)
+        else:
+            st="[X]"+st
+            logging.debug(st)
+
 
 #等待讀取 跳頁後必須執行此
 def test_WaitForLoading():
@@ -136,8 +149,8 @@ def test_WaitForLoading():
 #點擊按鈕後再次抓取狀態比對得知是否切換成功
 def test_PlayPause():   
     obj = get_WebObject()
-
-    time.sleep(6)
+    SleepAfterGetObj()
+    
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Connected"):
@@ -147,7 +160,7 @@ def test_PlayPause():
             obj.click("Button_Popup_Window_Ok")
         
         obj.retry(2,obj.click,str("Button_PlayPause") )
-        time.sleep(10)     
+        SleepAfterPlayPause()
         CameraState = obj.GetText("Label_CameraState")        
         ButtonState = obj.GetText("Button_PlayPause")
         before = CameraState
@@ -172,11 +185,10 @@ def test_PlayPause():
         obj.click("Button_Popup_Window_Ok")
         TargetWebAction.set_page_obj(obj)
 
-
 #Softtrigger Acquisition 
 def test_SoftwareTriggerAcq():
     obj = get_WebObject()
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Connected"): 
@@ -225,7 +237,7 @@ def test_SoftwareTriggerAcq():
 #Hardware Trigger
 def test_HardwareTriggerAcq(): 
     obj = get_WebObject()
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Connected"):
@@ -287,7 +299,7 @@ def test_HardwareTriggerAcq():
 #Set Focus Acquisition
 def test_SetFocusAcq(): 
     obj = get_WebObject()
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -299,7 +311,7 @@ def test_SetFocusAcq():
         obj.click("Tab_Focus_Settings")
         obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
         obj.click("Button_ZoomIn")
-        time.sleep(5)
+        SleepWaitForMachine()
 
         focusText = obj.GetInputBoxText("InputBox_Focus") 
         if( focusText == "300" ):
@@ -309,7 +321,7 @@ def test_SetFocusAcq():
             assert False,Exception("result different")      
 
         obj.click("Button_ZoomOut")
-        time.sleep(5)
+        SleepWaitForMachine()
 
         focusText = obj.GetInputBoxText("InputBox_Focus") 
         if( focusText == "0" ):
@@ -330,7 +342,7 @@ def test_SetFocusAcq():
 #Reset Focus Acquisition
 def test_ResetFocusAcq(): 
     obj = get_WebObject()
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -342,7 +354,7 @@ def test_ResetFocusAcq():
         obj.click("Tab_Focus_Settings")
         obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
         obj.retry(4,obj.click,str("Button_ZoomIn") )        
-        time.sleep(5)
+        SleepWaitForMachine()
 
         focusText = obj.GetInputBoxText("InputBox_Focus") 
         if( focusText == "1200" ):
@@ -352,7 +364,7 @@ def test_ResetFocusAcq():
             assert False,Exception("result different")      
 
         obj.click("Button_Reset_to_Zero_Position")
-        time.sleep(5)
+        SleepWaitForMachine()
         focusText = obj.GetInputBoxText("InputBox_Focus") 
         if( focusText == "0" ):
             logging.info( "Focus:" + focusText )
@@ -371,7 +383,7 @@ def test_ResetFocusAcq():
 #Set FPS and Acquisition
 def test_SetFPSAcq():
     obj = get_WebObject()
-    time.sleep(6)
+    SleepAfterGetObj()
 
     try:   
         CameraState = obj.GetText("Label_CameraState")
@@ -386,7 +398,7 @@ def test_SetFPSAcq():
         obj.SetInputBoxText("Input_Sensor_Frame_Rate", setFPSValue)
         
         obj.click("Button_PlayPause")
-        time.sleep(10)
+        SleepWaitForMachine()
         fpsText = obj.GetInputBoxText("InputBox_FPS")      
         CameraState = obj.GetText("Label_CameraState")        
         ButtonState = obj.GetText("Button_PlayPause")
@@ -400,7 +412,7 @@ def test_SetFPSAcq():
             logging.warning("按鈕與設備狀態不匹配")
 
         obj.click("Button_PlayPause")
-        time.sleep(1)       
+        SleepAfterPlayPause()  
         result = obj.GetText("Label_CameraState")
         
         if(after==result and 0 < float(fpsText) <= float(setFPSValue) ):
@@ -418,7 +430,7 @@ def test_SetFPSAcq():
 #Set ROI 1280*960 Acquisition
 def test_SetROI1280Acq():
     obj = get_WebObject()
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Connected"):
@@ -433,8 +445,7 @@ def test_SetROI1280Acq():
         obj.click("Button_Popup_Window_Ok")
       
         obj.click("Button_PlayPause")
-
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -468,7 +479,7 @@ def test_SetROI1280Acq():
 def test_SetROI640Acq():
     obj = get_WebObject()
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Connected"):
@@ -484,7 +495,7 @@ def test_SetROI640Acq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -518,7 +529,7 @@ def test_SetROI640Acq():
 def test_SetROI320Acq():
     obj = get_WebObject()
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Connected"):
@@ -534,7 +545,7 @@ def test_SetROI320Acq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -568,7 +579,7 @@ def test_SetBrightnessMAXInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -581,7 +592,7 @@ def test_SetBrightnessMAXInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -616,7 +627,7 @@ def test_SetBrightnessMiniInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -629,7 +640,7 @@ def test_SetBrightnessMiniInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -664,7 +675,7 @@ def test_SetBrightnessAnyInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -677,7 +688,7 @@ def test_SetBrightnessAnyInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -712,7 +723,7 @@ def test_SetSharpnessMAXInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -725,7 +736,7 @@ def test_SetSharpnessMAXInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -760,7 +771,7 @@ def test_SetSharpnessMiniInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -773,7 +784,7 @@ def test_SetSharpnessMiniInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -808,7 +819,7 @@ def test_SetSharpnessAnyInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -821,7 +832,7 @@ def test_SetSharpnessAnyInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -856,7 +867,7 @@ def test_SetGammaMAXInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -869,7 +880,7 @@ def test_SetGammaMAXInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -904,7 +915,7 @@ def test_SetGammaMiniInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -917,7 +928,7 @@ def test_SetGammaMiniInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -952,7 +963,7 @@ def test_SetGammaAnyInputAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -965,7 +976,7 @@ def test_SetGammaAnyInputAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1000,7 +1011,7 @@ def test_SetBrightnessSliderAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1014,7 +1025,7 @@ def test_SetBrightnessSliderAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1047,7 +1058,7 @@ def test_SetSharpnessSliderAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1061,7 +1072,7 @@ def test_SetSharpnessSliderAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1094,7 +1105,7 @@ def test_SetGammaSliderAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1108,7 +1119,7 @@ def test_SetGammaSliderAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1141,7 +1152,7 @@ def test_SetMirrorXAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1154,7 +1165,7 @@ def test_SetMirrorXAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1187,7 +1198,7 @@ def test_SetExposureTimeMaxAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1201,7 +1212,7 @@ def test_SetExposureTimeMaxAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1234,7 +1245,7 @@ def test_SetExposureTimeMinAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1248,7 +1259,7 @@ def test_SetExposureTimeMinAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1281,7 +1292,7 @@ def test_SetExposureTimeAnyValueAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1292,10 +1303,10 @@ def test_SetExposureTimeAnyValueAcq():
         obj.click("Tab_Auto_Exposure_Mode")
         setExposureTimeValue = "650"
         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
-        time.sleep(1)
+        SleepWaitForMachine()
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1328,7 +1339,7 @@ def test_SetAutoExposureAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1347,7 +1358,7 @@ def test_SetAutoExposureAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1380,7 +1391,7 @@ def test_ResetAutoExposureAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1397,7 +1408,7 @@ def test_ResetAutoExposureAcq():
         obj.click("Button_Auto_Exposure_Time_Confirm")      
         obj.click("Button_PlayPause")
 
-        time.sleep(5)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1432,7 +1443,7 @@ def test_SetGainMinAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1446,7 +1457,7 @@ def test_SetGainMinAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1479,7 +1490,7 @@ def test_SetGainMaxAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1493,7 +1504,7 @@ def test_SetGainMaxAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1527,7 +1538,7 @@ def test_SetGainSliderAcq():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1541,7 +1552,7 @@ def test_SetGainSliderAcq():
       
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1574,7 +1585,7 @@ def test_SetStrobeMode():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1585,10 +1596,10 @@ def test_SetStrobeMode():
         obj.click("Tab_Lighting_Settings")
         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
         obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         obj.click("Button_PlayPause")
-
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1621,7 +1632,7 @@ def test_SetStrobeGainMode():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1634,10 +1645,10 @@ def test_SetStrobeGainMode():
         obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Gain_Min","Label_Flash_LED_Gain_Max")
         obj.MoveUp("Slider_Flash_LED_Gain",movePos*10,0)        
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         obj.click("Button_PlayPause")
-
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1671,7 +1682,7 @@ def test_SetLEDColorGreen():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1684,7 +1695,7 @@ def test_SetLEDColorGreen():
 
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1721,7 +1732,7 @@ def test_SetLEDColorOrange():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1734,7 +1745,7 @@ def test_SetLEDColorOrange():
 
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1770,7 +1781,7 @@ def test_SetLEDColorYellow():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1783,7 +1794,7 @@ def test_SetLEDColorYellow():
 
         obj.click("Button_PlayPause")
 
-        time.sleep(10)
+        SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
         CameraState = obj.GetText("Label_CameraState")        
@@ -1820,7 +1831,7 @@ def test_DO0UserOutput():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1833,7 +1844,8 @@ def test_DO0UserOutput():
         obj.click("Tab_DO1_Parameters")
         
         obj.click("Button_DO1_Output_High")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI1_Status")
         if( diStatus ==  '(H)' ):
             logging.info( "DI0 Status:" + diStatus )
@@ -1842,7 +1854,8 @@ def test_DO0UserOutput():
             assert False,Exception("result different")
 
         obj.click("Button_DO1_Output_Low")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI1_Status")
         if( diStatus ==  '(L)' ):
             logging.info( "DI0 Status:" + diStatus )
@@ -1862,7 +1875,7 @@ def test_DO1UserOutput():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1875,7 +1888,8 @@ def test_DO1UserOutput():
         obj.click("Tab_DO2_Parameters")
         
         obj.click("Button_DO2_Output_High")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI2_Status")
         if( diStatus ==  '(H)' ):
             logging.info( "DI1 Status:" + diStatus )
@@ -1884,7 +1898,8 @@ def test_DO1UserOutput():
             assert False,Exception("result different")
 
         obj.click("Button_DO2_Output_Low")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI2_Status")
         if( diStatus ==  '(L)' ):
             logging.info( "DI1 Status:" + diStatus )
@@ -1904,7 +1919,7 @@ def test_DO0InvertUserOutput():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1918,7 +1933,8 @@ def test_DO0InvertUserOutput():
         obj.click("Radio_DO1_Reverse_On")
         
         obj.click("Button_DO1_Output_High")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI1_Status")
         if( diStatus ==  '(L)' ):
             logging.info( "DI0 Status:" + diStatus )
@@ -1927,7 +1943,8 @@ def test_DO0InvertUserOutput():
             assert False,Exception("result different")
 
         obj.click("Button_DO1_Output_Low")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI1_Status")
         if( diStatus ==  '(H)' ):
             logging.info( "DI0 Status:" + diStatus )
@@ -1948,7 +1965,7 @@ def test_DO1InvertUserOutput():
     obj = get_WebObject()
     
     
-    time.sleep(6)
+    SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == "Disconnected"):
@@ -1961,7 +1978,8 @@ def test_DO1InvertUserOutput():
         obj.click("Tab_DO2_Parameters")
         obj.click("Radio_DO2_Reverse_On")
         obj.click("Button_DO2_Output_High")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI2_Status")
         if( diStatus ==  '(L)' ):
             logging.info( "DI1 Status:" + diStatus )
@@ -1970,7 +1988,8 @@ def test_DO1InvertUserOutput():
             assert False,Exception("result different")
 
         obj.click("Button_DO2_Output_Low")
-        time.sleep(1)
+        SleepWaitForMachine()
+        
         diStatus = obj.GetText("Label_DI2_Status")
         if( diStatus ==  '(H)' ):
             logging.info( "DI1 Status:" + diStatus )
