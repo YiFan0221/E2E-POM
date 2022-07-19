@@ -11,6 +11,7 @@
 *.in
 *.la
 *.lo
+*.bak
 
 # Ignore all .pyc files
 *.pyc
@@ -18,3 +19,4 @@ E2ETesting.log
 report.html
 .pytest_cache/v/cache/lastfailed
 .pytest_cache/v/cache/nodeids
+.gitignore
