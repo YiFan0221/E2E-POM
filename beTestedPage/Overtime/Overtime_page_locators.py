@@ -12,25 +12,25 @@ class cOverTimePagelocators:
 
     RecvType = TypeVar('RecvType', LocatorsObj, str,Tuple)
 
-    def GetElementType(self,UIInput:Generic[RecvType])->Tuple:
-        #從傳遞進來的輸入取出element並回傳
-        elemt = None
-        #方法1.字串索引表檢索
-        if isinstance(UIInput, str): 
-            if UIInput in self.UI_dict:
-                logging.warning('GetElementType: '+UIInput+'is be found.') #修正記錄檔顯示文字
-                elemt=self.UI_dict[UIInput].elemt
-            else:
-                logging.warning('GetElementType: '+UIInput+'not found!') #修正記錄檔顯示文字
-                return None
-        #方法2.LocatorsObj物件檢索
-        elif isinstance(UIInput,LocatorsObj): 
-            elemt=UIInput.elemt
-        #方法3.elemt物件本身檢索   
-        elif isinstance(UIInput,Tuple):    
-            elemt=UIInput
+    # def GetElementType(self,UIInput:Generic[RecvType])->Tuple:
+    #     #從傳遞進來的輸入取出element並回傳
+    #     elemt = None
+    #     #方法1.字串索引表檢索
+    #     if isinstance(UIInput, str): 
+    #         if UIInput in self.UI_dict:
+    #             logging.warning('GetElementType: '+UIInput+'is be found.') #修正記錄檔顯示文字
+    #             elemt=self.UI_dict[UIInput].elemt
+    #         else:
+    #             logging.warning('GetElementType: '+UIInput+'not found!') #修正記錄檔顯示文字
+    #             return None
+    #     #方法2.LocatorsObj物件檢索
+    #     elif isinstance(UIInput,LocatorsObj): 
+    #         elemt=UIInput.elemt
+    #     #方法3.elemt物件本身檢索   
+    #     elif isinstance(UIInput,Tuple):    
+    #         elemt=UIInput
             
-        return elemt
+    #     return elemt
 
     #存放LocatorsObj容器
     UI_dict ={}

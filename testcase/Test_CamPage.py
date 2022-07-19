@@ -89,7 +89,6 @@ def test_turnOnBrowser():
 def test_checkElemt():                
     #依序檢查每個Elemt是否能夠找到?
     obj = get_Web1Object()
-
     
     #取出Locator容器中的大小
     number = len(obj.UI_List)

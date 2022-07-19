@@ -1,4 +1,5 @@
 from enum import Enum, unique
+from turtle import goto
 from typing import Any, Tuple ,TypeVar ,Generic
 from selenium.webdriver.common.by import By
 import json
@@ -19,23 +20,28 @@ class EnumUIType(Enum):
     ComboBox=8
     Table   =9
   
-def GetElementType(self,UIInput):
-    #從傳遞進來的輸入取出element並回傳
-    elemt = None
-    if isinstance(UIInput, str): #字串索引表檢索
-        if UIInput in self.UI_dict:
-            elemt=self.UI_dict[UIInput].elemt
-        else:
-            logging.debug('GetElementType: '+UIInput+'is none.')
-            return None            
-    ##運作異常 取消
-    #elif isinstance(UIInput,LocatorsObj.elemt): #element檢索
-    #    elemt=UIInput                
-    elif isinstance(UIInput,LocatorsObj): #定位器物件本身檢索
-        elemt=UIInput.elemt    
-    else:                
-        elemt=UIInput   
-    return elemt
+  
+global RecvType 
+RecvType = TypeVar('RecvType', str,Tuple)
+  
+# def GetElementType(self,UIInput):
+#     #從傳遞進來的輸入取出element並回傳
+#     elemt = None
+#     if isinstance(UIInput, str): #字串索引表檢索
+#         if UIInput in self.UI_dict:
+#             elemt=self.UI_dict[UIInput].elemt
+#         else:
+#             logging.debug('GetElementType: '+UIInput+'is none.')
+#             return None            
+#     ##運作異常 取消
+#     #elif isinstance(UIInput,LocatorsObj.elemt): #element檢索
+#     #    elemt=UIInput                
+#     elif isinstance(UIInput,LocatorsObj): #定位器物件本身檢索
+#         elemt=UIInput.elemt    
+#     else:                
+#         elemt=UIInput   
+#     return elemt
+
 class LocatorsObj():
 
     def elemt(self) -> Tuple:
@@ -91,3 +97,28 @@ class LocatorsObj():
         return Infodict["LocatorsType"]        
 
     #self.Infodict = json.loads(self.InfoJson) #也能用字典做搜尋
+
+
+    
+
+    def GetElementType(self,UIInput:Generic[RecvType])->Tuple:
+        #從傳遞進來的輸入取出element並回傳
+        elemt = None
+        #方法1.字串索引表檢索
+        if isinstance(UIInput, str): 
+            if UIInput in self.UI_dict:
+                logging.warning('GetElementType: '+UIInput+'is be found.') #修正記錄檔顯示文字
+                elemt=self.UI_dict[UIInput].elemt
+            else:
+                logging.warning('GetElementType: '+UIInput+'not found!') #修正記錄檔顯示文字
+                return None
+        #方法2.LocatorsObj物件檢索
+        elif isinstance(UIInput,LocatorsObj): 
+            elemt=UIInput.elemt
+        #方法3.elemt物件本身檢索   
+        elif isinstance(UIInput,Tuple):    
+            elemt=UIInput
+            
+        return elemt
+    
+  
