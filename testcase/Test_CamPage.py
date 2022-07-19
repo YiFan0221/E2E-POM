@@ -17,7 +17,7 @@ import beTestedPage.DetailPage.Detail_page_actions as TargetWeb2Action
 
 #region ===============================Enable Function===============================
 #各測試個別產生瀏覽器，或一個瀏覽器走到底
-Flg_KeepBrowser =False
+Flg_KeepBrowser =True
 #False : 個別開啟瀏覽器
 #True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
 def SleepAfterGetObj():

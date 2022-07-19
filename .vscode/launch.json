@@ -17,7 +17,7 @@
             "type": "python",
             "request": "launch",
             "module": "pytest",
-            "args": ["./testcase/Test_CamPage.py","--html=report.html", "--self-contained-html"]
+            "args": ["./testcase/Test_CamPage.py","-s","--html=report.html", "--self-contained-html"]
         }
     ]
 }
