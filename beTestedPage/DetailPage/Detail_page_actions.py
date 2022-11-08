@@ -15,7 +15,7 @@ class cDetailPage(BasePage,cDetailPagelocators):
          cDetailPagelocators.__init__(self)
 
     def get_page(self):#一定要建置後並透過物件呼叫
-        url = "http://172.17.12.33:3000/camera/settings"
+        url = "http://172.17.12.145:5000/camera/settings"
         BasePage.get_page(url)
         #self.wait_for_browser_title("OOXX")
 
@@ -33,7 +33,7 @@ class cDetailPage(BasePage,cDetailPagelocators):
 def set_page_obj(SrcObj):
     RobotDataStore.set_env_var("Detail_page_obj",SrcObj)
 
-def get_page_obj()->cDetailPage:
+def get_page_obj()->(cDetailPage):
     
     try:
         Detail_page = RobotDataStore.get_env_var("Detail_page_obj")
@@ -42,7 +42,7 @@ def get_page_obj()->cDetailPage:
         return False
     
 #Launch
-def Init_page(browser_type)->cDetailPage:
+def Init_page(browser_type)->(cDetailPage):
     browser_map = {
         "chrome": get_chrome_driver,
        "firefox": get_firefox_driver
