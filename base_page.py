@@ -131,6 +131,9 @@ class BasePage:
     #CheckElemt方法
     def check(self,UIInput):
         elemt = self.GetElementType(UIInput)
+        
+        #這邊添加前置動作後再check
+        
         if elemt== None:
             return False
         try:   

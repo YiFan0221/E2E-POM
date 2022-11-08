@@ -1,1 +1,0 @@
-ssh -i "YFService.pem" ubuntu@ec2-174-129-61-253.compute-1.amazonaws.com
