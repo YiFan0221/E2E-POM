@@ -1,7 +1,7 @@
 #Detail
 import sys,os
 sys.path.append(os.getcwd())
-from base_locators import LocatorsObj , EnumUIType ,logging ,json ,Tuple ,TypeVar ,Generic
+from base_locators import GetElementType,LocatorsObj , EnumUIType ,logging ,json ,Tuple ,TypeVar ,Generic
 from selenium.webdriver.common.by import By
 #By 可以選擇要使用的篩選器 有NAME、ID、XPATH
 #必須依照介面位置排放，以免找不到元件
@@ -12,25 +12,8 @@ class cDetailPagelocators:
 
     RecvType = TypeVar('RecvType', LocatorsObj, str,Tuple)
 
-    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):
-        #從傳遞進來的輸入取出element並回傳
-        elemt = None
-        #方法1.字串索引表檢索
-        if isinstance(UIInput, str): 
-            if UIInput in self.UI_dict:
-                logging.warning('GetElementType: '+UIInput+'is be found.') #修正記錄檔顯示文字
-                elemt=self.UI_dict[UIInput].elemt
-            else:
-                logging.warning('GetElementType: '+UIInput+'not found!') #修正記錄檔顯示文字
-                return None
-        #方法2.LocatorsObj物件檢索
-        elif isinstance(UIInput,LocatorsObj): 
-            elemt=UIInput.elemt
-        #方法3.elemt物件本身檢索   
-        elif isinstance(UIInput,Tuple):    
-            elemt=UIInput
-            
-        return elemt
+    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):        
+        return GetElementType(self,UIInput)
 
     #存放LocatorsObj容器
     UI_dict ={}
@@ -40,13 +23,13 @@ class cDetailPagelocators:
     #介面元件
         self.UI_List.clear()
         self.UI_dict.clear()    
-        self.Button_HomePage                         = LocatorsObj(self.UI_List,"Button_HomePage",EnumUIType.Button,'/html/body/div/div/div[1]/img')
-        self.Button_PlayPause                        = LocatorsObj(self.UI_List,"Button_PlayPause",EnumUIType.Button,'/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]')
-        self.Button_Save                             = LocatorsObj(self.UI_List,"Button_Save",EnumUIType.Button,'/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[2]')
-        self.Button_DisconnectConnect                = LocatorsObj(self.UI_List,"Button_DisconnectConnect",EnumUIType.Button,'/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[3]')
-        self.InputBox_FPS                            = LocatorsObj(self.UI_List,"InputBox_FPS",EnumUIType.InputBox,'/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/span[1]/input')
-        self.InputBox_Focus                          = LocatorsObj(self.UI_List,"InputBox_Focus",EnumUIType.InputBox,'/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/span[2]/input')
-        self.Label_CameraState                       = LocatorsObj(self.UI_List,"Label_CameraState",EnumUIType.Label,'/html/body/div/div/div[2]/div/div/div[1]/div/div/p/span')
+        self.Button_HomePage                         = LocatorsObj(self.UI_List,"Button_HomePage",EnumUIType.Button,By.ID)
+        self.Button_PlayPause                        = LocatorsObj(self.UI_List,"Button_PlayPause",EnumUIType.Button,By.ID)
+        self.Button_Save                             = LocatorsObj(self.UI_List,"Button_Save",EnumUIType.Button,By.ID)
+        self.Button_DisconnectConnect                = LocatorsObj(self.UI_List,"Button_DisconnectConnect",EnumUIType.Button,By.ID)
+        self.InputBox_FPS                            = LocatorsObj(self.UI_List,"InputBox_FPS",EnumUIType.InputBox,By.ID)
+        self.InputBox_Focus                          = LocatorsObj(self.UI_List,"InputBox_Focus",EnumUIType.InputBox,By.ID)
+        self.Label_CameraState                       = LocatorsObj(self.UI_List,"Label_CameraState",EnumUIType.Label,By.ID)
             
         self.Tab_CameraAcq_Settings                  = LocatorsObj(self.UI_List,"Tab_CameraAcq_Settings",EnumUIType.Tab,'/html/body/div/div/div[2]/div/div/div[2]/div[1]/div/div[4]/div[1]/div[1]')
         

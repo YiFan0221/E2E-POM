@@ -15,7 +15,7 @@ class cProjectPage(BasePage,cProjectPageLocators):
          cProjectPageLocators.__init__(self)
 
     def get_page(self):#一定要建置後並透過物件呼叫
-        url = "http://172.17.12.145:5000/"
+        url = "http://172.17.12.33:3000/"
         self.basefunc_get_page(url)
         self.basefunc_wait_for_browser_title("ICAM-500")
         #self.wait_for_browser_title("OOXX)

@@ -1,7 +1,7 @@
 #Project
 import sys,os
 sys.path.append(os.getcwd())
-from base_locators import LocatorsObj , EnumUIType , logging ,json , Tuple ,TypeVar ,Generic
+from base_locators import GetElementType,LocatorsObj , EnumUIType , logging ,json , Tuple ,TypeVar ,Generic
 from selenium.webdriver.common.by import By
 #By 可以選擇要使用的篩選器 有NAME、ID、XPATH
 #必須依照介面位置排放，以免找不到元件
@@ -13,24 +13,8 @@ class cProjectPageLocators:
 
     RecvType = TypeVar('RecvType', LocatorsObj, str,Tuple)
 
-    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):
-        #從傳遞進來的輸入取出element並回傳
-        elemt = None
-        if isinstance(UIInput, str): #字串索引表檢索
-            if UIInput in self.UI_dict:                
-                elemt=self.UI_dict[UIInput].elemt
-                logging.warning('GetElementType: '+UIInput+' found elemt ')
-            else:
-                logging.warning('GetElementType: '+UIInput+' is none.')
-                return None
-        # #運作異常 取消    
-        # elif isinstance(UIInput,LocatorsObj.elemt): #element檢索
-        #     elemt=UIInput
-        elif isinstance(UIInput,LocatorsObj): #定位器物件本身檢索
-            elemt=UIInput.elemt
-        elif isinstance(UIInput,Tuple):                
-            elemt=UIInput
-        return elemt
+    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):        
+        return GetElementType(self,UIInput)
 
     #存放LocatorsObj容器
     UI_dict ={}

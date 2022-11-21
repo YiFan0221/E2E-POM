@@ -15,7 +15,7 @@ class cDetailPage(BasePage,cDetailPagelocators):
          cDetailPagelocators.__init__(self)
 
     def get_page(self):#一定要建置後並透過物件呼叫
-        url = "http://172.17.12.145:5000/camera/settings"
+        url = "http://172.17.12.33:3000/camera/settings"
         BasePage.get_page(url)
         #self.wait_for_browser_title("OOXX")
 
@@ -59,7 +59,6 @@ def Init_page(browser_type)->(cDetailPage):
 def setup_page():
     Detail_driver = get_Browser_driver()
     Detail_page_obj = cDetailPage(Detail_driver)
-    set_Browser_driver(Detail_driver)
     set_page_obj(Detail_page_obj)
     return Detail_page_obj
 

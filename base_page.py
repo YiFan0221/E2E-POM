@@ -143,7 +143,7 @@ class BasePage:
             else:
                 return False
         except:
-            print("Check fail. Unexpected error:", sys.exc_info()[0])
+            #print("Check fail. Unexpected error:", sys.exc_info()[0])
             logging.debug("Check fail. Unexpected error:", sys.exc_info()[0])
             return False
     

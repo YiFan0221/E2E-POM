@@ -17,11 +17,11 @@ class cOverTimePagelocators:
     #     elemt = None
     #     #方法1.字串索引表檢索
     #     if isinstance(UIInput, str): 
-    #         if UIInput in self.UI_dict:
-    #             logging.warning('GetElementType: '+UIInput+'is be found.') #修正記錄檔顯示文字
-    #             elemt=self.UI_dict[UIInput].elemt
-    #         else:
-    #             logging.warning('GetElementType: '+UIInput+'not found!') #修正記錄檔顯示文字
+    #        if UIInput in self.UI_dict:
+    #            logging.warning('GetElementType: found '+UIInput+' elemt.') #修正記錄檔顯示文字
+    #            elemt=self.UI_dict[UIInput].elemt
+    #        else:
+    #            logging.warning('GetElementType: elemt '+UIInput+' not found!') #修正記錄檔顯示文字
     #             return None
     #     #方法2.LocatorsObj物件檢索
     #     elif isinstance(UIInput,LocatorsObj): 

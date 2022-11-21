@@ -2272,3 +2272,938 @@
 [W 20221121 14:18:32 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
 [I 20221121 14:18:33 base_page:99] >>> Wait for page until loading...
 [I 20221121 14:18:34 base_page:126] <<< Wait page loading spend time 1.243
+[I 20221121 14:29:47 base_page:36] Open URL -> http://172.17.12.145:5000/
+[W 20221121 14:29:49 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:29:49 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:30:29 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:30:31 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:30:31 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:30:32 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:30:33 base_page:126] <<< Wait page loading spend time 1.236
+[I 20221121 14:33:21 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:33:29 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:33:29 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:33:29 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:33:30 base_page:126] <<< Wait page loading spend time 1.244
+[I 20221121 14:34:23 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 14:35:08 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:35:29 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:35:29 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:35:29 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:35:31 base_page:126] <<< Wait page loading spend time 1.242
+[I 20221121 14:35:34 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:35:35 base_page:126] <<< Wait page loading spend time 1.243
+[I 20221121 14:36:43 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:36:53 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:36:53 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:36:53 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:36:54 base_page:126] <<< Wait page loading spend time 1.257
+[I 20221121 14:36:54 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:36:56 base_page:126] <<< Wait page loading spend time 1.237
+[I 20221121 14:39:21 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:39:30 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:39:30 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:39:30 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:39:31 base_page:126] <<< Wait page loading spend time 1.247
+[I 20221121 14:39:31 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:39:33 base_page:126] <<< Wait page loading spend time 1.244
+[I 20221121 14:40:48 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:41:01 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:41:01 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:41:01 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:41:02 base_page:126] <<< Wait page loading spend time 1.255
+[I 20221121 14:41:02 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:41:03 base_page:126] <<< Wait page loading spend time 1.245
+[I 20221121 14:41:25 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:41:34 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:41:34 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:41:34 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:41:35 base_page:126] <<< Wait page loading spend time 1.244
+[I 20221121 14:41:35 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:41:36 base_page:126] <<< Wait page loading spend time 1.244
+[I 20221121 14:46:51 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:47:00 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:47:00 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:47:01 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:47:02 base_page:126] <<< Wait page loading spend time 1.247
+[I 20221121 14:47:02 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:47:03 base_page:126] <<< Wait page loading spend time 1.239
+[I 20221121 16:58:58 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 16:59:08 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 16:59:08 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 16:59:08 base_page:99] >>> Wait for page until loading...
+[I 20221121 16:59:09 base_page:126] <<< Wait page loading spend time 1.248
+[I 20221121 16:59:09 base_page:99] >>> Wait for page until loading...
+[I 20221121 16:59:11 base_page:126] <<< Wait page loading spend time 1.244
+[I 20221121 16:59:33 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 16:59:42 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 16:59:42 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 16:59:43 base_page:99] >>> Wait for page until loading...
+[I 20221121 16:59:44 base_page:126] <<< Wait page loading spend time 1.245
+[I 20221121 16:59:44 base_page:99] >>> Wait for page until loading...
+[I 20221121 16:59:45 base_page:126] <<< Wait page loading spend time 1.234
+[I 20221121 17:00:20 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:00:30 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:00:30 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:00:30 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:00:31 base_page:126] <<< Wait page loading spend time 1.24
+[I 20221121 17:00:31 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:00:32 base_page:126] <<< Wait page loading spend time 1.256
+[I 20221121 17:02:59 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:03:09 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:03:09 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:03:09 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:03:10 base_page:126] <<< Wait page loading spend time 1.245
+[I 20221121 17:03:10 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:03:11 base_page:126] <<< Wait page loading spend time 1.249
+[I 20221121 17:03:56 Test_CamPage:149] List Size:153
+[I 20221121 17:08:04 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:08:35 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:08:35 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:08:35 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:08:37 base_page:126] <<< Wait page loading spend time 1.239
+[I 20221121 17:08:38 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:08:39 base_page:126] <<< Wait page loading spend time 1.237
+[I 20221121 17:09:31 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:09:44 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:09:44 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:09:44 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:09:46 base_page:126] <<< Wait page loading spend time 1.232
+[I 20221121 17:09:46 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:09:47 base_page:126] <<< Wait page loading spend time 1.241
+[I 20221121 17:10:35 Test_CamPage:149] List Size:153
+[I 20221121 17:12:59 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:13:08 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:13:08 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:13:08 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:13:09 base_page:126] <<< Wait page loading spend time 1.235
+[I 20221121 17:13:09 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:13:10 base_page:126] <<< Wait page loading spend time 1.239
+[I 20221121 17:13:35 Test_CamPage:149] List Size:153
+[D 20221121 17:15:09 remote_connection:388] POST http://127.0.0.1:60961/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}
+[D 20221121 17:15:09 connectionpool:205] Starting new HTTP connection (1): 127.0.0.1:60961
+[D 20221121 17:15:10 connectionpool:393] http://127.0.0.1:60961 "POST /session HTTP/1.1" 200 797
+[D 20221121 17:15:10 remote_connection:440] Finished Request
+[D 20221121 17:15:10 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/timeouts {"implicit": 500}
+[D 20221121 17:15:10 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/timeouts HTTP/1.1" 200 14
+[D 20221121 17:15:10 remote_connection:440] Finished Request
+[D 20221121 17:15:10 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize {}
+[D 20221121 17:15:11 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize HTTP/1.1" 200 52
+[D 20221121 17:15:11 remote_connection:440] Finished Request
+[I 20221121 17:15:11 base_page:36] Open URL -> http://172.17.12.33:3000/
+[D 20221121 17:15:11 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/url {"url": "http://172.17.12.33:3000/"}
+[D 20221121 17:15:12 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/url HTTP/1.1" 200 14
+[D 20221121 17:15:12 remote_connection:440] Finished Request
+[D 20221121 17:15:12 remote_connection:388] GET http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/title {}
+[D 20221121 17:15:12 connectionpool:393] http://127.0.0.1:60961 "GET /session/b62666d0c81443c5ba4ababcc3f0d590/title HTTP/1.1" 200 20
+[D 20221121 17:15:12 remote_connection:440] Finished Request
+[D 20221121 17:15:12 base_page:50] Wait for browser title Exp: [ICAM-500], Act: [ICAM-500]
+[D 20221121 17:15:12 remote_connection:388] GET http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/title {}
+[D 20221121 17:15:12 connectionpool:393] http://127.0.0.1:60961 "GET /session/b62666d0c81443c5ba4ababcc3f0d590/title HTTP/1.1" 200 20
+[D 20221121 17:15:12 remote_connection:440] Finished Request
+[D 20221121 17:15:16 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/timeouts {"implicit": 500}
+[D 20221121 17:15:16 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/timeouts HTTP/1.1" 200 14
+[D 20221121 17:15:16 remote_connection:440] Finished Request
+[D 20221121 17:15:16 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize {}
+[D 20221121 17:15:16 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:15:16 remote_connection:440] Finished Request
+[W 20221121 17:15:20 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:15:20 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[D 20221121 17:15:20 base_page:44] Find Element: ('xpath', '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
+[D 20221121 17:15:20 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/element {"using": "xpath", "value": "/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input"}
+[D 20221121 17:15:20 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/element HTTP/1.1" 200 88
+[D 20221121 17:15:20 remote_connection:440] Finished Request
+[D 20221121 17:15:20 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/element/e8585856-db22-46a1-91ad-97bdd792302a/click {"id": "e8585856-db22-46a1-91ad-97bdd792302a"}
+[D 20221121 17:15:20 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/element/e8585856-db22-46a1-91ad-97bdd792302a/click HTTP/1.1" 200 14
+[D 20221121 17:15:20 remote_connection:440] Finished Request
+[I 20221121 17:15:20 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:15:20 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:20 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:20 remote_connection:440] Finished Request
+[D 20221121 17:15:20 base_page:105] Wait page status changed...
+[D 20221121 17:15:20 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:20 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:20 remote_connection:440] Finished Request
+[D 20221121 17:15:20 base_page:105] Wait page status changed...
+[D 20221121 17:15:21 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:21 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:21 remote_connection:440] Finished Request
+[D 20221121 17:15:21 base_page:105] Wait page status changed...
+[D 20221121 17:15:21 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:21 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:21 remote_connection:440] Finished Request
+[D 20221121 17:15:21 base_page:105] Wait page status changed...
+[D 20221121 17:15:21 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:21 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:21 remote_connection:440] Finished Request
+[D 20221121 17:15:21 base_page:105] Wait page status changed...
+[D 20221121 17:15:21 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:21 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:21 remote_connection:440] Finished Request
+[D 20221121 17:15:21 base_page:105] Wait page status changed...
+[D 20221121 17:15:22 base_page:109] Page status not changed
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[I 20221121 17:15:22 base_page:126] <<< Wait page loading spend time 1.262
+[D 20221121 17:15:22 base_page:44] Find Element: ('id', 'Button_Next')
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/element {"using": "css selector", "value": "[id=\"Button_Next\"]"}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/element HTTP/1.1" 200 88
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/element/a7b3d3ec-599c-4f85-a6c3-2a613f00b422/click {"id": "a7b3d3ec-599c-4f85-a6c3-2a613f00b422"}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/element/a7b3d3ec-599c-4f85-a6c3-2a613f00b422/click HTTP/1.1" 200 14
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[I 20221121 17:15:22 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[D 20221121 17:15:22 base_page:105] Wait page status changed...
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[D 20221121 17:15:22 base_page:105] Wait page status changed...
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[D 20221121 17:15:22 base_page:105] Wait page status changed...
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[D 20221121 17:15:22 base_page:105] Wait page status changed...
+[D 20221121 17:15:22 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:22 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:22 remote_connection:440] Finished Request
+[D 20221121 17:15:22 base_page:105] Wait page status changed...
+[D 20221121 17:15:23 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:23 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:23 remote_connection:440] Finished Request
+[D 20221121 17:15:23 base_page:105] Wait page status changed...
+[D 20221121 17:15:23 base_page:109] Page status not changed
+[D 20221121 17:15:23 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:15:23 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:15:23 remote_connection:440] Finished Request
+[I 20221121 17:15:23 base_page:126] <<< Wait page loading spend time 1.264
+[D 20221121 17:15:28 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/timeouts {"implicit": 500}
+[D 20221121 17:15:28 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/timeouts HTTP/1.1" 200 14
+[D 20221121 17:15:28 remote_connection:440] Finished Request
+[D 20221121 17:15:28 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize {}
+[D 20221121 17:15:28 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:15:28 remote_connection:440] Finished Request
+[D 20221121 17:15:32 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/timeouts {"implicit": 500}
+[D 20221121 17:15:32 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/timeouts HTTP/1.1" 200 14
+[D 20221121 17:15:32 remote_connection:440] Finished Request
+[D 20221121 17:15:32 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize {}
+[D 20221121 17:15:32 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:15:32 remote_connection:440] Finished Request
+[I 20221121 17:15:36 Test_CamPage:149] List Size:153
+[D 20221121 17:15:36 base_page:44] Find Element: ('xpath', '/html/body/div/div/div[1]/img')
+[D 20221121 17:15:36 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/element {"using": "xpath", "value": "/html/body/div/div/div[1]/img"}
+[D 20221121 17:15:36 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/element HTTP/1.1" 200 88
+[D 20221121 17:15:36 remote_connection:440] Finished Request
+[D 20221121 17:15:36 Test_CamPage:161] [O][0]:Button_HomePage
+[D 20221121 17:15:36 base_page:44] Find Element: ('xpath', '/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]')
+[D 20221121 17:15:36 remote_connection:388] POST http://127.0.0.1:60961/session/b62666d0c81443c5ba4ababcc3f0d590/element {"using": "xpath", "value": "/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]"}
+[D 20221121 17:15:36 connectionpool:393] http://127.0.0.1:60961 "POST /session/b62666d0c81443c5ba4ababcc3f0d590/element HTTP/1.1" 404 1079
+[D 20221121 17:15:36 remote_connection:440] Finished Request
+[D 20221121 17:16:12 remote_connection:388] POST http://127.0.0.1:61208/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}
+[D 20221121 17:16:12 connectionpool:205] Starting new HTTP connection (1): 127.0.0.1:61208
+[D 20221121 17:16:13 connectionpool:393] http://127.0.0.1:61208 "POST /session HTTP/1.1" 200 797
+[D 20221121 17:16:13 remote_connection:440] Finished Request
+[D 20221121 17:16:13 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/timeouts {"implicit": 500}
+[D 20221121 17:16:13 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/timeouts HTTP/1.1" 200 14
+[D 20221121 17:16:13 remote_connection:440] Finished Request
+[D 20221121 17:16:13 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/window/maximize {}
+[D 20221121 17:16:13 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/window/maximize HTTP/1.1" 200 52
+[D 20221121 17:16:13 remote_connection:440] Finished Request
+[I 20221121 17:16:13 base_page:36] Open URL -> http://172.17.12.33:3000/
+[D 20221121 17:16:13 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/url {"url": "http://172.17.12.33:3000/"}
+[D 20221121 17:16:14 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/url HTTP/1.1" 200 14
+[D 20221121 17:16:14 remote_connection:440] Finished Request
+[D 20221121 17:16:14 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/title {}
+[D 20221121 17:16:14 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/title HTTP/1.1" 200 20
+[D 20221121 17:16:14 remote_connection:440] Finished Request
+[D 20221121 17:16:14 base_page:50] Wait for browser title Exp: [ICAM-500], Act: [ICAM-500]
+[D 20221121 17:16:14 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/title {}
+[D 20221121 17:16:14 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/title HTTP/1.1" 200 20
+[D 20221121 17:16:14 remote_connection:440] Finished Request
+[D 20221121 17:16:18 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/timeouts {"implicit": 500}
+[D 20221121 17:16:18 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/timeouts HTTP/1.1" 200 14
+[D 20221121 17:16:18 remote_connection:440] Finished Request
+[D 20221121 17:16:18 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/window/maximize {}
+[D 20221121 17:16:18 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:16:18 remote_connection:440] Finished Request
+[W 20221121 17:16:22 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:16:22 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[D 20221121 17:16:22 base_page:44] Find Element: ('xpath', '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
+[D 20221121 17:16:22 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element {"using": "xpath", "value": "/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input"}
+[D 20221121 17:16:22 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/element HTTP/1.1" 200 88
+[D 20221121 17:16:22 remote_connection:440] Finished Request
+[D 20221121 17:16:22 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/4f105d42-8511-47c5-b772-303621f3d00c/click {"id": "4f105d42-8511-47c5-b772-303621f3d00c"}
+[D 20221121 17:16:22 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/element/4f105d42-8511-47c5-b772-303621f3d00c/click HTTP/1.1" 200 14
+[D 20221121 17:16:22 remote_connection:440] Finished Request
+[I 20221121 17:16:22 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:16:22 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:22 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:22 remote_connection:440] Finished Request
+[D 20221121 17:16:22 base_page:105] Wait page status changed...
+[D 20221121 17:16:22 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:22 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:22 remote_connection:440] Finished Request
+[D 20221121 17:16:22 base_page:105] Wait page status changed...
+[D 20221121 17:16:23 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:23 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:23 remote_connection:440] Finished Request
+[D 20221121 17:16:23 base_page:105] Wait page status changed...
+[D 20221121 17:16:23 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:23 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:23 remote_connection:440] Finished Request
+[D 20221121 17:16:23 base_page:105] Wait page status changed...
+[D 20221121 17:16:23 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:23 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:23 remote_connection:440] Finished Request
+[D 20221121 17:16:23 base_page:105] Wait page status changed...
+[D 20221121 17:16:23 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:23 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:23 remote_connection:440] Finished Request
+[D 20221121 17:16:23 base_page:105] Wait page status changed...
+[D 20221121 17:16:23 base_page:109] Page status not changed
+[D 20221121 17:16:23 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:23 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:23 remote_connection:440] Finished Request
+[I 20221121 17:16:23 base_page:126] <<< Wait page loading spend time 1.271
+[D 20221121 17:16:23 base_page:44] Find Element: ('id', 'Button_Next')
+[D 20221121 17:16:23 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element {"using": "css selector", "value": "[id=\"Button_Next\"]"}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/element HTTP/1.1" 200 88
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[D 20221121 17:16:24 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/5653cdaf-1761-4f12-8919-20b8dcaac6e7/click {"id": "5653cdaf-1761-4f12-8919-20b8dcaac6e7"}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/element/5653cdaf-1761-4f12-8919-20b8dcaac6e7/click HTTP/1.1" 200 14
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[I 20221121 17:16:24 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:16:24 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[D 20221121 17:16:24 base_page:105] Wait page status changed...
+[D 20221121 17:16:24 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[D 20221121 17:16:24 base_page:105] Wait page status changed...
+[D 20221121 17:16:24 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[D 20221121 17:16:24 base_page:105] Wait page status changed...
+[D 20221121 17:16:24 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[D 20221121 17:16:24 base_page:105] Wait page status changed...
+[D 20221121 17:16:24 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:24 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:24 remote_connection:440] Finished Request
+[D 20221121 17:16:24 base_page:105] Wait page status changed...
+[D 20221121 17:16:25 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:25 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:25 remote_connection:440] Finished Request
+[D 20221121 17:16:25 base_page:105] Wait page status changed...
+[D 20221121 17:16:25 base_page:109] Page status not changed
+[D 20221121 17:16:25 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:16:25 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:16:25 remote_connection:440] Finished Request
+[I 20221121 17:16:25 base_page:126] <<< Wait page loading spend time 1.264
+[D 20221121 17:16:30 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/timeouts {"implicit": 500}
+[D 20221121 17:16:30 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/timeouts HTTP/1.1" 200 14
+[D 20221121 17:16:30 remote_connection:440] Finished Request
+[D 20221121 17:16:30 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/window/maximize {}
+[D 20221121 17:16:30 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:16:30 remote_connection:440] Finished Request
+[D 20221121 17:16:34 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/timeouts {"implicit": 500}
+[D 20221121 17:16:34 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/timeouts HTTP/1.1" 200 14
+[D 20221121 17:16:34 remote_connection:440] Finished Request
+[D 20221121 17:16:34 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/window/maximize {}
+[D 20221121 17:16:34 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:16:34 remote_connection:440] Finished Request
+[I 20221121 17:16:38 Test_CamPage:149] List Size:153
+[D 20221121 17:17:23 base_page:44] Find Element: ('xpath', '/html/body/div/div/div[1]/img')
+[D 20221121 17:17:32 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element {"using": "xpath", "value": "/html/body/div/div/div[1]/img"}
+[D 20221121 17:17:32 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/element HTTP/1.1" 200 88
+[D 20221121 17:17:32 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/rect {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/rect HTTP/1.1" 200 68
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/execute/sync {"script": "arguments[0].scrollIntoView(true); return arguments[0].getBoundingClientRect()", "args": [{"ELEMENT": "60151adb-4057-4a91-8e71-e08a45d3e6a1", "element-6066-11e4-a52e-4f735466cecf": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}], "id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/execute/sync HTTP/1.1" 200 140
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/rect {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/rect HTTP/1.1" 200 52
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/screenshot {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/screenshot HTTP/1.1" 200 11324
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/screenshot {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/screenshot HTTP/1.1" 200 11324
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/rect {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/rect HTTP/1.1" 200 52
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/name {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/name HTTP/1.1" 200 15
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:34 remote_connection:388] GET http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/text {"id": "60151adb-4057-4a91-8e71-e08a45d3e6a1"}
+[D 20221121 17:17:34 connectionpool:393] http://127.0.0.1:61208 "GET /session/08991d78bf36616a58d197a620c895bc/element/60151adb-4057-4a91-8e71-e08a45d3e6a1/text HTTP/1.1" 200 12
+[D 20221121 17:17:34 remote_connection:440] Finished Request
+[D 20221121 17:17:47 Test_CamPage:161] [O][0]:Button_HomePage
+[D 20221121 17:17:50 base_page:44] Find Element: ('xpath', '/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]')
+[D 20221121 17:17:50 remote_connection:388] POST http://127.0.0.1:61208/session/08991d78bf36616a58d197a620c895bc/element {"using": "xpath", "value": "/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]"}
+[D 20221121 17:17:50 connectionpool:393] http://127.0.0.1:61208 "POST /session/08991d78bf36616a58d197a620c895bc/element HTTP/1.1" 404 1079
+[D 20221121 17:17:50 remote_connection:440] Finished Request
+[D 20221121 17:18:06 remote_connection:388] POST http://127.0.0.1:61868/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}
+[D 20221121 17:18:06 connectionpool:205] Starting new HTTP connection (1): 127.0.0.1:61868
+[D 20221121 17:18:07 connectionpool:393] http://127.0.0.1:61868 "POST /session HTTP/1.1" 200 796
+[D 20221121 17:18:07 remote_connection:440] Finished Request
+[D 20221121 17:18:07 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/timeouts {"implicit": 500}
+[D 20221121 17:18:07 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:07 remote_connection:440] Finished Request
+[D 20221121 17:18:07 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/window/maximize {}
+[D 20221121 17:18:07 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/window/maximize HTTP/1.1" 200 52
+[D 20221121 17:18:07 remote_connection:440] Finished Request
+[I 20221121 17:18:07 base_page:36] Open URL -> http://172.17.12.33:3000/
+[D 20221121 17:18:07 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/url {"url": "http://172.17.12.33:3000/"}
+[D 20221121 17:18:09 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/url HTTP/1.1" 200 14
+[D 20221121 17:18:09 remote_connection:440] Finished Request
+[D 20221121 17:18:09 remote_connection:388] GET http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/title {}
+[D 20221121 17:18:09 connectionpool:393] http://127.0.0.1:61868 "GET /session/dc1dcf2b252570f340fa698ce3765efa/title HTTP/1.1" 200 20
+[D 20221121 17:18:09 remote_connection:440] Finished Request
+[D 20221121 17:18:09 base_page:50] Wait for browser title Exp: [ICAM-500], Act: [ICAM-500]
+[D 20221121 17:18:09 remote_connection:388] GET http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/title {}
+[D 20221121 17:18:10 connectionpool:393] http://127.0.0.1:61868 "GET /session/dc1dcf2b252570f340fa698ce3765efa/title HTTP/1.1" 200 20
+[D 20221121 17:18:10 remote_connection:440] Finished Request
+[D 20221121 17:18:14 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/timeouts {"implicit": 500}
+[D 20221121 17:18:14 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:14 remote_connection:440] Finished Request
+[D 20221121 17:18:14 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/window/maximize {}
+[D 20221121 17:18:14 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:18:14 remote_connection:440] Finished Request
+[W 20221121 17:18:18 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:18:18 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[D 20221121 17:18:18 base_page:44] Find Element: ('xpath', '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
+[D 20221121 17:18:18 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/element {"using": "xpath", "value": "/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input"}
+[D 20221121 17:18:18 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/element HTTP/1.1" 200 88
+[D 20221121 17:18:18 remote_connection:440] Finished Request
+[D 20221121 17:18:18 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/element/c1639542-a8c2-4bd0-9291-440f7fa9bb9b/click {"id": "c1639542-a8c2-4bd0-9291-440f7fa9bb9b"}
+[D 20221121 17:18:18 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/element/c1639542-a8c2-4bd0-9291-440f7fa9bb9b/click HTTP/1.1" 200 14
+[D 20221121 17:18:18 remote_connection:440] Finished Request
+[I 20221121 17:18:18 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:18:18 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:18 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:18 remote_connection:440] Finished Request
+[D 20221121 17:18:18 base_page:105] Wait page status changed...
+[D 20221121 17:18:18 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:18 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:18 remote_connection:440] Finished Request
+[D 20221121 17:18:18 base_page:105] Wait page status changed...
+[D 20221121 17:18:18 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:18 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:18 remote_connection:440] Finished Request
+[D 20221121 17:18:18 base_page:105] Wait page status changed...
+[D 20221121 17:18:18 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:18 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:18 remote_connection:440] Finished Request
+[D 20221121 17:18:18 base_page:105] Wait page status changed...
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[D 20221121 17:18:19 base_page:105] Wait page status changed...
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[D 20221121 17:18:19 base_page:105] Wait page status changed...
+[D 20221121 17:18:19 base_page:109] Page status not changed
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[I 20221121 17:18:19 base_page:126] <<< Wait page loading spend time 1.264
+[D 20221121 17:18:19 base_page:44] Find Element: ('id', 'Button_Next')
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/element {"using": "css selector", "value": "[id=\"Button_Next\"]"}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/element HTTP/1.1" 200 88
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/element/98bb3299-2852-4dcf-bba2-53c713d87a99/click {"id": "98bb3299-2852-4dcf-bba2-53c713d87a99"}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/element/98bb3299-2852-4dcf-bba2-53c713d87a99/click HTTP/1.1" 200 14
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[I 20221121 17:18:19 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[D 20221121 17:18:19 base_page:105] Wait page status changed...
+[D 20221121 17:18:19 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:19 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:19 remote_connection:440] Finished Request
+[D 20221121 17:18:19 base_page:105] Wait page status changed...
+[D 20221121 17:18:20 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:20 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:20 remote_connection:440] Finished Request
+[D 20221121 17:18:20 base_page:105] Wait page status changed...
+[D 20221121 17:18:20 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:20 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:20 remote_connection:440] Finished Request
+[D 20221121 17:18:20 base_page:105] Wait page status changed...
+[D 20221121 17:18:20 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:20 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:20 remote_connection:440] Finished Request
+[D 20221121 17:18:20 base_page:105] Wait page status changed...
+[D 20221121 17:18:20 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:20 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:20 remote_connection:440] Finished Request
+[D 20221121 17:18:20 base_page:105] Wait page status changed...
+[D 20221121 17:18:21 base_page:109] Page status not changed
+[D 20221121 17:18:21 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:21 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:21 remote_connection:440] Finished Request
+[I 20221121 17:18:21 base_page:126] <<< Wait page loading spend time 1.329
+[D 20221121 17:18:26 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/timeouts {"implicit": 500}
+[D 20221121 17:18:26 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:26 remote_connection:440] Finished Request
+[D 20221121 17:18:26 remote_connection:388] POST http://127.0.0.1:61868/session/dc1dcf2b252570f340fa698ce3765efa/window/maximize {}
+[D 20221121 17:18:26 connectionpool:393] http://127.0.0.1:61868 "POST /session/dc1dcf2b252570f340fa698ce3765efa/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:18:26 remote_connection:440] Finished Request
+[D 20221121 17:18:36 remote_connection:388] POST http://127.0.0.1:62048/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--lang=zt"]}}}
+[D 20221121 17:18:36 connectionpool:205] Starting new HTTP connection (1): 127.0.0.1:62048
+[D 20221121 17:18:38 connectionpool:393] http://127.0.0.1:62048 "POST /session HTTP/1.1" 200 797
+[D 20221121 17:18:38 remote_connection:440] Finished Request
+[D 20221121 17:18:38 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/timeouts {"implicit": 500}
+[D 20221121 17:18:38 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:38 remote_connection:440] Finished Request
+[D 20221121 17:18:38 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/window/maximize {}
+[D 20221121 17:18:38 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/window/maximize HTTP/1.1" 200 52
+[D 20221121 17:18:38 remote_connection:440] Finished Request
+[I 20221121 17:18:38 base_page:36] Open URL -> http://172.17.12.33:3000/
+[D 20221121 17:18:38 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/url {"url": "http://172.17.12.33:3000/"}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/url HTTP/1.1" 200 14
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[D 20221121 17:18:41 remote_connection:388] GET http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/title {}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "GET /session/0ecf51d3365dbd33061a08111142bb4b/title HTTP/1.1" 200 20
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[D 20221121 17:18:41 base_page:50] Wait for browser title Exp: [ICAM-500], Act: [ICAM-500]
+[D 20221121 17:18:41 remote_connection:388] GET http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/title {}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "GET /session/0ecf51d3365dbd33061a08111142bb4b/title HTTP/1.1" 200 20
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[D 20221121 17:18:41 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/timeouts {"implicit": 500}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[D 20221121 17:18:41 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/window/maximize {}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[W 20221121 17:18:41 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:18:41 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[D 20221121 17:18:41 base_page:44] Find Element: ('xpath', '/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
+[D 20221121 17:18:41 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/element {"using": "xpath", "value": "/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input"}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/element HTTP/1.1" 200 88
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[D 20221121 17:18:41 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/element/134ba293-e1e2-4bfc-a827-1f174aa4e67b/click {"id": "134ba293-e1e2-4bfc-a827-1f174aa4e67b"}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/element/134ba293-e1e2-4bfc-a827-1f174aa4e67b/click HTTP/1.1" 200 14
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[I 20221121 17:18:41 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:18:41 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:41 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:41 remote_connection:440] Finished Request
+[D 20221121 17:18:41 base_page:105] Wait page status changed...
+[D 20221121 17:18:42 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:42 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:42 remote_connection:440] Finished Request
+[D 20221121 17:18:42 base_page:105] Wait page status changed...
+[D 20221121 17:18:42 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:42 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:42 remote_connection:440] Finished Request
+[D 20221121 17:18:42 base_page:105] Wait page status changed...
+[D 20221121 17:18:42 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:42 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:42 remote_connection:440] Finished Request
+[D 20221121 17:18:42 base_page:105] Wait page status changed...
+[D 20221121 17:18:42 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:42 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:42 remote_connection:440] Finished Request
+[D 20221121 17:18:42 base_page:105] Wait page status changed...
+[D 20221121 17:18:42 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:42 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:42 remote_connection:440] Finished Request
+[D 20221121 17:18:42 base_page:105] Wait page status changed...
+[D 20221121 17:18:43 base_page:109] Page status not changed
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[I 20221121 17:18:43 base_page:126] <<< Wait page loading spend time 1.255
+[D 20221121 17:18:43 base_page:44] Find Element: ('id', 'Button_Next')
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/element {"using": "css selector", "value": "[id=\"Button_Next\"]"}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/element HTTP/1.1" 200 88
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/element/a096461f-5ed6-4a57-8098-c6d3cf7b5aed/click {"id": "a096461f-5ed6-4a57-8098-c6d3cf7b5aed"}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/element/a096461f-5ed6-4a57-8098-c6d3cf7b5aed/click HTTP/1.1" 200 14
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[I 20221121 17:18:43 base_page:99] >>> Wait for page until loading...
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[D 20221121 17:18:43 base_page:105] Wait page status changed...
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[D 20221121 17:18:43 base_page:105] Wait page status changed...
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[D 20221121 17:18:43 base_page:105] Wait page status changed...
+[D 20221121 17:18:43 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:43 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:43 remote_connection:440] Finished Request
+[D 20221121 17:18:43 base_page:105] Wait page status changed...
+[D 20221121 17:18:44 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:44 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:44 remote_connection:440] Finished Request
+[D 20221121 17:18:44 base_page:105] Wait page status changed...
+[D 20221121 17:18:44 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:44 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:44 remote_connection:440] Finished Request
+[D 20221121 17:18:44 base_page:105] Wait page status changed...
+[D 20221121 17:18:44 base_page:109] Page status not changed
+[D 20221121 17:18:44 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/execute/sync {"script": "return window.document.readyState;", "args": []}
+[D 20221121 17:18:44 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/execute/sync HTTP/1.1" 200 20
+[D 20221121 17:18:44 remote_connection:440] Finished Request
+[I 20221121 17:18:44 base_page:126] <<< Wait page loading spend time 1.276
+[D 20221121 17:18:49 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/timeouts {"implicit": 500}
+[D 20221121 17:18:49 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:49 remote_connection:440] Finished Request
+[D 20221121 17:18:49 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/window/maximize {}
+[D 20221121 17:18:49 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:18:49 remote_connection:440] Finished Request
+[D 20221121 17:18:53 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/timeouts {"implicit": 500}
+[D 20221121 17:18:53 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/timeouts HTTP/1.1" 200 14
+[D 20221121 17:18:53 remote_connection:440] Finished Request
+[D 20221121 17:18:53 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/window/maximize {}
+[D 20221121 17:18:53 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/window/maximize HTTP/1.1" 200 55
+[D 20221121 17:18:53 remote_connection:440] Finished Request
+[I 20221121 17:18:57 Test_CamPage:148] List Size:153
+[D 20221121 17:19:00 base_page:44] Find Element: ('xpath', '/html/body/div/div/div[1]/img')
+[D 20221121 17:19:00 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/element {"using": "xpath", "value": "/html/body/div/div/div[1]/img"}
+[D 20221121 17:19:00 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/element HTTP/1.1" 200 88
+[D 20221121 17:19:00 remote_connection:440] Finished Request
+[D 20221121 17:19:01 Test_CamPage:160] [O][0]:Button_HomePage
+[D 20221121 17:19:06 base_page:44] Find Element: ('xpath', '/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]')
+[D 20221121 17:19:06 remote_connection:388] POST http://127.0.0.1:62048/session/0ecf51d3365dbd33061a08111142bb4b/element {"using": "xpath", "value": "/html/body/div/div/div[2]/div/div/div[1]/div/div/div/ul/li/span/span/button[1]"}
+[D 20221121 17:19:07 connectionpool:393] http://127.0.0.1:62048 "POST /session/0ecf51d3365dbd33061a08111142bb4b/element HTTP/1.1" 404 1079
+[D 20221121 17:19:07 remote_connection:440] Finished Request
+[I 20221121 17:19:54 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:19:55 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:19:55 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:19:55 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:19:56 base_page:126] <<< Wait page loading spend time 1.272
+[I 20221121 17:19:56 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:19:58 base_page:126] <<< Wait page loading spend time 1.239
+[I 20221121 17:20:11 Test_CamPage:148] List Size:153
+[I 20221121 17:20:11 Test_CamPage:160] [O][0]:Button_HomePage
+[I 20221121 17:20:12 Test_CamPage:163] [X][1]:Button_PlayPause
+[I 20221121 17:20:13 Test_CamPage:163] [X][2]:Button_Save
+[I 20221121 17:20:14 Test_CamPage:163] [X][3]:Button_DisconnectConnect
+[I 20221121 17:20:15 Test_CamPage:163] [X][4]:InputBox_FPS
+[I 20221121 17:20:16 Test_CamPage:163] [X][5]:InputBox_Focus
+[I 20221121 17:20:17 Test_CamPage:163] [X][6]:Label_CameraState
+[I 20221121 17:20:17 Test_CamPage:160] [O][7]:Tab_CameraAcq_Settings
+[I 20221121 17:20:18 Test_CamPage:163] [X][8]:Button_Popup_Window_Ok
+[I 20221121 17:20:19 Test_CamPage:163] [X][9]:Button_Popup_Window_Ok2
+[I 20221121 17:20:20 Test_CamPage:163] [X][10]:Tab_Trigger_Mode_Settings
+[I 20221121 17:20:21 Test_CamPage:163] [X][11]:Radio_HW_Trigger_Mode
+[I 20221121 17:20:22 Test_CamPage:163] [X][12]:Radio_SW_Trigger_Mode
+[I 20221121 17:20:23 Test_CamPage:163] [X][13]:Button_SW_Trigger_Trigger
+[I 20221121 17:20:24 Test_CamPage:163] [X][14]:Radio_Continuous_Mode
+[I 20221121 17:20:25 Test_CamPage:163] [X][15]:Input_Sensor_Frame_Rate
+[I 20221121 17:20:26 Test_CamPage:163] [X][16]:Tab_Focus_Settings
+[I 20221121 17:20:27 Test_CamPage:163] [X][17]:Button_ZoomIn
+[I 20221121 17:20:28 Test_CamPage:163] [X][18]:Button_ZoomOut
+[I 20221121 17:20:29 Test_CamPage:163] [X][19]:Input_Focus_Step_Distance
+[I 20221121 17:20:30 Test_CamPage:163] [X][20]:Button_Reset_to_Zero_Position
+[I 20221121 17:20:31 Test_CamPage:163] [X][21]:Tab_Lighting_Settings
+[I 20221121 17:20:32 Test_CamPage:163] [X][22]:Button_StrobeOrNot
+[I 20221121 17:20:33 Test_CamPage:163] [X][23]:Slider_Flash_LED_Mode
+[I 20221121 17:20:34 Test_CamPage:163] [X][24]:Slider_Flash_LED_Gain
+[I 20221121 17:20:35 Test_CamPage:163] [X][25]:Input_Delay
+[I 20221121 17:20:36 Test_CamPage:163] [X][26]:Input_Duration
+[I 20221121 17:20:37 Test_CamPage:163] [X][27]:Label_Flash_LED_Mode_Min
+[I 20221121 17:20:38 Test_CamPage:163] [X][28]:Label_Flash_LED_Mode_Max
+[I 20221121 17:20:39 Test_CamPage:163] [X][29]:Label_Flash_LED_Gain_Min
+[I 20221121 17:20:40 Test_CamPage:163] [X][30]:Label_Flash_LED_Gain_Max
+[I 20221121 17:20:40 Test_CamPage:160] [O][31]:Tab_Generic_Settings
+[I 20221121 17:20:41 Test_CamPage:163] [X][32]:Tab_Pixel_Format
+[I 20221121 17:20:42 Test_CamPage:163] [X][33]:Radio_GRAY8
+[I 20221121 17:20:43 Test_CamPage:163] [X][34]:Radio_YUV2
+[I 20221121 17:20:44 Test_CamPage:163] [X][35]:Tab_Image_Parameters
+[I 20221121 17:20:45 Test_CamPage:163] [X][36]:Slider_Brightness
+[I 20221121 17:20:46 Test_CamPage:163] [X][37]:Slider_Sharpness
+[I 20221121 17:20:47 Test_CamPage:163] [X][38]:Slider_Gamma
+[I 20221121 17:20:48 Test_CamPage:163] [X][39]:Slider_Contrast
+[I 20221121 17:20:50 Test_CamPage:163] [X][40]:Slider_Saturation
+[I 20221121 17:20:51 Test_CamPage:163] [X][41]:Slider_ColorHue
+[I 20221121 17:20:52 Test_CamPage:163] [X][42]:Slider_ColorSaturation
+[I 20221121 17:20:53 Test_CamPage:163] [X][43]:Slider_ColorSharpness
+[I 20221121 17:20:54 Test_CamPage:163] [X][44]:Input_Brightness
+[I 20221121 17:20:55 Test_CamPage:163] [X][45]:Input_Sharpness
+[I 20221121 17:20:56 Test_CamPage:163] [X][46]:Input_Gamma
+[I 20221121 17:20:57 Test_CamPage:163] [X][47]:Input_Contrast
+[I 20221121 17:20:58 Test_CamPage:163] [X][48]:Input_Saturation
+[I 20221121 17:20:59 Test_CamPage:163] [X][49]:Input_ColorHue
+[I 20221121 17:21:00 Test_CamPage:163] [X][50]:Input_ColorSaturation
+[I 20221121 17:21:01 Test_CamPage:163] [X][51]:Input_ColorSharpness
+[I 20221121 17:21:07 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:21:09 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:21:09 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:21:10 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:21:11 base_page:126] <<< Wait page loading spend time 1.25
+[I 20221121 17:21:11 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:21:12 base_page:126] <<< Wait page loading spend time 1.269
+[I 20221121 17:21:25 Test_CamPage:148] List Size:153
+[I 20221121 17:21:25 Test_CamPage:160] [O][0]:Button_HomePage
+[I 20221121 17:21:26 Test_CamPage:163] [X][1]:Button_PlayPause
+[I 20221121 17:21:27 Test_CamPage:163] [X][2]:Button_Save
+[I 20221121 17:21:28 Test_CamPage:163] [X][3]:Button_DisconnectConnect
+[I 20221121 17:21:29 Test_CamPage:163] [X][4]:InputBox_FPS
+[I 20221121 17:21:30 Test_CamPage:163] [X][5]:InputBox_Focus
+[I 20221121 17:21:31 Test_CamPage:163] [X][6]:Label_CameraState
+[I 20221121 17:21:31 Test_CamPage:160] [O][7]:Tab_CameraAcq_Settings
+[I 20221121 17:21:32 Test_CamPage:163] [X][8]:Button_Popup_Window_Ok
+[I 20221121 17:21:33 Test_CamPage:163] [X][9]:Button_Popup_Window_Ok2
+[I 20221121 17:21:34 Test_CamPage:163] [X][10]:Tab_Trigger_Mode_Settings
+[I 20221121 17:21:35 Test_CamPage:163] [X][11]:Radio_HW_Trigger_Mode
+[I 20221121 17:21:36 Test_CamPage:163] [X][12]:Radio_SW_Trigger_Mode
+[I 20221121 17:21:38 Test_CamPage:163] [X][13]:Button_SW_Trigger_Trigger
+[I 20221121 17:21:39 Test_CamPage:163] [X][14]:Radio_Continuous_Mode
+[I 20221121 17:21:40 Test_CamPage:163] [X][15]:Input_Sensor_Frame_Rate
+[I 20221121 17:21:41 Test_CamPage:163] [X][16]:Tab_Focus_Settings
+[I 20221121 17:21:42 Test_CamPage:163] [X][17]:Button_ZoomIn
+[I 20221121 17:21:43 Test_CamPage:163] [X][18]:Button_ZoomOut
+[I 20221121 17:21:44 Test_CamPage:163] [X][19]:Input_Focus_Step_Distance
+[I 20221121 17:21:45 Test_CamPage:163] [X][20]:Button_Reset_to_Zero_Position
+[I 20221121 17:21:46 Test_CamPage:163] [X][21]:Tab_Lighting_Settings
+[I 20221121 17:21:47 Test_CamPage:163] [X][22]:Button_StrobeOrNot
+[I 20221121 17:21:48 Test_CamPage:163] [X][23]:Slider_Flash_LED_Mode
+[I 20221121 17:21:49 Test_CamPage:163] [X][24]:Slider_Flash_LED_Gain
+[I 20221121 17:21:50 Test_CamPage:163] [X][25]:Input_Delay
+[I 20221121 17:21:51 Test_CamPage:163] [X][26]:Input_Duration
+[I 20221121 17:21:52 Test_CamPage:163] [X][27]:Label_Flash_LED_Mode_Min
+[I 20221121 17:21:53 Test_CamPage:163] [X][28]:Label_Flash_LED_Mode_Max
+[I 20221121 17:21:54 Test_CamPage:163] [X][29]:Label_Flash_LED_Gain_Min
+[I 20221121 17:21:55 Test_CamPage:163] [X][30]:Label_Flash_LED_Gain_Max
+[I 20221121 17:21:55 Test_CamPage:160] [O][31]:Tab_Generic_Settings
+[I 20221121 17:21:56 Test_CamPage:163] [X][32]:Tab_Pixel_Format
+[I 20221121 17:21:57 Test_CamPage:163] [X][33]:Radio_GRAY8
+[I 20221121 17:21:58 Test_CamPage:163] [X][34]:Radio_YUV2
+[I 20221121 17:21:59 Test_CamPage:163] [X][35]:Tab_Image_Parameters
+[I 20221121 17:22:00 Test_CamPage:163] [X][36]:Slider_Brightness
+[I 20221121 17:22:01 Test_CamPage:163] [X][37]:Slider_Sharpness
+[I 20221121 17:22:02 Test_CamPage:163] [X][38]:Slider_Gamma
+[I 20221121 17:22:03 Test_CamPage:163] [X][39]:Slider_Contrast
+[I 20221121 17:22:04 Test_CamPage:163] [X][40]:Slider_Saturation
+[I 20221121 17:22:05 Test_CamPage:163] [X][41]:Slider_ColorHue
+[I 20221121 17:22:06 Test_CamPage:163] [X][42]:Slider_ColorSaturation
+[I 20221121 17:22:07 Test_CamPage:163] [X][43]:Slider_ColorSharpness
+[I 20221121 17:22:08 Test_CamPage:163] [X][44]:Input_Brightness
+[I 20221121 17:22:09 Test_CamPage:163] [X][45]:Input_Sharpness
+[I 20221121 17:22:10 Test_CamPage:163] [X][46]:Input_Gamma
+[I 20221121 17:22:11 Test_CamPage:163] [X][47]:Input_Contrast
+[I 20221121 17:22:12 Test_CamPage:163] [X][48]:Input_Saturation
+[I 20221121 17:22:13 Test_CamPage:163] [X][49]:Input_ColorHue
+[I 20221121 17:22:14 Test_CamPage:163] [X][50]:Input_ColorSaturation
+[I 20221121 17:22:15 Test_CamPage:163] [X][51]:Input_ColorSharpness
+[I 20221121 17:22:16 Test_CamPage:163] [X][52]:Button_MirrorX
+[I 20221121 17:22:17 Test_CamPage:163] [X][53]:Label_Brightness_Min
+[I 20221121 17:22:18 Test_CamPage:163] [X][54]:Label_Brightness_Max
+[I 20221121 17:22:19 Test_CamPage:163] [X][55]:Label_Sharpness_Min
+[I 20221121 17:22:20 Test_CamPage:163] [X][56]:Label_Sharpness_Max
+[I 20221121 17:22:21 Test_CamPage:163] [X][57]:Label_Gamma_Min
+[I 20221121 17:22:23 Test_CamPage:163] [X][58]:Label_Gamma_Max
+[I 20221121 17:22:24 Test_CamPage:163] [X][59]:Tab_Auto_Exposure_Mode
+[I 20221121 17:22:25 Test_CamPage:163] [X][60]:Input_Auto_Exposure_Time
+[I 20221121 17:22:26 Test_CamPage:163] [X][61]:Switch_Auto_Exposure_Time
+[I 20221121 17:22:27 Test_CamPage:163] [X][62]:Input_Auto_Exposure_Time_Min
+[I 20221121 17:22:28 Test_CamPage:163] [X][63]:Input_Auto_Exposure_Time_Max
+[I 20221121 17:22:29 Test_CamPage:163] [X][64]:Button_Auto_Exposure_Time_Confirm
+[I 20221121 17:22:30 Test_CamPage:163] [X][65]:Button_Auto_Exposure_Time_Reset
+[I 20221121 17:22:31 Test_CamPage:163] [X][66]:Tab_Gain
+[I 20221121 17:22:32 Test_CamPage:163] [X][67]:Slider_GainLevel
+[I 20221121 17:22:33 Test_CamPage:163] [X][68]:Label_Gain_Min
+[I 20221121 17:22:34 Test_CamPage:163] [X][69]:Label_Gain_Max
+[I 20221121 17:22:35 Test_CamPage:163] [X][70]:Input_GainLevel
+[I 20221121 17:22:36 Test_CamPage:163] [X][71]:Switch_GainLevel
+[I 20221121 17:22:37 Test_CamPage:163] [X][72]:Input_GainLevel_Min
+[I 20221121 17:22:38 Test_CamPage:163] [X][73]:Input_GainLevel_Max
+[I 20221121 17:22:39 Test_CamPage:163] [X][74]:Button_GainLevel_Enable
+[I 20221121 17:22:40 Test_CamPage:163] [X][75]:Button_GainLevel_Reset
+[I 20221121 17:22:41 Test_CamPage:163] [X][76]:Tab_Auto_White_Balance
+[I 20221121 17:22:42 Test_CamPage:163] [X][77]:Switch_Auto_White_Balance
+[I 20221121 17:22:43 Test_CamPage:163] [X][78]:Radio_narrow_mode
+[I 20221121 17:22:44 Test_CamPage:163] [X][79]:Radio_wide_mode
+[I 20221121 17:22:45 Test_CamPage:163] [X][80]:Slider_White_Balance_Red
+[I 20221121 17:22:46 Test_CamPage:163] [X][81]:Input_White_Balance_Red
+[I 20221121 17:22:47 Test_CamPage:163] [X][82]:Slider_White_Balance_Green
+[I 20221121 17:22:48 Test_CamPage:163] [X][83]:Input_White_Balance_Green
+[I 20221121 17:22:49 Test_CamPage:163] [X][84]:Slider_White_Balance_Blue
+[I 20221121 17:22:50 Test_CamPage:163] [X][85]:Input_White_Balance_Blue
+[I 20221121 17:22:51 Test_CamPage:163] [X][86]:Tab_Color_Transformation
+[I 20221121 17:22:52 Test_CamPage:163] [X][87]:Switch_Color_Transformation
+[I 20221121 17:22:53 Test_CamPage:163] [X][88]:Slider_Color_Transformation00
+[I 20221121 17:22:54 Test_CamPage:163] [X][89]:Input_Color_Transformation00
+[I 20221121 17:22:55 Test_CamPage:163] [X][90]:Slider_Color_Transformation01
+[I 20221121 17:22:56 Test_CamPage:163] [X][91]:Input_Color_Transformation01
+[I 20221121 17:22:57 Test_CamPage:163] [X][92]:Slider_Color_Transformation02
+[I 20221121 17:22:58 Test_CamPage:163] [X][93]:Input_Color_Transformation02
+[I 20221121 17:22:59 Test_CamPage:163] [X][94]:Slider_Color_Transformation10
+[I 20221121 17:23:00 Test_CamPage:163] [X][95]:Input_Color_Transformation10
+[I 20221121 17:23:01 Test_CamPage:163] [X][96]:Slider_Color_Transformation11
+[I 20221121 17:23:02 Test_CamPage:163] [X][97]:Input_Color_Transformation11
+[I 20221121 17:23:03 Test_CamPage:163] [X][98]:Slider_Color_Transformation12
+[I 20221121 17:23:04 Test_CamPage:163] [X][99]:Input_Color_Transformation12
+[I 20221121 17:23:05 Test_CamPage:163] [X][100]:Slider_Color_Transformation20
+[I 20221121 17:23:06 Test_CamPage:163] [X][101]:Input_Color_Transformation20
+[I 20221121 17:23:08 Test_CamPage:163] [X][102]:Slider_Color_Transformation21
+[I 20221121 17:23:09 Test_CamPage:163] [X][103]:Input_Color_Transformation21
+[I 20221121 17:23:10 Test_CamPage:163] [X][104]:Slider_Color_Transformation22
+[I 20221121 17:23:11 Test_CamPage:163] [X][105]:Input_Color_Transformation22
+[I 20221121 17:23:11 Test_CamPage:160] [O][106]:Tab_ROI_Settings_Output_Resolution
+[I 20221121 17:23:12 Test_CamPage:163] [X][107]:Radio_1408x1080
+[I 20221121 17:23:13 Test_CamPage:163] [X][108]:Radio_1280x960
+[I 20221121 17:23:14 Test_CamPage:163] [X][109]:Radio_640x480
+[I 20221121 17:23:15 Test_CamPage:163] [X][110]:Radio_320x240
+[I 20221121 17:23:15 Test_CamPage:160] [O][111]:Tab_IO_Settings
+[I 20221121 17:23:16 Test_CamPage:163] [X][112]:Tab_DI0
+[I 20221121 17:23:17 Test_CamPage:163] [X][113]:Tab_DI1
+[I 20221121 17:23:18 Test_CamPage:163] [X][114]:Tab_DO0
+[I 20221121 17:23:19 Test_CamPage:163] [X][115]:Tab_DO0_Parameters
+[I 20221121 17:23:20 Test_CamPage:163] [X][116]:Tab_DO1
+[I 20221121 17:23:21 Test_CamPage:163] [X][117]:Tab_DO1_Parameters
+[I 20221121 17:23:22 Test_CamPage:163] [X][118]:Label_DI0_Status
+[I 20221121 17:23:23 Test_CamPage:163] [X][119]:Switch_DI0_Invert
+[I 20221121 17:23:24 Test_CamPage:163] [X][120]:Switch_DI0_Interrupt
+[I 20221121 17:23:25 Test_CamPage:163] [X][121]:Input_DI0_Debounce_Time
+[I 20221121 17:23:26 Test_CamPage:163] [X][122]:Radio_DI0_Edge_Trigger_Rising_Edge
+[I 20221121 17:23:27 Test_CamPage:163] [X][123]:Radio_DI0_Edge_Trigger_Falling_Edge
+[I 20221121 17:23:28 Test_CamPage:163] [X][124]:Radio_DI0_Edge_Trigger_Both
+[I 20221121 17:23:29 Test_CamPage:163] [X][125]:Label_DI1_Status
+[I 20221121 17:23:30 Test_CamPage:163] [X][126]:Switch_DI1_Invert
+[I 20221121 17:23:31 Test_CamPage:163] [X][127]:Switch_DI1_Interrupt
+[I 20221121 17:23:32 Test_CamPage:163] [X][128]:Input_DI1_Debounce_Time
+[I 20221121 17:23:33 Test_CamPage:163] [X][129]:Radio_DI1_Edge_Trigger_Rising_Edge
+[I 20221121 17:23:34 Test_CamPage:163] [X][130]:Radio_DI1_Edge_Trigger_Falling_Edge
+[I 20221121 17:23:35 Test_CamPage:163] [X][131]:Radio_DI1_Edge_Trigger_Both
+[I 20221121 17:23:36 Test_CamPage:163] [X][132]:Label_DO0_Status
+[I 20221121 17:23:37 Test_CamPage:163] [X][133]:Button_DO0_Output_High
+[I 20221121 17:23:38 Test_CamPage:163] [X][134]:Button_DO0_Output_Low
+[I 20221121 17:23:39 Test_CamPage:163] [X][135]:Radio_DO0_Mode_Direct_Output
+[I 20221121 17:23:40 Test_CamPage:163] [X][136]:Radio_DO0_Mode_ByPassDI0
+[I 20221121 17:23:41 Test_CamPage:163] [X][137]:Radio_DO0_Reverse_Off
+[I 20221121 17:23:42 Test_CamPage:163] [X][138]:Radio_DO0_Reverse_On
+[I 20221121 17:23:43 Test_CamPage:163] [X][139]:Input_DO0_Delay_Time
+[I 20221121 17:23:44 Test_CamPage:163] [X][140]:Label_DO1_Status
+[I 20221121 17:23:45 Test_CamPage:163] [X][141]:Button_DO1_Output_High
+[I 20221121 17:23:46 Test_CamPage:163] [X][142]:Button_DO1_Output_Low
+[I 20221121 17:23:47 Test_CamPage:163] [X][143]:Radio_DO1_Mode_Direct_Output
+[I 20221121 17:23:49 Test_CamPage:163] [X][144]:Radio_DO1_Mode_ByPassDI1
+[I 20221121 17:23:50 Test_CamPage:163] [X][145]:Radio_DO1_Reverse_Off
+[I 20221121 17:23:51 Test_CamPage:163] [X][146]:Radio_DO1_Reverse_On
+[I 20221121 17:23:52 Test_CamPage:163] [X][147]:Input_DO1_Delay_Time
+[I 20221121 17:23:52 Test_CamPage:160] [O][148]:Tab_Platform_LED
+[I 20221121 17:23:53 Test_CamPage:163] [X][149]:Switch_SYSLED
+[I 20221121 17:23:54 Test_CamPage:163] [X][150]:Radio_SYSLED_Green
+[I 20221121 17:23:55 Test_CamPage:163] [X][151]:Radio_SYSLED_Orange
+[I 20221121 17:23:56 Test_CamPage:163] [X][152]:Radio_SYSLED_Yellow
+[I 20221121 17:24:35 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:24:36 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:24:36 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:24:36 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:24:38 base_page:126] <<< Wait page loading spend time 1.248
+[I 20221121 17:24:38 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:24:39 base_page:126] <<< Wait page loading spend time 1.236
+[W 20221121 17:24:52 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 17:24:54 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:24:54 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:24:56 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:24:56 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:25:00 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 17:25:01 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:25:02 Test_CamPage:189] 按鈕與設備狀態不匹配
+[W 20221121 17:25:02 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:25:02 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:25:03 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 17:25:04 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 17:25:04 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 17:25:05 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 17:25:05 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[I 20221121 17:26:42 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:26:43 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:26:43 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:26:43 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:26:45 base_page:126] <<< Wait page loading spend time 1.228
+[I 20221121 17:26:45 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:26:46 base_page:126] <<< Wait page loading spend time 1.236
+[W 20221121 17:26:59 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 17:27:01 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:01 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:07 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 17:27:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:09 Test_CamPage:189] 按鈕與設備狀態不匹配
+[W 20221121 17:27:09 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:09 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 17:27:10 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 17:27:11 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 17:27:11 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 17:27:12 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 17:27:12 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[I 20221121 17:31:30 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:32:37 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 17:32:39 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 17:32:39 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 17:32:39 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:32:40 base_page:126] <<< Wait page loading spend time 1.245
+[I 20221121 17:32:40 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:32:41 base_page:126] <<< Wait page loading spend time 1.237
+[W 20221121 17:32:55 Detail_page_locators:21] GetElementType: found Label_CameraState elemt.
+[W 20221121 17:32:57 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:32:57 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:32:59 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:32:59 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:33:03 Detail_page_locators:21] GetElementType: found Label_CameraState elemt.
+[W 20221121 17:33:04 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:33:05 Test_CamPage:189] 按鈕與設備狀態不匹配
+[W 20221121 17:33:05 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:33:05 Detail_page_locators:21] GetElementType: found Button_PlayPause elemt.
+[W 20221121 17:33:06 Detail_page_locators:21] GetElementType: found Label_CameraState elemt.
+[W 20221121 17:33:07 Detail_page_locators:21] GetElementType: found Button_DisconnectConnect elemt.
+[W 20221121 17:33:07 Detail_page_locators:21] GetElementType: found Button_DisconnectConnect elemt.
+[W 20221121 17:33:08 Detail_page_locators:21] GetElementType: found Button_Popup_Window_Ok elemt.
+[W 20221121 17:33:08 Detail_page_locators:21] GetElementType: found Button_Popup_Window_Ok elemt.
+[I 20221121 17:36:25 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:36:27 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:36:28 base_page:126] <<< Wait page loading spend time 1.251
+[I 20221121 17:36:29 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:36:30 base_page:126] <<< Wait page loading spend time 1.244
+[W 20221121 17:36:53 Test_CamPage:189] 按鈕與設備狀態不匹配
+[I 20221121 17:37:19 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:37:21 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:37:22 base_page:126] <<< Wait page loading spend time 1.236
+[I 20221121 17:37:22 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:37:23 base_page:126] <<< Wait page loading spend time 1.252
+[I 20221121 17:39:26 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:39:28 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:39:29 base_page:126] <<< Wait page loading spend time 1.242
+[I 20221121 17:39:29 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:39:31 base_page:126] <<< Wait page loading spend time 1.283
+[I 20221121 17:41:31 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:41:33 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:41:35 base_page:126] <<< Wait page loading spend time 1.241
+[I 20221121 17:41:35 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:41:36 base_page:126] <<< Wait page loading spend time 1.242
+[I 20221121 17:42:26 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:42:28 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:42:29 base_page:126] <<< Wait page loading spend time 1.246
+[I 20221121 17:42:29 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:42:30 base_page:126] <<< Wait page loading spend time 1.242
+[I 20221121 17:48:19 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 17:48:21 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:48:22 base_page:126] <<< Wait page loading spend time 1.238
+[I 20221121 17:48:22 base_page:99] >>> Wait for page until loading...
+[I 20221121 17:48:24 base_page:126] <<< Wait page loading spend time 1.239
