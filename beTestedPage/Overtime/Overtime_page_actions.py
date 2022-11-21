@@ -33,7 +33,7 @@ Get_page
 def set_page_obj(SrcObj):
     RobotDataStore.set_env_var("OverTime_page_obj",SrcObj)
 
-def get_page_obj()->(cPage):
+def get_page_obj()->cPage:
     
     try:
         rtn_page = RobotDataStore.get_env_var("OverTime_page_obj")
@@ -42,7 +42,7 @@ def get_page_obj()->(cPage):
         return False
     
 #Launch
-def Init_page(browser_type)->(cPage):
+def Init_page(browser_type)->cPage:
     browser_map = {
         "chrome": get_chrome_driver,
        "firefox": get_firefox_driver

@@ -205,7 +205,7 @@ class BasePage:
             logging.debug('MoveUp warning.')
             return False
 
-    def GetText(self,UIInput)->(str):
+    def GetText(self,UIInput)->str:
         elemt = self.GetElementType(UIInput)
         if elemt== None:
             return False
