@@ -578,95 +578,1697 @@
 [I 20220722 10:16:11 Test_CamPage:112] [O][23]:Button_New_Project
 [I 20220722 10:16:12 Test_CamPage:112] [X][24]:Input_ProjectName
 [I 20220722 10:16:13 Test_CamPage:112] [X][25]:Input_Description
-[I 20221108 15:09:57 base_page:36] Open URL -> http://172.17.12.33:3000/
-[I 20221108 15:10:01 Test_CamPage:96] List Size:44
-[I 20221108 15:10:02 Test_CamPage:112] [X][0]:Project_radio_0
-[I 20221108 15:10:03 Test_CamPage:112] [X][1]:Project_Name_0
-[I 20221108 15:10:04 Test_CamPage:112] [X][2]:Project_Date_0
-[I 20221108 15:10:05 Test_CamPage:112] [X][3]:Project_Description_0
-[I 20221108 15:10:06 Test_CamPage:112] [X][4]:Project_StatusIcon_0
-[I 20221108 15:10:08 Test_CamPage:112] [X][5]:Delete_button_0
-[I 20221108 15:10:09 Test_CamPage:112] [X][6]:Modify_button_0
-[I 20221108 15:10:10 Test_CamPage:112] [X][7]:Disconnect_button_0
-[I 20221108 15:10:11 Test_CamPage:112] [X][8]:Button_Global_Settings
-[I 20221108 15:10:12 Test_CamPage:112] [X][9]:Tab_Device_IP_Settings
-[I 20221108 15:10:13 Test_CamPage:112] [X][10]:Radio_Static_IP
-[I 20221108 15:10:14 Test_CamPage:112] [X][11]:Radio_DHCP
-[I 20221108 15:10:15 Test_CamPage:112] [X][12]:Input_IP_Address
-[I 20221108 15:10:16 Test_CamPage:112] [X][13]:Input_Subnet_Mask
-[I 20221108 15:10:17 Test_CamPage:112] [X][14]:Button_Device_IP_Apply
-[I 20221108 15:10:18 Test_CamPage:112] [X][15]:Button_Device_IP_Cancel
-[I 20221108 15:10:19 Test_CamPage:112] [X][16]:Tab_Firmware
-[I 20221108 15:10:20 Test_CamPage:112] [X][17]:Button_Load_FW_File
-[I 20221108 15:10:21 Test_CamPage:112] [X][18]:Button_StartUpload
-[I 20221108 15:10:22 Test_CamPage:112] [X][19]:Tab_Reset
-[I 20221108 15:10:23 Test_CamPage:112] [X][20]:Button_Reboot
-[I 20221108 15:10:24 Test_CamPage:112] [X][21]:Button_Global_OK
-[I 20221108 15:10:25 Test_CamPage:112] [X][22]:Button_Global_Cancel
-[I 20221108 15:10:26 Test_CamPage:112] [X][23]:Button_New_Project
-[I 20221108 15:10:27 Test_CamPage:112] [X][24]:Input_ProjectName
-[I 20221108 15:10:28 Test_CamPage:112] [X][25]:Input_Description
-[I 20221108 15:10:29 Test_CamPage:112] [X][26]:List_Camera
-[I 20221108 15:10:30 Test_CamPage:112] [X][27]:List_Camera_Select
-[I 20221108 15:10:31 Test_CamPage:112] [X][28]:List_Output_Resolutions
-[I 20221108 15:10:32 Test_CamPage:112] [X][29]:List_Output_Resolutions_Select0
-[I 20221108 15:10:33 Test_CamPage:112] [X][30]:List_Output_Resolutions_Select1
-[I 20221108 15:10:34 Test_CamPage:112] [X][31]:List_Output_Resolutions_Select2
-[I 20221108 15:10:35 Test_CamPage:112] [X][32]:List_Output_Resolutions_Select3
-[I 20221108 15:10:36 Test_CamPage:112] [X][33]:List_Pixel_Format
-[I 20221108 15:10:37 Test_CamPage:112] [X][34]:List_Pixel_Format_Select0
-[I 20221108 15:10:38 Test_CamPage:112] [X][35]:List_Pixel_Format_Select1
-[I 20221108 15:10:39 Test_CamPage:112] [X][36]:List_Pixel_Format_Select2
-[I 20221108 15:10:40 Test_CamPage:112] [X][37]:List_Trigger_Mode
-[I 20221108 15:10:41 Test_CamPage:112] [X][38]:List_Trigger_Mode_Select0
-[I 20221108 15:10:43 Test_CamPage:112] [X][39]:List_Trigger_Mode_Select1
-[I 20221108 15:10:44 Test_CamPage:112] [X][40]:List_Trigger_Mode_Select2
-[I 20221108 15:10:45 Test_CamPage:112] [X][41]:Button_New_Project_Cancel
-[I 20221108 15:10:46 Test_CamPage:112] [X][42]:Button_New_Project_Comfirm
-[I 20221108 15:10:47 Test_CamPage:112] [X][43]:Button_Next
-[I 20221108 15:11:53 base_page:36] Open URL -> http://172.17.12.145:5000/
-[I 20221108 15:11:54 Test_CamPage:96] List Size:44
-[I 20221108 15:11:54 Test_CamPage:112] [O][0]:Project_radio_0
-[I 20221108 15:11:54 Test_CamPage:112] [O][1]:Project_Name_0
-[I 20221108 15:11:55 Test_CamPage:112] [X][2]:Project_Date_0
-[I 20221108 15:11:56 Test_CamPage:112] [X][3]:Project_Description_0
-[I 20221108 15:11:58 Test_CamPage:112] [X][4]:Project_StatusIcon_0
-[I 20221108 15:11:59 Test_CamPage:112] [X][5]:Delete_button_0
-[I 20221108 15:12:00 Test_CamPage:112] [X][6]:Modify_button_0
-[I 20221108 15:12:01 Test_CamPage:112] [X][7]:Disconnect_button_0
-[I 20221108 15:12:01 Test_CamPage:112] [O][8]:Button_Global_Settings
-[I 20221108 15:12:02 Test_CamPage:112] [X][9]:Tab_Device_IP_Settings
-[I 20221108 15:12:03 Test_CamPage:112] [X][10]:Radio_Static_IP
-[I 20221108 15:12:04 Test_CamPage:112] [X][11]:Radio_DHCP
-[I 20221108 15:12:05 Test_CamPage:112] [X][12]:Input_IP_Address
-[I 20221108 15:12:06 Test_CamPage:112] [X][13]:Input_Subnet_Mask
-[I 20221108 15:12:07 Test_CamPage:112] [X][14]:Button_Device_IP_Apply
-[I 20221108 15:12:08 Test_CamPage:112] [X][15]:Button_Device_IP_Cancel
-[I 20221108 15:12:09 Test_CamPage:112] [X][16]:Tab_Firmware
-[I 20221108 15:12:10 Test_CamPage:112] [X][17]:Button_Load_FW_File
-[I 20221108 15:12:11 Test_CamPage:112] [X][18]:Button_StartUpload
-[I 20221108 15:12:12 Test_CamPage:112] [X][19]:Tab_Reset
-[I 20221108 15:12:13 Test_CamPage:112] [X][20]:Button_Reboot
-[I 20221108 15:12:14 Test_CamPage:112] [X][21]:Button_Global_OK
-[I 20221108 15:12:15 Test_CamPage:112] [X][22]:Button_Global_Cancel
-[I 20221108 15:12:15 Test_CamPage:112] [O][23]:Button_New_Project
-[I 20221108 15:12:16 Test_CamPage:112] [X][24]:Input_ProjectName
-[I 20221108 15:12:17 Test_CamPage:112] [X][25]:Input_Description
-[I 20221108 15:12:18 Test_CamPage:112] [X][26]:List_Camera
-[I 20221108 15:12:19 Test_CamPage:112] [X][27]:List_Camera_Select
-[I 20221108 15:12:20 Test_CamPage:112] [X][28]:List_Output_Resolutions
-[I 20221108 15:12:21 Test_CamPage:112] [X][29]:List_Output_Resolutions_Select0
-[I 20221108 15:12:22 Test_CamPage:112] [X][30]:List_Output_Resolutions_Select1
-[I 20221108 15:12:23 Test_CamPage:112] [X][31]:List_Output_Resolutions_Select2
-[I 20221108 15:12:24 Test_CamPage:112] [X][32]:List_Output_Resolutions_Select3
-[I 20221108 15:12:26 Test_CamPage:112] [X][33]:List_Pixel_Format
-[I 20221108 15:12:27 Test_CamPage:112] [X][34]:List_Pixel_Format_Select0
-[I 20221108 15:12:28 Test_CamPage:112] [X][35]:List_Pixel_Format_Select1
-[I 20221108 15:12:29 Test_CamPage:112] [X][36]:List_Pixel_Format_Select2
-[I 20221108 15:12:30 Test_CamPage:112] [X][37]:List_Trigger_Mode
-[I 20221108 15:12:31 Test_CamPage:112] [X][38]:List_Trigger_Mode_Select0
-[I 20221108 15:12:32 Test_CamPage:112] [X][39]:List_Trigger_Mode_Select1
-[I 20221108 15:12:33 Test_CamPage:112] [X][40]:List_Trigger_Mode_Select2
-[I 20221108 15:12:34 Test_CamPage:112] [X][41]:Button_New_Project_Cancel
-[I 20221108 15:12:35 Test_CamPage:112] [X][42]:Button_New_Project_Comfirm
-[I 20221108 15:12:35 Test_CamPage:112] [O][43]:Button_Next
+[I 20221121 11:09:29 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 11:09:30 Test_CamPage:96] List Size:44
+[I 20221121 11:09:31 Test_CamPage:112] [X][0]:Project_radio_0
+[I 20221121 11:09:31 Test_CamPage:112] [O][1]:Project_Name_0
+[I 20221121 11:09:33 Test_CamPage:112] [X][2]:Project_Date_0
+[I 20221121 11:09:34 Test_CamPage:112] [X][3]:Project_Description_0
+[I 20221121 11:09:35 Test_CamPage:112] [X][4]:Project_StatusIcon_0
+[I 20221121 11:09:36 Test_CamPage:112] [X][5]:Delete_button_0
+[I 20221121 11:09:37 Test_CamPage:112] [X][6]:Modify_button_0
+[I 20221121 11:09:38 Test_CamPage:112] [X][7]:Disconnect_button_0
+[I 20221121 11:09:38 Test_CamPage:112] [O][8]:Button_Global_Settings
+[I 20221121 11:09:39 Test_CamPage:112] [X][9]:Tab_Device_IP_Settings
+[I 20221121 11:09:40 Test_CamPage:112] [X][10]:Radio_Static_IP
+[I 20221121 11:09:41 Test_CamPage:112] [X][11]:Radio_DHCP
+[I 20221121 11:09:42 Test_CamPage:112] [X][12]:Input_IP_Address
+[I 20221121 11:09:43 Test_CamPage:112] [X][13]:Input_Subnet_Mask
+[I 20221121 11:09:44 Test_CamPage:112] [X][14]:Button_Device_IP_Apply
+[I 20221121 11:09:45 Test_CamPage:112] [X][15]:Button_Device_IP_Cancel
+[I 20221121 11:09:46 Test_CamPage:112] [X][16]:Tab_Firmware
+[I 20221121 11:09:47 Test_CamPage:112] [X][17]:Button_Load_FW_File
+[I 20221121 11:09:48 Test_CamPage:112] [X][18]:Button_StartUpload
+[I 20221121 11:09:49 Test_CamPage:112] [X][19]:Tab_Reset
+[I 20221121 11:09:50 Test_CamPage:112] [X][20]:Button_Reboot
+[I 20221121 11:09:51 Test_CamPage:112] [X][21]:Button_Global_OK
+[I 20221121 11:09:52 Test_CamPage:112] [X][22]:Button_Global_Cancel
+[I 20221121 11:09:53 Test_CamPage:112] [X][23]:Button_New_Project
+[I 20221121 11:09:54 Test_CamPage:112] [X][24]:Input_ProjectName
+[I 20221121 11:09:55 Test_CamPage:112] [X][25]:Input_Description
+[I 20221121 11:09:56 Test_CamPage:112] [X][26]:List_Camera
+[I 20221121 11:09:57 Test_CamPage:112] [X][27]:List_Camera_Select
+[I 20221121 11:09:58 Test_CamPage:112] [X][28]:List_Output_Resolutions
+[I 20221121 11:10:00 Test_CamPage:112] [X][29]:List_Output_Resolutions_Select0
+[I 20221121 11:10:01 Test_CamPage:112] [X][30]:List_Output_Resolutions_Select1
+[I 20221121 11:10:02 Test_CamPage:112] [X][31]:List_Output_Resolutions_Select2
+[I 20221121 11:10:03 Test_CamPage:112] [X][32]:List_Output_Resolutions_Select3
+[I 20221121 11:10:04 Test_CamPage:112] [X][33]:List_Pixel_Format
+[I 20221121 11:10:05 Test_CamPage:112] [X][34]:List_Pixel_Format_Select0
+[I 20221121 11:10:06 Test_CamPage:112] [X][35]:List_Pixel_Format_Select1
+[I 20221121 11:10:07 Test_CamPage:112] [X][36]:List_Pixel_Format_Select2
+[I 20221121 11:10:08 Test_CamPage:112] [X][37]:List_Trigger_Mode
+[I 20221121 11:10:09 Test_CamPage:112] [X][38]:List_Trigger_Mode_Select0
+[I 20221121 11:10:10 Test_CamPage:112] [X][39]:List_Trigger_Mode_Select1
+[I 20221121 11:10:11 Test_CamPage:112] [X][40]:List_Trigger_Mode_Select2
+[I 20221121 11:10:12 Test_CamPage:112] [X][41]:Button_New_Project_Cancel
+[I 20221121 11:10:13 Test_CamPage:112] [X][42]:Button_New_Project_Comfirm
+[I 20221121 11:10:13 Test_CamPage:112] [O][43]:Button_Next
+[I 20221121 11:10:13 base_page:99] >>> Wait for page until loading...
+[I 20221121 11:10:15 base_page:126] <<< Wait page loading spend time 1.239
+[I 20221121 11:13:04 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 11:13:06 base_page:99] >>> Wait for page until loading...
+[I 20221121 11:13:08 base_page:126] <<< Wait page loading spend time 1.381
+[W 20221121 11:13:19 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:13:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:28 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:13:29 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:30 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:13:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:31 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:13:32 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:13:32 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:13:33 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:13:33 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:13:38 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:13:39 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:13:39 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:13:40 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:13:40 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:13:41 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 11:13:41 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 11:13:43 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:13:43 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:13:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:13:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:13:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:13:47 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:47 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:49 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:49 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:51 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:51 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:53 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:53 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:55 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:55 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:57 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:57 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:59 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:13:59 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:01 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:01 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:03 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:03 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:05 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:05 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:14:06 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:14:07 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:14:09 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:14:10 Test_CamPage:235] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:14:10 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:14:10 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:14:11 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:14:12 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:14:12 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:14:13 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:14:13 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:14:14 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:14:14 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:14:15 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:14:15 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:14:16 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:14:16 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:14:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:14:22 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:14:22 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:14:23 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:14:23 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:14:24 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 11:14:24 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 11:14:25 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:14:25 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:14:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:14:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:14:27 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:14:27 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:14:28 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:14:28 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:14:29 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:14:29 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:14:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:14:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:14:31 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:31 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:32 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:32 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:34 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:34 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:35 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:35 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:36 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:36 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:37 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:37 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:38 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:38 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:40 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:40 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:41 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:41 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:42 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:42 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:43 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:43 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:45 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:45 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:46 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:46 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:47 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:47 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:48 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:48 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:14:49 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:14:49 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[I 20221121 11:15:00 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 11:15:02 base_page:99] >>> Wait for page until loading...
+[I 20221121 11:15:03 base_page:126] <<< Wait page loading spend time 1.35
+[W 20221121 11:15:15 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:17 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:17 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:20 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:25 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:25 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:26 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:26 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:27 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:27 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:28 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:28 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:29 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:29 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:30 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:30 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:31 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:31 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:32 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:32 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:33 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:33 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:34 Test_CamPage:235] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:34 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:39 Test_CamPage:294] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:15:39 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Input_Focus_Step_Distanceis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:43 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: InputBox_Focusis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:44 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:48 Detail_page_locators:21] GetElementType: Input_Focus_Step_Distanceis be found.
+[W 20221121 11:15:49 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:49 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:50 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:50 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:51 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:51 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:52 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:52 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: InputBox_Focusis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:53 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Input_Sensor_Frame_Rateis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:57 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:58 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:15:58 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:15:58 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:58 Test_CamPage:430] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:15:58 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:15:58 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:16:01 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Radio_1280x960is be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Radio_1280x960is be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:05 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:08 Test_CamPage:478] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:08 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Radio_640x480is be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Radio_640x480is be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:13 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:16 Test_CamPage:528] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:16 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Radio_320x240is be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Radio_320x240is be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:23 Test_CamPage:578] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:23 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 11:16:27 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:27 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:27 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:27 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:27 Detail_page_locators:21] GetElementType: Input_Brightnessis be found.
+[W 20221121 11:16:27 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:27 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:30 Test_CamPage:625] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:30 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:30 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:34 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:34 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:34 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:34 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:34 Detail_page_locators:21] GetElementType: Input_Brightnessis be found.
+[W 20221121 11:16:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:37 Test_CamPage:673] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:37 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:37 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:42 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:42 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:42 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:42 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:42 Detail_page_locators:21] GetElementType: Input_Brightnessis be found.
+[W 20221121 11:16:42 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:42 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:45 Test_CamPage:721] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:45 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:45 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:49 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:49 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:49 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:49 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:49 Detail_page_locators:21] GetElementType: Input_Sharpnessis be found.
+[W 20221121 11:16:49 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:49 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:52 Test_CamPage:769] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:52 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:52 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:56 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:56 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:56 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:56 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:56 Detail_page_locators:21] GetElementType: Input_Sharpnessis be found.
+[W 20221121 11:16:56 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:56 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:59 Test_CamPage:817] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:16:59 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:16:59 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:03 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:03 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:03 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:03 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:03 Detail_page_locators:21] GetElementType: Input_Sharpnessis be found.
+[W 20221121 11:17:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:06 Test_CamPage:865] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:06 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:06 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:11 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:11 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:11 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:11 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:11 Detail_page_locators:21] GetElementType: Input_Gammais be found.
+[W 20221121 11:17:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:14 Test_CamPage:913] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:14 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:14 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:18 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:18 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:18 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:18 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:18 Detail_page_locators:21] GetElementType: Input_Gammais be found.
+[W 20221121 11:17:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:21 Test_CamPage:961] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:21 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:21 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:25 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:25 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:25 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:25 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:25 Detail_page_locators:21] GetElementType: Input_Gammais be found.
+[W 20221121 11:17:25 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:25 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:28 Test_CamPage:1009] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 11:17:28 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:28 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:32 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Label_Brightness_Minis be found.
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Label_Brightness_Maxis be found.
+[W 20221121 11:17:32 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:32 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:36 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Label_Sharpness_Minis be found.
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Label_Sharpness_Maxis be found.
+[W 20221121 11:17:36 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:36 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:41 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Label_Gamma_Minis be found.
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Label_Gamma_Maxis be found.
+[W 20221121 11:17:41 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:41 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:45 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Button_MirrorXis be found.
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Button_MirrorXis be found.
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:48 Test_CamPage:1198] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:48 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:48 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Timeis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:52 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:55 Test_CamPage:1245] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:17:55 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Timeis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:00 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:03 Test_CamPage:1292] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:03 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:07 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:07 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:07 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:07 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:07 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:07 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Timeis be found.
+[W 20221121 11:18:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:11 Test_CamPage:1339] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:11 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Switch_Auto_Exposure_Timeis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Switch_Auto_Exposure_Timeis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Time_Minis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Time_Maxis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Button_Auto_Exposure_Time_Confirmis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Button_Auto_Exposure_Time_Confirmis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:15 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:18 Test_CamPage:1391] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:18 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Switch_Auto_Exposure_Timeis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Switch_Auto_Exposure_Timeis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Time_Minis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Time_Maxis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Button_Auto_Exposure_Time_Confirmis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Button_Auto_Exposure_Time_Confirmis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:25 Test_CamPage:1441] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Button_Auto_Exposure_Time_Resetis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Button_Auto_Exposure_Time_Resetis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Time_Minis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Input_Auto_Exposure_Time_Maxis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Tab_Auto_Exposure_Modeis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:25 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:29 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:29 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:29 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:29 Detail_page_locators:24] GetElementType: Tab_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:30 Detail_page_locators:24] GetElementType: Input_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:33 Test_CamPage:1490] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:33 Detail_page_locators:24] GetElementType: Tab_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:33 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:37 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:37 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:37 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:37 Detail_page_locators:24] GetElementType: Tab_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:37 Detail_page_locators:24] GetElementType: Input_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:37 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:37 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:40 Test_CamPage:1537] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:40 Detail_page_locators:24] GetElementType: Input_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:40 Detail_page_locators:24] GetElementType: Tab_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:40 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:44 Detail_page_locators:24] GetElementType: Tab_Auto_Gain_Mode_Intensitynot found!
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Label_Gain_Minis be found.
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Label_Gain_Maxis be found.
+[W 20221121 11:18:44 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:44 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Label_Flash_LED_Mode_Minis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Label_Flash_LED_Mode_Maxis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Label_Flash_LED_Mode_Minis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Label_Flash_LED_Mode_Maxis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_Lighting_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:53 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Radio_SYSLED_Greenis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Radio_SYSLED_Greenis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:18:58 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:01 Test_CamPage:1728] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:01 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Radio_SYSLED_Orangeis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Radio_SYSLED_Orangeis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:05 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:08 Test_CamPage:1778] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:08 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Radio_SYSLED_Yellowis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Radio_SYSLED_Yellowis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:12 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:15 Test_CamPage:1827] ���s�P�]�ƪ��A���ǰt
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Switch_SYSLEDis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:15 Detail_page_locators:21] GetElementType: Tab_Platform_LEDis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:19:19 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Label_DI1_Statusis be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:20 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:24 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:24 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:24 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:25 Detail_page_locators:24] GetElementType: Tab_DI2not found!
+[W 20221121 11:19:25 Detail_page_locators:24] GetElementType: Tab_DO2not found!
+[W 20221121 11:19:25 Detail_page_locators:24] GetElementType: Tab_DO2_Parametersnot found!
+[W 20221121 11:19:25 Detail_page_locators:24] GetElementType: Button_DO2_Output_Highnot found!
+[W 20221121 11:19:26 Detail_page_locators:24] GetElementType: Label_DI2_Statusnot found!
+[W 20221121 11:19:26 Detail_page_locators:24] GetElementType: Tab_DO2_Parametersnot found!
+[W 20221121 11:19:26 Detail_page_locators:24] GetElementType: Tab_DI2not found!
+[W 20221121 11:19:26 Detail_page_locators:24] GetElementType: Tab_DO2not found!
+[W 20221121 11:19:26 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:26 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Radio_DO1_Reverse_Onis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Radio_DO1_Reverse_Onis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:19:30 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Label_DI1_Statusis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Radio_DO1_Reverse_Offis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Radio_DO1_Reverse_Offis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_DI1is be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:31 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:35 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 11:19:35 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:35 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:35 Detail_page_locators:24] GetElementType: Tab_DI2not found!
+[W 20221121 11:19:35 Detail_page_locators:24] GetElementType: Tab_DO2not found!
+[W 20221121 11:19:35 Detail_page_locators:24] GetElementType: Tab_DO2_Parametersnot found!
+[W 20221121 11:19:35 Detail_page_locators:24] GetElementType: Radio_DO2_Reverse_Onnot found!
+[W 20221121 11:19:35 Detail_page_locators:24] GetElementType: Button_DO2_Output_Highnot found!
+[W 20221121 11:19:36 Detail_page_locators:24] GetElementType: Label_DI2_Statusnot found!
+[W 20221121 11:19:36 Detail_page_locators:24] GetElementType: Radio_DO2_Reverse_Offnot found!
+[W 20221121 11:19:36 Detail_page_locators:24] GetElementType: Tab_DO2_Parametersnot found!
+[W 20221121 11:19:36 Detail_page_locators:24] GetElementType: Tab_DI2not found!
+[W 20221121 11:19:36 Detail_page_locators:24] GetElementType: Tab_DO2not found!
+[W 20221121 11:19:36 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 11:19:36 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[I 20221121 13:32:41 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:32:42 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[W 20221121 13:32:42 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[I 20221121 13:32:43 base_page:99] >>> Wait for page until loading...
+[I 20221121 13:32:44 base_page:126] <<< Wait page loading spend time 1.25
+[W 20221121 13:32:55 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:32:57 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:32:57 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:32:59 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:32:59 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[I 20221121 13:33:02 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:33:03 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[W 20221121 13:33:03 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[W 20221121 13:33:04 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[I 20221121 13:33:04 base_page:99] >>> Wait for page until loading...
+[W 20221121 13:33:05 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:33:06 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:33:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:33:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:33:07 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:33:08 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:33:08 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[I 20221121 13:33:14 base_page:126] <<< Wait page loading spend time 10.283
+[I 20221121 13:34:04 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:34:05 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[W 20221121 13:34:05 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[I 20221121 13:34:07 base_page:99] >>> Wait for page until loading...
+[I 20221121 13:34:08 base_page:126] <<< Wait page loading spend time 1.248
+[W 20221121 13:34:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:34:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:28 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:34:29 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:30 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:34:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:31 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:34:32 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:34:32 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:34:33 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:34:33 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:34:39 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:34:40 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:34:40 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:34:41 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:34:41 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:34:42 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 13:34:42 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 13:34:43 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:34:43 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:34:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:34:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:34:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:45 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:34:47 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:47 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:49 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:49 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:51 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:51 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:53 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:53 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:55 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:55 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:57 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:57 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:59 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:34:59 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:01 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:01 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:03 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:03 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:05 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:05 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:35:06 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 13:35:07 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:35:09 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:10 Test_CamPage:235] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:35:10 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:10 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:11 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:35:12 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:35:12 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:35:13 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:35:13 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:35:14 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 13:35:14 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 13:35:15 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:35:15 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:35:16 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:35:16 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:35:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:35:22 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:35:22 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:35:23 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:35:23 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:35:24 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 13:35:24 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 13:35:25 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:35:25 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:35:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:35:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:35:27 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 13:35:27 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 13:35:28 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 13:35:28 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 13:35:29 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 13:35:29 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 13:35:31 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:31 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:32 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:32 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:33 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:33 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:34 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:34 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:35 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:35 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:36 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:36 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:37 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:37 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:38 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:38 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:39 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:40 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:40 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:41 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:41 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:42 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:42 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:43 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:43 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:45 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:45 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:46 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:46 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:47 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:47 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:48 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:48 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:49 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:49 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:50 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:50 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 13:35:51 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:51 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 13:35:52 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 13:35:54 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:35:55 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:56 Test_CamPage:294] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:35:56 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:56 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:35:57 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:35:58 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:35:58 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:35:59 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:35:59 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:36:00 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 13:36:00 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 13:36:01 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:36:01 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:36:02 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:36:02 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:36:03 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 13:36:03 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 13:36:04 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 13:36:04 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 13:36:05 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 13:36:05 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 13:36:10 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:36:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:36:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:36:12 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:36:12 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:36:13 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 13:36:13 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 13:36:14 Detail_page_locators:21] GetElementType: Input_Focus_Step_Distanceis be found.
+[W 20221121 13:36:15 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 13:36:15 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 13:36:17 Detail_page_locators:21] GetElementType: InputBox_Focusis be found.
+[W 20221121 13:36:19 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:36:19 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:36:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:36:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:36:21 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 13:36:21 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 13:36:22 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:36:22 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[I 20221121 13:36:34 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:37:20 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[W 20221121 13:37:47 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[I 20221121 13:38:14 base_page:99] >>> Wait for page until loading...
+[I 20221121 13:38:32 base_page:126] <<< Wait page loading spend time 14.419
+[I 20221121 13:38:35 base_page:99] >>> Wait for page until loading...
+[I 20221121 13:38:36 base_page:126] <<< Wait page loading spend time 1.234
+[W 20221121 13:39:02 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:39:04 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:04 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:06 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:10 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:39:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:12 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:39:12 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:12 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:13 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:39:14 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:39:14 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:39:15 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:39:15 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:39:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:39:21 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:39:21 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:39:22 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:39:22 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:39:23 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 13:39:23 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 13:39:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:39:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:39:25 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:39:25 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:39:27 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:39:27 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[I 20221121 13:54:10 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:54:12 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[W 20221121 13:54:12 Project_page_locators:21] GetElementType: Project_radio_0is none.
+[I 20221121 13:54:14 base_page:99] >>> Wait for page until loading...
+[I 20221121 13:54:15 base_page:126] <<< Wait page loading spend time 1.24
+[W 20221121 13:54:27 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:54:31 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:54:31 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:54:33 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFDA3248>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:36 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFDA1388>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:38 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFDA4AC8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:41 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:54:41 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:54:43 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB23608>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:45 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFFA9848>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:47 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFFA9F48>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:52 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:54:54 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFDA4B08>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:56 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFBDFC08>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:54:58 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB23808>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:00 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:55:02 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD9F7C8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:04 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFA02E88>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:06 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFABD648>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:08 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:55:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:55:08 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:55:10 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAEB10AC8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:12 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB37D88>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:14 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB377C8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:16 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:55:18 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFABDB48>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:20 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD99C88>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:22 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD99748>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:55:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:55:26 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD9F8C8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:28 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD95EC8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:30 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD95688>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:32 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:55:32 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:55:34 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD93488>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:36 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB49348>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:38 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB49548>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:44 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:55:46 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAE4047C8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:48 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD95A48>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:50 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFD93E48>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:52 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:55:52 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:55:54 connectionpool:662] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFB378C8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:56 connectionpool:662] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFDB60C8>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[W 20221121 13:55:58 connectionpool:662] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEAFDB6B08>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/831d7287d7a0e8a2febc066e39cb0973/element
+[I 20221121 13:56:05 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:56:15 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:56:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:16 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:17 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:17 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:20 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:56:20 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:24 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:25 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:25 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:26 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:26 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:27 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:27 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:28 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:28 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:29 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:29 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:30 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:30 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:31 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:31 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:32 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:32 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:33 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:33 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:34 Test_CamPage:235] ���s�P�]�ƪ��A���ǰt
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 13:56:34 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[I 20221121 13:57:23 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 13:57:39 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 13:57:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 13:57:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[I 20221121 13:57:46 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 13:58:33 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 13:59:00 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 13:59:19 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 13:59:34 base_page:36] Open URL -> http://172.17.12.33:3000/
+[I 20221121 14:01:01 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:01:05 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:01:05 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:01:05 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:01:07 base_page:126] <<< Wait page loading spend time 1.384
+[I 20221121 14:01:07 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:01:08 base_page:126] <<< Wait page loading spend time 1.259
+[W 20221121 14:01:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:22 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:23 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:23 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:26 Test_CamPage:191] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Radio_SW_Trigger_Modeis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:30 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:31 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:31 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:32 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:32 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:33 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:33 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:34 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:34 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:35 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:35 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:36 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:36 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:37 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:37 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:38 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:38 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:39 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:39 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_SW_Trigger_Triggeris be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:40 Test_CamPage:235] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:40 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Radio_HW_Trigger_Modeis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Highis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DO1_Output_Lowis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:44 Test_CamPage:294] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1_Parametersis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_DO1is be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 14:01:44 Detail_page_locators:21] GetElementType: Tab_IO_Settingsis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Input_Focus_Step_Distanceis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:48 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: InputBox_Focusis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:49 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:54 Detail_page_locators:21] GetElementType: Input_Focus_Step_Distanceis be found.
+[W 20221121 14:01:55 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:55 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:56 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:56 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:57 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:57 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:58 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:58 Detail_page_locators:21] GetElementType: Button_ZoomInis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: InputBox_Focusis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Tab_Focus_Settingsis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:01:59 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Radio_Continuous_Modeis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Input_Sensor_Frame_Rateis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:03 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:04 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:02:04 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:04 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:04 Test_CamPage:430] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:02:04 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:04 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Tab_Trigger_Mode_Settingsis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:02:07 Detail_page_locators:21] GetElementType: Tab_CameraAcq_Settingsis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Radio_1280x960is be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Radio_1280x960is be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:11 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:14 Test_CamPage:478] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:14 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Radio_640x480is be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Radio_640x480is be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:18 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:21 Test_CamPage:528] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:21 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Radio_320x240is be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Radio_320x240is be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:26 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:29 Test_CamPage:578] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:29 Detail_page_locators:21] GetElementType: Tab_ROI_Settings_Output_Resolutionis be found.
+[W 20221121 14:02:33 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:33 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 14:02:33 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 14:02:33 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 14:02:33 Detail_page_locators:21] GetElementType: Input_Brightnessis be found.
+[W 20221121 14:02:33 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:33 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: InputBox_FPSis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:36 Test_CamPage:625] ���s�P�]�ƪ��A���ǰt
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_PlayPauseis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_DisconnectConnectis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Button_Popup_Window_Okis be found.
+[W 20221121 14:02:36 Detail_page_locators:24] GetElementType: Tab_Image_Adjustmentsnot found!
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[W 20221121 14:02:36 Detail_page_locators:21] GetElementType: Tab_Generic_Settingsis be found.
+[I 20221121 14:04:12 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:04:17 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:04:17 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:04:17 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:04:18 base_page:126] <<< Wait page loading spend time 1.236
+[I 20221121 14:04:19 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:04:20 base_page:126] <<< Wait page loading spend time 1.243
+[I 20221121 14:14:54 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:14:56 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:14:56 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:14:57 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:14:58 base_page:126] <<< Wait page loading spend time 1.246
+[W 20221121 14:15:10 Detail_page_locators:21] GetElementType: Label_CameraStateis be found.
+[I 20221121 14:18:30 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221121 14:18:32 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[W 20221121 14:18:32 Project_page_locators:22] GetElementType: Project_radio_0 found elemt 
+[I 20221121 14:18:33 base_page:99] >>> Wait for page until loading...
+[I 20221121 14:18:34 base_page:126] <<< Wait page loading spend time 1.243

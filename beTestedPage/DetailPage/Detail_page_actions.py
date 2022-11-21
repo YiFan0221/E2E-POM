@@ -49,16 +49,17 @@ def Init_page(browser_type)->(cDetailPage):
     }
     if browser_type not in browser_map:
         raise ValueError("Browser type error")
-    Detail_driver = browser_map[browser_type]()
+    Detail_driver = browser_map[browser_type]
     Detail_page_obj = cDetailPage(Detail_driver)
     set_Browser_driver(Detail_driver)
     set_page_obj(Detail_page_obj)
     return Detail_page_obj
 
-#Adapter
-#從driver植入一個物件存入RobotDataStore
+#Adapter #從driver植入一個物件存入RobotDataStore
 def setup_page():
     Detail_driver = get_Browser_driver()
     Detail_page_obj = cDetailPage(Detail_driver)
+    set_Browser_driver(Detail_driver)
     set_page_obj(Detail_page_obj)
+    return Detail_page_obj
 

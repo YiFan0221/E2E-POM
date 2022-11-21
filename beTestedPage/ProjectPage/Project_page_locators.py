@@ -17,11 +17,11 @@ class cProjectPageLocators:
         #從傳遞進來的輸入取出element並回傳
         elemt = None
         if isinstance(UIInput, str): #字串索引表檢索
-            if UIInput in self.UI_dict:
-                logging.warning('GetElementType: '+UIInput+'is none.')
+            if UIInput in self.UI_dict:                
                 elemt=self.UI_dict[UIInput].elemt
+                logging.warning('GetElementType: '+UIInput+' found elemt ')
             else:
-                print( "height not found" )
+                logging.warning('GetElementType: '+UIInput+' is none.')
                 return None
         # #運作異常 取消    
         # elif isinstance(UIInput,LocatorsObj.elemt): #element檢索
@@ -41,7 +41,7 @@ class cProjectPageLocators:
         self.UI_List.clear()
         self.UI_dict.clear()
         
-        self.Project_radio_0                 = LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr/td[1]/label/span/input')
+        self.Project_radio_0                 = LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
         self.Project_Name_0                  = LocatorsObj(self.UI_List,"Project_Name_0",EnumUIType.Label,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div/table/tbody/tr[1]/td[2]')
         self.Project_Date_0                  = LocatorsObj(self.UI_List,"Project_Date_0",EnumUIType.Label,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[3]')    
         self.Project_Description_0           = LocatorsObj(self.UI_List,"Project_Description_0",EnumUIType.Label,'/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[4]')    
