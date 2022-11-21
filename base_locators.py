@@ -44,11 +44,11 @@ RecvType = TypeVar('RecvType', str,Tuple)
 
 class LocatorsObj():
 
-    def elemt(self) -> Tuple:
+    def elemt(self) -> (Tuple):
         #回傳用來找尋元件用的Elemt
         return self.elemt
 
-    def InfoJson(self) -> json:
+    def InfoJson(self) -> (json):
         #直接回傳InfoJson本體
         return self.InfoJson
 
@@ -80,19 +80,19 @@ class LocatorsObj():
         UI_Dict.append(self)
 
     #Json中屬性的Getter 方便在加或加常用的就好~
-    def Name(self) -> str:
+    def Name(self) -> (str):
         Infodict=json.loads(self.InfoJson)
         return Infodict["Name"]
     
-    def ComponentType(self) -> str:
+    def ComponentType(self) -> (str):
         Infodict=json.loads(self.InfoJson)
         return str(Infodict["ComponentType"])
 
-    def locatorStr(self) -> str:
+    def locatorStr(self) -> (str):
         Infodict=json.loads(self.InfoJson)
         return Infodict["locatorStr"]
 
-    def LocatorsType(self) -> By:
+    def LocatorsType(self) ->(By):
         Infodict=json.loads(self.InfoJson)
         return Infodict["LocatorsType"]        
 
@@ -101,7 +101,7 @@ class LocatorsObj():
 
     
 
-    def GetElementType(self,UIInput:Generic[RecvType])->Tuple:
+    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):
         #從傳遞進來的輸入取出element並回傳
         elemt = None
         #方法1.字串索引表檢索

@@ -7,7 +7,7 @@ sys.path.append(os.getcwd())
 os.environ['CONFIG_FILE']='config.yaml'
 
 #讀檔實作
-def read_yaml_file(yaml_file: str) -> dict:
+def read_yaml_file(yaml_file: str) -> (dict):
     with open(yaml_file, "r") as steam:
         yaml_config = yaml.safe_load(steam)
     return yaml_config

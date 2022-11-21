@@ -15,7 +15,7 @@ class cProjectPage(BasePage,cProjectPageLocators):
          cProjectPageLocators.__init__(self)
 
     def get_page(self):#一定要建置後並透過物件呼叫
-        url = "http://172.17.12.33:3000/"
+        url = "http://172.17.12.145:5000/"
         self.basefunc_get_page(url)
         self.basefunc_wait_for_browser_title("ICAM-500")
         #self.wait_for_browser_title("OOXX)
@@ -36,7 +36,7 @@ class cProjectPage(BasePage,cProjectPageLocators):
 def set_page_obj(SrcObj):
     RobotDataStore.set_env_var("Project_page_obj",SrcObj)
 
-def get_page_obj()->cProjectPage:
+def get_page_obj()->(cProjectPage):
     try:
         project_page = RobotDataStore.get_env_var("Project_page_obj")        
         return project_page 
@@ -44,7 +44,7 @@ def get_page_obj()->cProjectPage:
         return False
 
 #Launch
-def Init_page(browser_type)->cProjectPage:
+def Init_page(browser_type)->(cProjectPage):
     browser_map = {
         "chrome": get_chrome_driver,
         "firefox": get_firefox_driver

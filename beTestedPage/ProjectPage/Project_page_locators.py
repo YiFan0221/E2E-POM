@@ -13,7 +13,7 @@ class cProjectPageLocators:
 
     RecvType = TypeVar('RecvType', LocatorsObj, str,Tuple)
 
-    def GetElementType(self,UIInput:Generic[RecvType])->Tuple:
+    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):
         #從傳遞進來的輸入取出element並回傳
         elemt = None
         if isinstance(UIInput, str): #字串索引表檢索
