@@ -54,13 +54,17 @@ class LocatorsObj():
         return self.InfoJson
 
     #需要多載
-    def __init__(self,UI_Dict,Name,ComponentType:EnumUIType,locatorStr,LocatorsType:By): 
+    def __init__(self,UI_Dict,Name,ComponentType:EnumUIType, LocatorsType:By  ,locatorStr=None): 
+        
+        if locatorStr is None:
+            locatorStr = Name
+        
         #關於定位器可以傳入什麼的說明
         #https://selenium-python.readthedocs.io/locating-elements.html
 
         #此函式範例:
         #(1)用X-PATH找
-        #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input',By.XPATH)
+        #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
         #(2)用ClassName找
         #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'ant-radio-input',By.CLASS_NAME)
         #(3)用id找

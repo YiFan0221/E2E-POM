@@ -3219,3 +3219,89 @@
 [I 20221122 11:13:32 base_page:126] <<< Wait page loading spend time 1.253
 [I 20221122 11:13:36 base_page:99] >>> Wait for page until loading...
 [I 20221122 11:13:38 base_page:126] <<< Wait page loading spend time 1.242
+[I 20221122 13:40:41 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:40:45 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:40:45 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:40:46 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:40:48 base_page:126] <<< Wait page loading spend time 1.264
+[I 20221122 13:41:04 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:41:05 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:41:05 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:41:06 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:41:07 base_page:126] <<< Wait page loading spend time 1.242
+[I 20221122 13:41:27 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:41:28 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:41:28 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:41:28 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:41:30 base_page:126] <<< Wait page loading spend time 1.243
+[I 20221122 13:41:47 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:41:48 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:41:48 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:41:48 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:41:50 base_page:126] <<< Wait page loading spend time 1.252
+[I 20221122 13:43:00 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:43:04 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:43:04 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:43:04 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:43:05 base_page:126] <<< Wait page loading spend time 1.283
+[W 20221122 13:43:18 base_locators:33] GetElementType: found Label_CameraState elemt.
+[W 20221122 13:43:20 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:20 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:22 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:22 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:26 base_locators:33] GetElementType: found Label_CameraState elemt.
+[W 20221122 13:43:27 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:28 Test_CamPage:189] 按鈕與設備狀態不匹配
+[W 20221122 13:43:28 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:28 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:43:29 base_locators:33] GetElementType: found Label_CameraState elemt.
+[W 20221122 13:43:30 base_locators:33] GetElementType: found Button_DisconnectConnect elemt.
+[W 20221122 13:43:30 base_locators:33] GetElementType: found Button_DisconnectConnect elemt.
+[W 20221122 13:43:31 base_locators:33] GetElementType: found Button_Popup_Window_Ok elemt.
+[W 20221122 13:43:31 base_locators:33] GetElementType: found Button_Popup_Window_Ok elemt.
+[I 20221122 13:44:06 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:45:13 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:46:15 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:47:04 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:47:18 base_page:126] <<< Wait page loading spend time 12.052
+[I 20221122 13:47:43 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:47:49 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:48:15 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:56:59 base_page:36] Open URL -> http://172.17.12.33:3000/
+[W 20221122 13:57:05 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[W 20221122 13:57:07 base_locators:33] GetElementType: found Project_radio_0 elemt.
+[I 20221122 13:57:10 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:11 base_page:126] <<< Wait page loading spend time 1.236
+[I 20221122 13:57:11 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:12 base_page:126] <<< Wait page loading spend time 1.246
+[W 20221122 13:57:25 base_locators:33] GetElementType: found Label_CameraState elemt.
+[I 20221122 13:57:25 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:27 base_page:126] <<< Wait page loading spend time 1.255
+[W 20221122 13:57:28 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:57:28 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[I 20221122 13:57:28 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:29 base_page:126] <<< Wait page loading spend time 1.253
+[W 20221122 13:57:30 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:57:30 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[I 20221122 13:57:30 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:31 base_page:126] <<< Wait page loading spend time 1.252
+[W 20221122 13:57:34 base_locators:33] GetElementType: found Label_CameraState elemt.
+[I 20221122 13:57:34 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:35 base_page:126] <<< Wait page loading spend time 1.241
+[W 20221122 13:57:35 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[I 20221122 13:57:35 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:37 base_page:126] <<< Wait page loading spend time 1.25
+[W 20221122 13:57:37 Test_CamPage:189] 按鈕與設備狀態不匹配
+[W 20221122 13:57:37 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[W 20221122 13:57:37 base_locators:33] GetElementType: found Button_PlayPause elemt.
+[I 20221122 13:57:37 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:38 base_page:126] <<< Wait page loading spend time 1.249
+[W 20221122 13:57:38 base_locators:33] GetElementType: found Label_CameraState elemt.
+[I 20221122 13:57:38 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:39 base_page:126] <<< Wait page loading spend time 1.248
+[W 20221122 13:57:39 base_locators:33] GetElementType: found Button_DisconnectConnect elemt.
+[W 20221122 13:57:39 base_locators:33] GetElementType: found Button_DisconnectConnect elemt.
+[I 20221122 13:57:39 base_page:99] >>> Wait for page until loading...
+[I 20221122 13:57:41 base_page:126] <<< Wait page loading spend time 1.262
+[W 20221122 13:57:41 base_locators:33] GetElementType: found Button_Popup_Window_Ok elemt.
+[W 20221122 13:57:41 base_locators:33] GetElementType: found Button_Popup_Window_Ok elemt.
