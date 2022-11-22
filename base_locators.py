@@ -24,22 +24,23 @@ class EnumUIType(Enum):
 global RecvType 
 RecvType = TypeVar('RecvType', str,Tuple)
   
-def GetElementType(self,UIInput):
+def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):
     #從傳遞進來的輸入取出element並回傳
     elemt = None
-    if isinstance(UIInput, str): #字串索引表檢索
+    #方法1.字串索引表檢索
+    if isinstance(UIInput, str): 
         if UIInput in self.UI_dict:
+            logging.warning('GetElementType: found '+UIInput+' elemt.') #修正記錄檔顯示文字
             elemt=self.UI_dict[UIInput].elemt
         else:
-            logging.debug('GetElementType: '+UIInput+'is none.')
-            return None            
-    ##運作異常 取消
-    #elif isinstance(UIInput,LocatorsObj.elemt): #element檢索
-    #    elemt=UIInput                
-    elif isinstance(UIInput,LocatorsObj): #定位器物件本身檢索
-        elemt=UIInput.elemt    
-    else:                
-        elemt=UIInput   
+            logging.warning('GetElementType: elemt '+UIInput+' not found!') #修正記錄檔顯示文字
+            return None
+    #方法2.LocatorsObj物件檢索
+    elif isinstance(UIInput,LocatorsObj): 
+        elemt=UIInput.elemt
+    #方法3.elemt物件本身檢索   
+    elif isinstance(UIInput,Tuple):    
+        elemt=UIInput            
     return elemt
 
 class LocatorsObj():
@@ -53,13 +54,13 @@ class LocatorsObj():
         return self.InfoJson
 
     #需要多載
-    def __init__(self,UI_Dict,Name,ComponentType:EnumUIType,locatorStr,LocatorsType:By=By.XPATH): 
+    def __init__(self,UI_Dict,Name,ComponentType:EnumUIType,locatorStr,LocatorsType:By): 
         #關於定位器可以傳入什麼的說明
         #https://selenium-python.readthedocs.io/locating-elements.html
 
         #此函式範例:
         #(1)用X-PATH找
-        #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input')
+        #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'/html/body/div/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div/table/tbody/tr[1]/td[1]/label/span/input',By.XPATH)
         #(2)用ClassName找
         #LocatorsObj(self.UI_List,"Project_radio_0",EnumUIType.Radio,'ant-radio-input',By.CLASS_NAME)
         #(3)用id找
@@ -98,26 +99,3 @@ class LocatorsObj():
         return Infodict["LocatorsType"]        
 
     #self.Infodict = json.loads(self.InfoJson) #也能用字典做搜尋
-
-
-
-    def GetElementType(self,UIInput:Generic[RecvType])->(Tuple):
-        #從傳遞進來的輸入取出element並回傳
-        elemt = None
-        #方法1.字串索引表檢索
-        if isinstance(UIInput, str): 
-            if UIInput in self.UI_dict:
-                logging.warning('GetElementType: found '+UIInput+' elemt.') #修正記錄檔顯示文字
-                elemt=self.UI_dict[UIInput].elemt
-            else:
-                logging.warning('GetElementType: elemt '+UIInput+' not found!') #修正記錄檔顯示文字
-                return None
-        #方法2.LocatorsObj物件檢索
-        elif isinstance(UIInput,LocatorsObj): 
-            elemt=UIInput.elemt
-        #方法3.elemt物件本身檢索   
-        elif isinstance(UIInput,Tuple):    
-            elemt=UIInput            
-        return elemt
-    
-  

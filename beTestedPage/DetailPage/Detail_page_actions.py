@@ -49,7 +49,7 @@ def Init_page(browser_type)->(cDetailPage):
     }
     if browser_type not in browser_map:
         raise ValueError("Browser type error")
-    Detail_driver = browser_map[browser_type]
+    Detail_driver = browser_map[browser_type]() #這邊就是要這樣寫才會載入driver
     Detail_page_obj = cDetailPage(Detail_driver)
     set_Browser_driver(Detail_driver)
     set_page_obj(Detail_page_obj)
