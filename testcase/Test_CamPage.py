@@ -135,6 +135,7 @@ import beTestedPage.DetailPage.Detail_page_actions as TargetWebAction
 CameraStatus_Playing = "Camera Status:Playing"
 CameraStatus_Paused = "Camera Status:Paused"
 CameraStatus_Connected = "Camera Status:Connected"
+CameraStatus_Disconnected = "Camera Status:Disconnected"
 
 #等待讀取 跳頁後必須執行此
 def test_WaitForLoading():
@@ -173,7 +174,7 @@ def test_PlayPause():
     
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == 'Camera Status:Connected'):
+        if(CameraState == CameraStatus_Connected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
             obj.click("Button_DisconnectConnect")
@@ -211,7 +212,7 @@ def test_SoftwareTriggerAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"): 
+        if(CameraState == CameraStatus_Connected): 
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -260,7 +261,7 @@ def test_HardwareTriggerAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -322,7 +323,7 @@ def test_SetFocusAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
         
@@ -365,7 +366,7 @@ def test_ResetFocusAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
         
@@ -410,7 +411,7 @@ def test_SetFPSAcq():
         obj.click("Tab_CameraAcq_Settings")
         obj.click("Tab_Trigger_Mode_Settings")
         obj.click("Radio_Continuous_Mode")   
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -453,7 +454,7 @@ def test_SetROI1280Acq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -502,7 +503,7 @@ def test_SetROI640Acq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -552,7 +553,7 @@ def test_SetROI320Acq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -602,7 +603,7 @@ def test_SetBrightnessMAXInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -650,7 +651,7 @@ def test_SetBrightnessMiniInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -698,7 +699,7 @@ def test_SetBrightnessAnyInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -746,7 +747,7 @@ def test_SetSharpnessMAXInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -794,7 +795,7 @@ def test_SetSharpnessMiniInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -842,7 +843,7 @@ def test_SetSharpnessAnyInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -890,7 +891,7 @@ def test_SetGammaMAXInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -938,7 +939,7 @@ def test_SetGammaMiniInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -986,7 +987,7 @@ def test_SetGammaAnyInputAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1034,7 +1035,7 @@ def test_SetBrightnessSliderAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1081,7 +1082,7 @@ def test_SetSharpnessSliderAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1128,7 +1129,7 @@ def test_SetGammaSliderAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1175,7 +1176,7 @@ def test_SetMirrorXAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1221,7 +1222,7 @@ def test_SetExposureTimeMaxAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1268,7 +1269,7 @@ def test_SetExposureTimeMinAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1315,7 +1316,7 @@ def test_SetExposureTimeAnyValueAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1362,7 +1363,7 @@ def test_SetAutoExposureAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1414,7 +1415,7 @@ def test_ResetAutoExposureAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1466,7 +1467,7 @@ def test_SetGainMinAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1513,7 +1514,7 @@ def test_SetGainMaxAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1561,7 +1562,7 @@ def test_SetGainSliderAcq():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1608,7 +1609,7 @@ def test_SetStrobeMode():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1655,7 +1656,7 @@ def test_SetStrobeGainMode():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1705,7 +1706,7 @@ def test_SetLEDColorGreen():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1755,7 +1756,7 @@ def test_SetLEDColorOrange():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1804,7 +1805,7 @@ def test_SetLEDColorYellow():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1854,7 +1855,7 @@ def test_DO0UserOutput():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1898,7 +1899,7 @@ def test_DO1UserOutput():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1942,7 +1943,7 @@ def test_DO0InvertUserOutput():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 
@@ -1988,7 +1989,7 @@ def test_DO1InvertUserOutput():
     SleepAfterGetObj()
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
 

@@ -140,7 +140,7 @@ def test_PlayPause():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
             Detail_obj.click("Button_DisconnectConnect")
@@ -179,7 +179,7 @@ def test_SoftwareTriggerAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"): 
+        if(CameraState == CameraStatus_Connected): 
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -228,7 +228,7 @@ def test_HardwareTriggerAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -290,7 +290,7 @@ def test_SetFocusAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
         
@@ -333,7 +333,7 @@ def test_ResetFocusAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
         
@@ -378,7 +378,7 @@ def test_SetFPSAcq():
         Detail_obj.click("Tab_CameraAcq_Settings")
         Detail_obj.click("Tab_Trigger_Mode_Settings")
         Detail_obj.click("Radio_Continuous_Mode")   
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -421,7 +421,7 @@ def test_SetROI1280Acq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -471,7 +471,7 @@ def test_SetROI640Acq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -521,7 +521,7 @@ def test_SetROI320Acq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == CameraStatus_Connected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -571,7 +571,7 @@ def test_SetBrightnessMAXInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -619,7 +619,7 @@ def test_SetBrightnessMiniInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -667,7 +667,7 @@ def test_SetBrightnessAnyInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -715,7 +715,7 @@ def test_SetSharpnessMAXInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -763,7 +763,7 @@ def test_SetSharpnessMiniInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -811,7 +811,7 @@ def test_SetSharpnessAnyInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -859,7 +859,7 @@ def test_SetGammaMAXInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -907,7 +907,7 @@ def test_SetGammaMiniInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -955,7 +955,7 @@ def test_SetGammaAnyInputAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1003,7 +1003,7 @@ def test_SetBrightnessSliderAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1050,7 +1050,7 @@ def test_SetSharpnessSliderAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1097,7 +1097,7 @@ def test_SetGammaSliderAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1144,7 +1144,7 @@ def test_SetMirrorXAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1190,7 +1190,7 @@ def test_SetExposureTimeMaxAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1237,7 +1237,7 @@ def test_SetExposureTimeMinAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1284,7 +1284,7 @@ def test_SetExposureTimeAnyValueAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1331,7 +1331,7 @@ def test_SetAutoExposureAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1383,7 +1383,7 @@ def test_ResetAutoExposureAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1435,7 +1435,7 @@ def test_SetGainMinAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1482,7 +1482,7 @@ def test_SetGainMaxAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1530,7 +1530,7 @@ def test_SetGainSliderAcq():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1577,7 +1577,7 @@ def test_SetStrobeMode():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1624,7 +1624,7 @@ def test_SetStrobeGainMode():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1674,7 +1674,7 @@ def test_SetLEDColorGreen():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1724,7 +1724,7 @@ def test_SetLEDColorOrange():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1773,7 +1773,7 @@ def test_SetLEDColorYellow():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1823,7 +1823,7 @@ def test_DO0UserOutput():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1865,7 +1865,7 @@ def test_DO1UserOutput():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1907,7 +1907,7 @@ def test_DO0InvertUserOutput():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
@@ -1951,7 +1951,7 @@ def test_DO1InvertUserOutput():
     time.sleep(6)
     try:   
         CameraState = Detail_obj.GetText("Label_CameraState")
-        if(CameraState == "Disconnected"):
+        if(CameraState == CameraStatus_Disconnected):
             Detail_obj.click("Button_DisconnectConnect")
             Detail_obj.click("Button_Popup_Window_Ok")
 
