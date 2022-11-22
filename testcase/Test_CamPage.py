@@ -169,7 +169,7 @@ def test_PlayPause():
     
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == "Connected"):
+        if(CameraState == 'Camera Status:Connected'):
             obj.click("Button_DisconnectConnect")
             obj.click("Button_Popup_Window_Ok")
             obj.click("Button_DisconnectConnect")
@@ -181,10 +181,10 @@ def test_PlayPause():
         ButtonState = obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(ButtonState=="Pause" and before=="Camera Status:Playing"):
+            after  =  "Camera Status:Paused"
+        elif(ButtonState=="Play" and(before=="Camera Status:Paused" or before == "Camera Status:Connected" )):
+            after  =  "Camera Status:Playing"
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
