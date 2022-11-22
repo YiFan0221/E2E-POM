@@ -96,8 +96,8 @@ class BasePage:
 
     def basefunc_wait_page_until_loading(self):
         """ Wait page until loading """
-        logging.info('>>> Wait for page until loading...')
-        wait_time = 0.2
+        logging.debug('>>> Wait for page until loading...')
+        wait_time = 0.3
         start_t = time.time()
 
         load_st_timeout = 0
@@ -105,7 +105,7 @@ class BasePage:
             logging.debug('Wait page status changed...')
             time.sleep(wait_time)
             load_st_timeout += 1
-            if load_st_timeout > 5:  # 15 times (30 * 0.2 = 10 sec)
+            if load_st_timeout > 8:  # 15 times (8 * 0.5 =4.0 sec)
                 logging.debug('Page status not changed')
                 break
         else:
@@ -113,17 +113,17 @@ class BasePage:
 
         if not self.basefunc_is_page_load_complete():
             # wait page loading after 15 sec get timeout
-            logging.info('Wait page loading...')
+            logging.debug('Wait page loading...')
             try:
                 WebDriverWait(self.driver, 60).until(lambda driver: self.basefunc_is_page_load_complete())
             except Exception:
                 raise Exception("WAIT_PAGE_LOADING_TIMEOUT")
             else:
-                logging.info('Wait page loading complete!')
+                logging.debug('Wait page loading complete!')
 
         end_t = time.time()
         elapsedtime = round((end_t - start_t), 3)
-        logging.info("<<< Wait page loading spend time %s", elapsedtime)
+        logging.debug("<<< Wait page loading spend time %s", elapsedtime)
 
 
 #==================================通用方法=========================================
@@ -160,7 +160,7 @@ class BasePage:
             self.basefunc_wait_page_until_loading()        
             return True
         except:
-            logging.debug('Click fail.')
+            logging.Info('Click fail !')
             return False
     
     def GetCalSliderMovePos(self,UI_Min,UI_Max)->(int):
