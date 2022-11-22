@@ -156,7 +156,8 @@ class BasePage:
             return False
         try:            
             elemt = self.GetElementType(UIInput)
-            self.basefunc_find_element(elemt).click()
+            logging.warning('click : ['+UIInput[1]+']')
+            self.basefunc_find_element(elemt).click()            
             self.basefunc_wait_page_until_loading()        
             return True
         except:
@@ -195,6 +196,7 @@ class BasePage:
         if elemt== None:
             return False
         try:
+            logging.warning('MoveUp : [moveposX:'+moveposX+' moveposY:'+moveposY+']['+UIInput[1]+']')
             move = ActionChains(get_Browser_driver())
             Slider = self.basefunc_find_element(elemt)            
             move.click_and_hold(Slider).move_by_offset(moveposX, moveposY).release().perform()
@@ -209,8 +211,9 @@ class BasePage:
         elemt = self.GetElementType(UIInput)
         if elemt== None:
             return False
-        try:
+        try:            
             text = self.basefunc_find_element(elemt).text
+            logging.warning('GetText : ['+text+']['+UIInput[1]+']')
             self.basefunc_wait_page_until_loading()
             return text 
         except:
@@ -228,6 +231,7 @@ class BasePage:
             return False
         try:
             text = self.basefunc_find_element(elemt).get_attribute('value')
+            logging.warning('GetInputBoxText : ['+text+']['+UIInput[1]+']')
             self.basefunc_wait_page_until_loading()
             return text
         except:
@@ -239,6 +243,7 @@ class BasePage:
         if elemt== None:
             return False
         try:           
+            logging.warning('SetInputBoxText : ['+text+']['+UIInput[1]+']')
             inputtext = self.basefunc_find_element(elemt)
             inputtext.send_keys(Keys.CONTROL+'a')
             #inputtext.send_keys(Keys.DELETE)
@@ -255,6 +260,7 @@ class BasePage:
         if elemt== None:
             return False
         try:
+            logging.warning('GetTableRows :['+UIInput[1]+']')
             rows = self.driver.find_elements_by_xpath(elemt[1]+'/tr')
             cols = self.driver.find_elements_by_xpath(elemt[1]+'/tr[1]/td')
             # rows = len(table)
@@ -268,6 +274,7 @@ class BasePage:
         if self== None:
             return False
         try:
+            logging.warning('MouseClick :[PosX:'+PosX+', PosY:'+PosY+']')
             move = ActionChains(get_Browser_driver())      
             move.move_by_offset(PosX, PosX)
             move.click().release().perform()
@@ -283,6 +290,7 @@ class BasePage:
         if elemt== None:
             return False
         try:           
+            logging.warning('SelectList :[index: '+index+'] ['+UIInput[1]+']')
             lstSelect = self.basefunc_find_element(elemt)
             lstSelect.select_by_index(index)
             

@@ -213,8 +213,8 @@ class cDetailPagelocators:
         self.Button_DO1_Output_Low                   = LocatorsObj(self.UI_List, "Button_DO1_Output_Low", EnumUIType.Button,By.ID)
         self.Radio_DO1_Mode_Direct_Output            = LocatorsObj(self.UI_List, "Radio_DO1_Mode_Direct_Output", EnumUIType.Radio,By.ID)
         self.Radio_DO1_Mode_ByPassDI1                = LocatorsObj(self.UI_List, "Radio_DO1_Mode_ByPassDI1", EnumUIType.Radio,By.ID)
-        self.Radio_DO1_Reverse_Off                   = LocatorsObj(self.UI_List, "Radio_DO1_Reverse_Off", EnumUIType.Radio,By.ID)
-        self.Radio_DO1_Reverse_On                    = LocatorsObj(self.UI_List, "Radio_DO1_Reverse_On", EnumUIType.Radio,By.ID)
+                    # self.Radio_DO1_Reverse_Off                   = LocatorsObj(self.UI_List, "Radio_DO1_Reverse_Off", EnumUIType.Radio,By.ID)
+                    # self.Radio_DO1_Reverse_On                    = LocatorsObj(self.UI_List, "Radio_DO1_Reverse_On", EnumUIType.Radio,By.ID)
         self.Input_DO1_Delay_Time                    = LocatorsObj(self.UI_List, "Input_DO1_Delay_Time", EnumUIType.Input,By.ID)
 
         self.Tab_Platform_LED                        = LocatorsObj(self.UI_List,"Tab_Platform_LED",EnumUIType.Tab,By.XPATH,'/html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div/div[1]')

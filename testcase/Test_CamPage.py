@@ -25,7 +25,7 @@ def SleepAfterGetObj():
 def SleepAfterPlayPause():
     time.sleep(3)
 def SleepWaitForMachine():
-    time.sleep(1)
+    time.sleep(2)
     
 def get_Web1Object(): #寫成單例 取得目前網頁資訊
     global obj;
@@ -83,7 +83,8 @@ logger.addHandler(fh)
 
 #region ===============================page1===============================
 def test_turnOnBrowser():    
-    obj = get_Web1Object()         
+    obj = get_Web1Object()  
+    SleepAfterPlayPause()       
     assert True  
     
 # def test_checkElemt():                
@@ -142,33 +143,76 @@ def test_WaitForLoading():
     obj = get_Web2Object()    
     TargetWebAction.set_page_obj(obj)
     
-# def test_checkElemt():     
+def test_checkElemt():     
            
-#     #依序檢查每個Elemt是否能夠找到?
-#     obj = get_Web2Object()
+    #依序檢查每個Elemt是否能夠找到?
+    obj = get_Web2Object()
 
-#     #取出Locator容器中的大小
-#     number = len(obj.UI_List)
-#     st = "List Size:"+str(number)
-#     logging.info(st)
-#     print(st)
+    #取出Locator容器中的大小
+    number = len(obj.UI_List)
+    st = "List Size:"+str(number)
+    logging.info(st)
+    print(st)
 
-#     #巡訪Locator容器所有元件
-#     for i in range(number):
-#         oLocatorsObj = obj.UI_List[i]
-#         mInfoJson=json.loads(oLocatorsObj.InfoJson) #取Json
-#         mElemt = oLocatorsObj.elemt
-#         st = "["+str(i)+"]:"+mInfoJson["Name"]    
+    obj.click(obj.Tab_CameraAcq_Settings.elemt)
+    obj.click(obj.Tab_Trigger_Mode_Settings.elemt)
+    obj.click(obj.Tab_Focus_Settings.elemt)
+    obj.click(obj.Tab_Lighting_Settings.elemt)
+    obj.click(obj.Tab_Generic_Settings.elemt)
+    obj.click(obj.Tab_Pixel_Format.elemt)
+    obj.click(obj.Tab_Image_Parameters.elemt)
+    obj.click(obj.Tab_Auto_Exposure_Mode.elemt)
+    obj.click(obj.Tab_Gain.elemt)
+    obj.click(obj.Tab_Auto_White_Balance.elemt)
+    obj.click(obj.Tab_Color_Transformation.elemt)
+    obj.click(obj.Tab_ROI_Settings_Output_Resolution.elemt)
+    obj.click(obj.Tab_IO_Settings.elemt)
+    obj.click(obj.Tab_DI0.elemt)
+    obj.click(obj.Tab_DI1.elemt)
+    obj.click(obj.Tab_DO0.elemt)
+    obj.click(obj.Tab_DO0_Parameters.elemt)
+    obj.click(obj.Tab_DO1.elemt)
+    obj.click(obj.Tab_DO1_Parameters.elemt)
+    obj.click(obj.Tab_Platform_LED.elemt)
+    #巡訪Locator容器所有元件
+    for i in range(number):
+        oLocatorsObj = obj.UI_List[i]
+        mInfoJson=json.loads(oLocatorsObj.InfoJson) #取Json
+        mElemt = oLocatorsObj.elemt
+        st = "["+str(i)+"]:"+mInfoJson["Name"]    
         
-#         if obj.check(mElemt)==True:
-#             st="[O]"+st
-#             logging.info(st)
-#         else:
-#             st="[X]"+st
-#             logging.info(st)
-
+        if obj.check(mElemt)==True:
+            st="[O]"+st
+            logging.info(st)
+        else:
+            st="[X]"+st
+            logging.info(st)
+                   
+    obj.click(obj.Tab_Platform_LED.elemt)            
+    obj.click(obj.Tab_DO1_Parameters.elemt) 
+    obj.click(obj.Tab_DO1.elemt)
+    obj.click(obj.Tab_DO0_Parameters.elemt)
+    obj.click(obj.Tab_DO0.elemt)
+    obj.click(obj.Tab_DI1.elemt)
+    obj.click(obj.Tab_DI0.elemt)
+    obj.click(obj.Tab_IO_Settings.elemt)
+    obj.click(obj.Tab_ROI_Settings_Output_Resolution.elemt)
+    obj.click(obj.Tab_Color_Transformation.elemt)
+    obj.click(obj.Tab_Auto_White_Balance.elemt)
+    obj.click(obj.Tab_Gain.elemt)
+    obj.click(obj.Tab_Auto_Exposure_Mode.elemt)
+    obj.click(obj.Tab_Image_Parameters.elemt)
+    obj.click(obj.Tab_Pixel_Format.elemt)
+    obj.click(obj.Tab_Generic_Settings.elemt)
+    obj.click(obj.Tab_Lighting_Settings.elemt)
+    obj.click(obj.Tab_Focus_Settings.elemt)
+    obj.click(obj.Tab_Trigger_Mode_Settings.elemt)
+    obj.click(obj.Tab_CameraAcq_Settings.elemt)
+    
+    assert True
 #切換播放/暫停
 #點擊按鈕後再次抓取狀態比對得知是否切換成功
+
 def test_PlayPause():   
     obj = get_Web2Object()    
     
@@ -176,8 +220,11 @@ def test_PlayPause():
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected):
             obj.click("Button_DisconnectConnect")
+            SleepWaitForMachine()
             obj.click("Button_Popup_Window_Ok")
+            SleepWaitForMachine()
             obj.click("Button_DisconnectConnect")
+            SleepWaitForMachine()
             obj.click("Button_Popup_Window_Ok")
         
         obj.retry(2,obj.click,str("Button_PlayPause") )
@@ -740,149 +787,149 @@ def test_SetBrightnessAnyInputAcq():
         obj.click("Tab_Image_Adjustments")
         obj.click("Tab_Generic_Settings")
 
-def test_SetSharpnessMAXInputAcq():
-    obj = get_Web2Object()
+# def test_SetSharpnessMAXInputAcq(): #此元件從介面取消  
+#     obj = get_Web2Object()
     
     
-    SleepAfterGetObj()
-    try:   
-        CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+#     SleepAfterGetObj()
+#     try:   
+#         CameraState = obj.GetText("Label_CameraState")
+#         if(CameraState == CameraStatus_Disconnected):
+#             obj.click("Button_DisconnectConnect")
+#             obj.click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
-        obj.SetInputBoxText("Input_Sharpness","100")
+#         obj.click("Tab_Generic_Settings")
+#         obj.click("Tab_Image_Adjustments")
+#         # obj.SetInputBoxText("Input_Sharpness","100") #此元件從介面取消   
       
-        obj.click("Button_PlayPause")
+#         obj.click("Button_PlayPause")
 
-        SleepAfterPlayPause()
+#         SleepAfterPlayPause()
                 
-        fpsText = obj.GetInputBoxText("InputBox_FPS")   
-        CameraState = obj.GetText("Label_CameraState")        
-        ButtonState = obj.GetText("Button_PlayPause")
-        before = CameraState
-        after  = ''
-        if(before==CameraStatus_Playing and ButtonState=="Pause"):
-            after  =  CameraStatus_Paused
-        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
-            after  =  CameraStatus_Playing
-        else:
-            logging.warning("按鈕與設備狀態不匹配")
+#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
+#         CameraState = obj.GetText("Label_CameraState")        
+#         ButtonState = obj.GetText("Button_PlayPause")
+#         before = CameraState
+#         after  = ''
+#         if(before==CameraStatus_Playing and ButtonState=="Pause"):
+#             after  =  CameraStatus_Paused
+#         elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+#             after  =  CameraStatus_Playing
+#         else:
+#             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+#         obj.click("Button_PlayPause")  
   
-        result = obj.GetText("Label_CameraState")
+#         result = obj.GetText("Label_CameraState")
         
-        if( after == result and fpsText != '' ):
-            logging.info( "FPS:" + fpsText )
-            assert True
-        else:
-            assert False,Exception("result different")                
-    except Exception:
-        assert False        
-    finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+#         if( after == result and fpsText != '' ):
+#             logging.info( "FPS:" + fpsText )
+#             assert True
+#         else:
+#             assert False,Exception("result different")                
+#     except Exception:
+#         assert False        
+#     finally:
+#         obj.click("Button_DisconnectConnect")
+#         obj.click("Button_Popup_Window_Ok")
+#         obj.click("Tab_Image_Adjustments")
+#         obj.click("Tab_Generic_Settings")
 
-def test_SetSharpnessMiniInputAcq():
-    obj = get_Web2Object()
+# def test_SetSharpnessMiniInputAcq(): #此元件從介面取消   
+#     obj = get_Web2Object()
     
     
-    SleepAfterGetObj()
-    try:   
-        CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+#     SleepAfterGetObj()
+#     try:   
+#         CameraState = obj.GetText("Label_CameraState")
+#         if(CameraState == CameraStatus_Disconnected):
+#             obj.click("Button_DisconnectConnect")
+#             obj.click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
-        obj.SetInputBoxText("Input_Sharpness","0")
+#         obj.click("Tab_Generic_Settings")
+#         obj.click("Tab_Image_Adjustments")
+#         # obj.SetInputBoxText("Input_Sharpness","0") #此元件從介面取消   
       
-        obj.click("Button_PlayPause")
+#         obj.click("Button_PlayPause")
 
-        SleepAfterPlayPause()
+#         SleepAfterPlayPause()
                 
-        fpsText = obj.GetInputBoxText("InputBox_FPS")   
-        CameraState = obj.GetText("Label_CameraState")        
-        ButtonState = obj.GetText("Button_PlayPause")
-        before = CameraState
-        after  = ''
-        if(before==CameraStatus_Playing and ButtonState=="Pause"):
-            after  =  CameraStatus_Paused
-        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
-            after  =  CameraStatus_Playing
-        else:
-            logging.warning("按鈕與設備狀態不匹配")
+#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
+#         CameraState = obj.GetText("Label_CameraState")        
+#         ButtonState = obj.GetText("Button_PlayPause")
+#         before = CameraState
+#         after  = ''
+#         if(before==CameraStatus_Playing and ButtonState=="Pause"):
+#             after  =  CameraStatus_Paused
+#         elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+#             after  =  CameraStatus_Playing
+#         else:
+#             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+#         obj.click("Button_PlayPause")  
   
-        result = obj.GetText("Label_CameraState")
+#         result = obj.GetText("Label_CameraState")
         
-        if( after == result and fpsText != '' ):
-            logging.info( "FPS:" + fpsText )
-            assert True
-        else:
-            assert False,Exception("result different")                
-    except Exception:
-        assert False        
-    finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+#         if( after == result and fpsText != '' ):
+#             logging.info( "FPS:" + fpsText )
+#             assert True
+#         else:
+#             assert False,Exception("result different")                
+#     except Exception:
+#         assert False        
+#     finally:
+#         obj.click("Button_DisconnectConnect")
+#         obj.click("Button_Popup_Window_Ok")
+#         obj.click("Tab_Image_Adjustments")
+#         obj.click("Tab_Generic_Settings")
 
-def test_SetSharpnessAnyInputAcq():
-    obj = get_Web2Object()
+# def test_SetSharpnessAnyInputAcq(): #此元件從介面取消  
+#     obj = get_Web2Object()
     
     
-    SleepAfterGetObj()
-    try:   
-        CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+#     SleepAfterGetObj()
+#     try:   
+#         CameraState = obj.GetText("Label_CameraState")
+#         if(CameraState == CameraStatus_Disconnected):
+#             obj.click("Button_DisconnectConnect")
+#             obj.click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
-        obj.SetInputBoxText("Input_Sharpness","75")
+#         obj.click("Tab_Generic_Settings")
+#         obj.click("Tab_Image_Adjustments")
+#         # obj.SetInputBoxText("Input_Sharpness","75") #此元件從介面取消   
       
-        obj.click("Button_PlayPause")
+#         obj.click("Button_PlayPause")
 
-        SleepAfterPlayPause()
+#         SleepAfterPlayPause()
                 
-        fpsText = obj.GetInputBoxText("InputBox_FPS")   
-        CameraState = obj.GetText("Label_CameraState")        
-        ButtonState = obj.GetText("Button_PlayPause")
-        before = CameraState
-        after  = ''
-        if(before==CameraStatus_Playing and ButtonState=="Pause"):
-            after  =  CameraStatus_Paused
-        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
-            after  =  CameraStatus_Playing
-        else:
-            logging.warning("按鈕與設備狀態不匹配")
+#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
+#         CameraState = obj.GetText("Label_CameraState")        
+#         ButtonState = obj.GetText("Button_PlayPause")
+#         before = CameraState
+#         after  = ''
+#         if(before==CameraStatus_Playing and ButtonState=="Pause"):
+#             after  =  CameraStatus_Paused
+#         elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+#             after  =  CameraStatus_Playing
+#         else:
+#             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+#         obj.click("Button_PlayPause")  
   
-        result = obj.GetText("Label_CameraState")
+#         result = obj.GetText("Label_CameraState")
         
-        if( after == result and fpsText != '' ):
-            logging.info( "FPS:" + fpsText )
-            assert True
-        else:
-            assert False,Exception("result different")                
-    except Exception:
-        assert False        
-    finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+#         if( after == result and fpsText != '' ):
+#             logging.info( "FPS:" + fpsText )
+#             assert True
+#         else:
+#             assert False,Exception("result different")                
+#     except Exception:
+#         assert False        
+#     finally:
+#         obj.click("Button_DisconnectConnect")
+#         obj.click("Button_Popup_Window_Ok")
+#         obj.click("Tab_Image_Adjustments")
+#         obj.click("Tab_Generic_Settings")
 
 def test_SetGammaMAXInputAcq():
     obj = get_Web2Object()
@@ -1075,52 +1122,52 @@ def test_SetBrightnessSliderAcq():
         obj.click("Tab_Image_Adjustments")
         obj.click("Tab_Generic_Settings")
 
-def test_SetSharpnessSliderAcq():
-    obj = get_Web2Object()
+# def test_SetSharpnessSliderAcq(): #此元件從介面取消  
+#     obj = get_Web2Object()
     
     
-    SleepAfterGetObj()
-    try:   
-        CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+#     SleepAfterGetObj()
+#     try:   
+#         CameraState = obj.GetText("Label_CameraState")
+#         if(CameraState == CameraStatus_Disconnected):
+#             obj.click("Button_DisconnectConnect")
+#             obj.click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
-        movePos = obj.GetCalSliderMovePos("Label_Sharpness_Min","Label_Sharpness_Max")
-        obj.MoveUp("Slider_Sharpness",movePos*50,0)        
+#         obj.click("Tab_Generic_Settings")
+#         obj.click("Tab_Image_Adjustments")
+#         # movePos = obj.GetCalSliderMovePos("Label_Sharpness_Min","Label_Sharpness_Max") #此元件從介面取消 
+#         # obj.MoveUp("Slider_Sharpness",movePos*50,0) #此元件從介面取消       
       
-        obj.click("Button_PlayPause")
+#         obj.click("Button_PlayPause")
 
-        SleepAfterPlayPause()
+#         SleepAfterPlayPause()
                 
-        fpsText = obj.GetInputBoxText("InputBox_FPS")   
-        CameraState = obj.GetText("Label_CameraState")        
-        ButtonState = obj.GetText("Button_PlayPause")
-        before = CameraState
-        after  = ''
-        if(before==CameraStatus_Playing and ButtonState=="Pause"):
-            after  =  CameraStatus_Paused
-        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
-            after  =  CameraStatus_Playing
-        else:
-            logging.warning("按鈕與設備狀態不匹配")
+#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
+#         CameraState = obj.GetText("Label_CameraState")        
+#         ButtonState = obj.GetText("Button_PlayPause")
+#         before = CameraState
+#         after  = ''
+#         if(before==CameraStatus_Playing and ButtonState=="Pause"):
+#             after  =  CameraStatus_Paused
+#         elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+#             after  =  CameraStatus_Playing
+#         else:
+#             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+#         obj.click("Button_PlayPause")  
   
-        result = obj.GetText("Label_CameraState")
+#         result = obj.GetText("Label_CameraState")
         
-        if( after == result and fpsText != '' ):
-            logging.info( "FPS:" + fpsText )
-            assert True
-        else:
-            assert False,Exception("result different")                
-    except Exception:
-        assert False        
-    finally:
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+#         if( after == result and fpsText != '' ):
+#             logging.info( "FPS:" + fpsText )
+#             assert True
+#         else:
+#             assert False,Exception("result different")                
+#     except Exception:
+#         assert False        
+#     finally:
+#         obj.click("Tab_Image_Adjustments")
+#         obj.click("Tab_Generic_Settings")
 
 def test_SetGammaSliderAcq():
     obj = get_Web2Object()
@@ -1408,57 +1455,57 @@ def test_SetAutoExposureAcq():
         obj.click("Tab_Auto_Exposure_Mode")
         obj.click("Tab_Generic_Settings")
 
-def test_ResetAutoExposureAcq():
-    obj = get_Web2Object()
+# def test_ResetAutoExposureAcq(): #此元件從介面取消  
+#     obj = get_Web2Object()
     
     
-    SleepAfterGetObj()
-    try:   
-        CameraState = obj.GetText("Label_CameraState")
-        if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+#     SleepAfterGetObj()
+#     try:   
+#         CameraState = obj.GetText("Label_CameraState")
+#         if(CameraState == CameraStatus_Disconnected):
+#             obj.click("Button_DisconnectConnect")
+#             obj.click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Switch_Auto_Exposure_Time") 
-        setAEMinValue = "3000"
-        setAEMaxValue = "6000"
-        obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
-        obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)  
-        obj.click("Button_Auto_Exposure_Time_Confirm")      
-        obj.click("Button_PlayPause")
+#         obj.click("Tab_Generic_Settings")
+#         obj.click("Tab_Auto_Exposure_Mode")
+#         obj.click("Switch_Auto_Exposure_Time") 
+#         setAEMinValue = "3000"
+#         setAEMaxValue = "6000"
+#         obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
+#         obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)  
+#         obj.click("Button_Auto_Exposure_Time_Confirm")      
+#         obj.click("Button_PlayPause")
 
-        SleepAfterPlayPause()
+#         SleepAfterPlayPause()
                 
-        fpsText = obj.GetInputBoxText("InputBox_FPS")   
-        CameraState = obj.GetText("Label_CameraState")        
-        ButtonState = obj.GetText("Button_PlayPause")
-        before = CameraState
-        after  = ''
-        if(before==CameraStatus_Playing and ButtonState=="Pause"):
-            after  =  CameraStatus_Paused
-        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
-            after  =  CameraStatus_Playing
-        else:
-            logging.warning("按鈕與設備狀態不匹配")
-        obj.click("Button_Auto_Exposure_Time_Reset")
-        minText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Min")
-        maxText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Max")
-        obj.click("Button_PlayPause")  
+#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
+#         CameraState = obj.GetText("Label_CameraState")        
+#         ButtonState = obj.GetText("Button_PlayPause")
+#         before = CameraState
+#         after  = ''
+#         if(before==CameraStatus_Playing and ButtonState=="Pause"):
+#             after  =  CameraStatus_Paused
+#         elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+#             after  =  CameraStatus_Playing
+#         else:
+#             logging.warning("按鈕與設備狀態不匹配")
+#         # obj.click("Button_Auto_Exposure_Time_Reset") #此元件從介面取消   
+#         minText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Min")
+#         maxText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Max")
+#         obj.click("Button_PlayPause")  
   
-        result = obj.GetText("Label_CameraState")
+#         result = obj.GetText("Label_CameraState")
         
-        if( after == result and minText == "50" and maxText == "10000" ):
-            logging.info( "FPS:" + fpsText )
-            assert True
-        else:
-            assert False,Exception("result different")                
-    except Exception:
-        assert False        
-    finally:
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Tab_Generic_Settings")
+#         if( after == result and minText == "50" and maxText == "10000" ):
+#             logging.info( "FPS:" + fpsText )
+#             assert True
+#         else:
+#             assert False,Exception("result different")                
+#     except Exception:
+#         assert False        
+#     finally:
+#         obj.click("Tab_Auto_Exposure_Mode")
+#         obj.click("Tab_Generic_Settings")
 
 def test_SetGainMinAcq():
     obj = get_Web2Object()
@@ -1976,7 +2023,7 @@ def test_DO0InvertUserOutput():
     except Exception:
         assert False        
     finally:
-        obj.click("Radio_DO1_Reverse_Off")
+        # obj.click("Radio_DO1_Reverse_Off")#此元件從介面取消   
         obj.click("Tab_DO1_Parameters")
         obj.click("Tab_DI1")
         obj.click("Tab_DO1")
