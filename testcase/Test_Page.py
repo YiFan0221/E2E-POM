@@ -152,10 +152,10 @@ def test_PlayPause():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -197,10 +197,10 @@ def test_SoftwareTriggerAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -256,10 +256,10 @@ def test_HardwareTriggerAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -392,10 +392,10 @@ def test_SetFPSAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -441,10 +441,10 @@ def test_SetROI1280Acq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -491,10 +491,10 @@ def test_SetROI640Acq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -541,10 +541,10 @@ def test_SetROI320Acq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -588,10 +588,10 @@ def test_SetBrightnessMAXInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -636,10 +636,10 @@ def test_SetBrightnessMiniInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -684,10 +684,10 @@ def test_SetBrightnessAnyInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -732,10 +732,10 @@ def test_SetSharpnessMAXInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -780,10 +780,10 @@ def test_SetSharpnessMiniInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -828,10 +828,10 @@ def test_SetSharpnessAnyInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -876,10 +876,10 @@ def test_SetGammaMAXInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -924,10 +924,10 @@ def test_SetGammaMiniInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -972,10 +972,10 @@ def test_SetGammaAnyInputAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1021,10 +1021,10 @@ def test_SetBrightnessSliderAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1068,10 +1068,10 @@ def test_SetSharpnessSliderAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1115,10 +1115,10 @@ def test_SetGammaSliderAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1161,10 +1161,10 @@ def test_SetMirrorXAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1208,10 +1208,10 @@ def test_SetExposureTimeMaxAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1255,10 +1255,10 @@ def test_SetExposureTimeMinAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1302,10 +1302,10 @@ def test_SetExposureTimeAnyValueAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1354,10 +1354,10 @@ def test_SetAutoExposureAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1404,10 +1404,10 @@ def test_ResetAutoExposureAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
         Detail_obj.click("Button_Auto_Exposure_Time_Reset")
@@ -1453,10 +1453,10 @@ def test_SetGainMinAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1500,10 +1500,10 @@ def test_SetGainMaxAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1548,10 +1548,10 @@ def test_SetGainSliderAcq():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1595,10 +1595,10 @@ def test_SetStrobeMode():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1644,10 +1644,10 @@ def test_SetStrobeGainMode():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1691,10 +1691,10 @@ def test_SetLEDColorGreen():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1741,10 +1741,10 @@ def test_SetLEDColorOrange():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -1790,10 +1790,10 @@ def test_SetLEDColorYellow():
         ButtonState = Detail_obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if("Playing"==before and ButtonState=="Pause"):
-            after  =  "Paused"
-        elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-            after  =  "Playing"
+        if(before==CameraStatus_playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 

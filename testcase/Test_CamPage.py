@@ -132,6 +132,10 @@ def test_ClicktoNextPage():
 import beTestedPage.DetailPage.Detail_page_actions as TargetWebAction
 #region ===============================page2===============================
 
+CameraStatus_Playing = "Camera Status:Playing"
+CameraStatus_Paused = "Camera Status:Paused"
+CameraStatus_Connected = "Camera Status:Connected"
+
 #等待讀取 跳頁後必須執行此
 def test_WaitForLoading():
     obj = get_Web2Object()    
@@ -181,10 +185,10 @@ def test_PlayPause():
         ButtonState = obj.GetText("Button_PlayPause")
         before = CameraState
         after  = ''
-        if(ButtonState=="Pause" and before=="Camera Status:Playing"):
-            after  =  "Camera Status:Paused"
-        elif(ButtonState=="Play" and(before=="Camera Status:Paused" or before == "Camera Status:Connected" )):
-            after  =  "Camera Status:Playing"
+        if(ButtonState=="Pause" and before==CameraStatus_Playing):
+            after  =  CameraStatus_Paused
+        elif(ButtonState=="Play" and(before==CameraStatus_Paused or before==CameraStatus_Connected )):
+            after  =  CameraStatus_Playing
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
@@ -201,1823 +205,1823 @@ def test_PlayPause():
         obj.click("Button_Popup_Window_Ok")
         TargetWebAction.set_page_obj(obj)
 
-# #Softtrigger Acquisition 
-# def test_SoftwareTriggerAcq():
-#     obj = get_Web2Object()
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Connected"): 
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+#Softtrigger Acquisition 
+def test_SoftwareTriggerAcq():
+    obj = get_Web2Object()
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Connected"): 
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Trigger_Mode_Settings")
-#         obj.click("Radio_SW_Trigger_Mode")
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Trigger_Mode_Settings")
+        obj.click("Radio_SW_Trigger_Mode")
 
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Button_PlayPause")
-#         obj.retry(10, obj.click,str("Button_SW_Trigger_Trigger"))
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Button_PlayPause")
+        obj.retry(10, obj.click,str("Button_SW_Trigger_Trigger"))
 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")  
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")  
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
     
-#         obj.click("Button_PlayPause")  
-#         result = obj.GetText("Label_CameraState")
+        obj.click("Button_PlayPause")  
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Radio_Continuous_Mode")
-#         obj.click("Tab_Trigger_Mode_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Radio_Continuous_Mode")
+        obj.click("Tab_Trigger_Mode_Settings")
+        obj.click("Tab_CameraAcq_Settings")
 
-# #Hardware Trigger
-# def test_HardwareTriggerAcq(): 
-#     obj = get_Web2Object()
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Connected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+#Hardware Trigger
+def test_HardwareTriggerAcq(): 
+    obj = get_Web2Object()
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Connected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Trigger_Mode_Settings")
-#         obj.click("Radio_HW_Trigger_Mode")
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Trigger_Mode_Settings")
+        obj.click("Radio_HW_Trigger_Mode")
 
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_IO_Settings")
-#         obj.click("Tab_DO1")
-#         obj.click("Tab_DO1_Parameters")
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_IO_Settings")
+        obj.click("Tab_DO1")
+        obj.click("Tab_DO1_Parameters")
         
 
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         times = 10
-#         for i in range(times):
-#             obj.click("Button_DO1_Output_High")
-#             obj.click("Button_DO1_Output_Low")       
+        times = 10
+        for i in range(times):
+            obj.click("Button_DO1_Output_High")
+            obj.click("Button_DO1_Output_Low")       
         
         
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Radio_Continuous_Mode")
-#         obj.click("Tab_Trigger_Mode_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_DO1_Parameters")
-#         obj.click("Tab_DO1")
-#         obj.click("Tab_IO_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Radio_Continuous_Mode")
+        obj.click("Tab_Trigger_Mode_Settings")
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_DO1_Parameters")
+        obj.click("Tab_DO1")
+        obj.click("Tab_IO_Settings")
 
-# #Set Focus Acquisition
-# def test_SetFocusAcq(): 
-#     obj = get_Web2Object()
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+#Set Focus Acquisition
+def test_SetFocusAcq(): 
+    obj = get_Web2Object()
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
         
-#         obj.click("Button_PlayPause")
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Focus_Settings")
-#         obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
-#         obj.click("Button_ZoomIn")
-#         SleepWaitForMachine()
+        obj.click("Button_PlayPause")
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Focus_Settings")
+        obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
+        obj.click("Button_ZoomIn")
+        SleepWaitForMachine()
 
-#         focusText = obj.GetInputBoxText("InputBox_Focus") 
-#         if( focusText == "300" ):
-#             logging.info( "Focus:" + focusText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")      
+        focusText = obj.GetInputBoxText("InputBox_Focus") 
+        if( focusText == "300" ):
+            logging.info( "Focus:" + focusText )
+            assert True
+        else:
+            assert False,Exception("result different")      
 
-#         obj.click("Button_ZoomOut")
-#         SleepWaitForMachine()
+        obj.click("Button_ZoomOut")
+        SleepWaitForMachine()
 
-#         focusText = obj.GetInputBoxText("InputBox_Focus") 
-#         if( focusText == "0" ):
-#             logging.info( "Focus:" + focusText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")      
+        focusText = obj.GetInputBoxText("InputBox_Focus") 
+        if( focusText == "0" ):
+            logging.info( "Focus:" + focusText )
+            assert True
+        else:
+            assert False,Exception("result different")      
 
-#         obj.click("Button_PlayPause")  
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Focus_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
+        obj.click("Button_PlayPause")  
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Focus_Settings")
+        obj.click("Tab_CameraAcq_Settings")
 
-# #Reset Focus Acquisition
-# def test_ResetFocusAcq(): 
-#     obj = get_Web2Object()
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+#Reset Focus Acquisition
+def test_ResetFocusAcq(): 
+    obj = get_Web2Object()
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
         
-#         obj.click("Button_PlayPause")
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Focus_Settings")
-#         obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
-#         obj.retry(4,obj.click,str("Button_ZoomIn") )        
-#         SleepWaitForMachine()
+        obj.click("Button_PlayPause")
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Focus_Settings")
+        obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
+        obj.retry(4,obj.click,str("Button_ZoomIn") )        
+        SleepWaitForMachine()
 
-#         focusText = obj.GetInputBoxText("InputBox_Focus") 
-#         if( focusText == "1200" ):
-#             logging.info( "Focus:" + focusText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")      
+        focusText = obj.GetInputBoxText("InputBox_Focus") 
+        if( focusText == "1200" ):
+            logging.info( "Focus:" + focusText )
+            assert True
+        else:
+            assert False,Exception("result different")      
 
-#         obj.click("Button_Reset_to_Zero_Position")
-#         SleepWaitForMachine()
-#         focusText = obj.GetInputBoxText("InputBox_Focus") 
-#         if( focusText == "0" ):
-#             logging.info( "Focus:" + focusText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")  
-#         obj.click("Button_PlayPause")  
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Focus_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
+        obj.click("Button_Reset_to_Zero_Position")
+        SleepWaitForMachine()
+        focusText = obj.GetInputBoxText("InputBox_Focus") 
+        if( focusText == "0" ):
+            logging.info( "Focus:" + focusText )
+            assert True
+        else:
+            assert False,Exception("result different")  
+        obj.click("Button_PlayPause")  
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Focus_Settings")
+        obj.click("Tab_CameraAcq_Settings")
 
-# #Set FPS and Acquisition
-# def test_SetFPSAcq():
-#     obj = get_Web2Object()
-#     SleepAfterGetObj()
+#Set FPS and Acquisition
+def test_SetFPSAcq():
+    obj = get_Web2Object()
+    SleepAfterGetObj()
 
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Trigger_Mode_Settings")
-#         obj.click("Radio_Continuous_Mode")   
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Trigger_Mode_Settings")
+        obj.click("Radio_Continuous_Mode")   
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         setFPSValue = "10"
-#         obj.SetInputBoxText("Input_Sensor_Frame_Rate", setFPSValue)
+        setFPSValue = "10"
+        obj.SetInputBoxText("Input_Sensor_Frame_Rate", setFPSValue)
         
-#         obj.click("Button_PlayPause")
-#         SleepWaitForMachine()
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")      
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        obj.click("Button_PlayPause")
+        SleepWaitForMachine()
+        fpsText = obj.GetInputBoxText("InputBox_FPS")      
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")
-#         SleepAfterPlayPause()  
-#         result = obj.GetText("Label_CameraState")
+        obj.click("Button_PlayPause")
+        SleepAfterPlayPause()  
+        result = obj.GetText("Label_CameraState")
         
-#         if(after==result and 0 < float(fpsText) <= float(setFPSValue) ):
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Trigger_Mode_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
+        if(after==result and 0 < float(fpsText) <= float(setFPSValue) ):
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Trigger_Mode_Settings")
+        obj.click("Tab_CameraAcq_Settings")
 
-# #Set ROI 1280*960 Acquisition
-# def test_SetROI1280Acq():
-#     obj = get_Web2Object()
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Connected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+#Set ROI 1280*960 Acquisition
+def test_SetROI1280Acq():
+    obj = get_Web2Object()
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Connected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_ROI_Settings_Output_Resolution")
-#         obj.click("Radio_1280x960")
+        obj.click("Tab_ROI_Settings_Output_Resolution")
+        obj.click("Radio_1280x960")
 
 
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
       
-#         obj.click("Button_PlayPause")
-#         SleepAfterPlayPause()
+        obj.click("Button_PlayPause")
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_ROI_Settings_Output_Resolution")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_ROI_Settings_Output_Resolution")
 
-# #Set ROI 640*480 Acquisition
-# def test_SetROI640Acq():
-#     obj = get_Web2Object()
+#Set ROI 640*480 Acquisition
+def test_SetROI640Acq():
+    obj = get_Web2Object()
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Connected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Connected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_ROI_Settings_Output_Resolution")
-#         obj.click("Radio_640x480")
+        obj.click("Tab_ROI_Settings_Output_Resolution")
+        obj.click("Radio_640x480")
 
 
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_ROI_Settings_Output_Resolution")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_ROI_Settings_Output_Resolution")
 
-# #Set ROI 320*240 Acquisition
-# def test_SetROI320Acq():
-#     obj = get_Web2Object()
+#Set ROI 320*240 Acquisition
+def test_SetROI320Acq():
+    obj = get_Web2Object()
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Connected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Connected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_ROI_Settings_Output_Resolution")
-#         obj.click("Radio_320x240")
+        obj.click("Tab_ROI_Settings_Output_Resolution")
+        obj.click("Radio_320x240")
 
 
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_ROI_Settings_Output_Resolution")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_ROI_Settings_Output_Resolution")
 
-# def test_SetBrightnessMAXInputAcq():
-#     obj = get_Web2Object()
+def test_SetBrightnessMAXInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Brightness","255")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Brightness","255")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetBrightnessMiniInputAcq():
-#     obj = get_Web2Object()
+def test_SetBrightnessMiniInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Brightness","0")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Brightness","0")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetBrightnessAnyInputAcq():
-#     obj = get_Web2Object()
+def test_SetBrightnessAnyInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Brightness","120")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Brightness","120")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetSharpnessMAXInputAcq():
-#     obj = get_Web2Object()
+def test_SetSharpnessMAXInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Sharpness","100")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Sharpness","100")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetSharpnessMiniInputAcq():
-#     obj = get_Web2Object()
+def test_SetSharpnessMiniInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Sharpness","0")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Sharpness","0")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetSharpnessAnyInputAcq():
-#     obj = get_Web2Object()
+def test_SetSharpnessAnyInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Sharpness","75")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Sharpness","75")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGammaMAXInputAcq():
-#     obj = get_Web2Object()
+def test_SetGammaMAXInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Gamma","0")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Gamma","0")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGammaMiniInputAcq():
-#     obj = get_Web2Object()
+def test_SetGammaMiniInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Gamma","400")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Gamma","400")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGammaAnyInputAcq():
-#     obj = get_Web2Object()
+def test_SetGammaAnyInputAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.SetInputBoxText("Input_Gamma","333")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.SetInputBoxText("Input_Gamma","333")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Button_DisconnectConnect")
-#         obj.click("Button_Popup_Window_Ok")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Button_DisconnectConnect")
+        obj.click("Button_Popup_Window_Ok")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetBrightnessSliderAcq():
-#     obj = get_Web2Object()
+def test_SetBrightnessSliderAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         movePos = obj.GetCalSliderMovePos("Label_Brightness_Min","Label_Brightness_Max")
-#         obj.MoveUp("Slider_Brightness",movePos*50,0)        
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        movePos = obj.GetCalSliderMovePos("Label_Brightness_Min","Label_Brightness_Max")
+        obj.MoveUp("Slider_Brightness",movePos*50,0)        
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetSharpnessSliderAcq():
-#     obj = get_Web2Object()
+def test_SetSharpnessSliderAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         movePos = obj.GetCalSliderMovePos("Label_Sharpness_Min","Label_Sharpness_Max")
-#         obj.MoveUp("Slider_Sharpness",movePos*50,0)        
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        movePos = obj.GetCalSliderMovePos("Label_Sharpness_Min","Label_Sharpness_Max")
+        obj.MoveUp("Slider_Sharpness",movePos*50,0)        
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGammaSliderAcq():
-#     obj = get_Web2Object()
+def test_SetGammaSliderAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         movePos = obj.GetCalSliderMovePos("Label_Gamma_Min","Label_Gamma_Max")
-#         obj.MoveUp("Slider_Gamma",movePos*70,0)        
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        movePos = obj.GetCalSliderMovePos("Label_Gamma_Min","Label_Gamma_Max")
+        obj.MoveUp("Slider_Gamma",movePos*70,0)        
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetMirrorXAcq():
-#     obj = get_Web2Object()
+def test_SetMirrorXAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Button_MirrorX")     
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Button_MirrorX")     
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetExposureTimeMaxAcq():
-#     obj = get_Web2Object()
+def test_SetExposureTimeMaxAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         setExposureTimeValue = "10000"
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Exposure_Mode")
+        setExposureTimeValue = "10000"
+        obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetExposureTimeMinAcq():
-#     obj = get_Web2Object()
+def test_SetExposureTimeMinAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         setExposureTimeValue = "50"
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Exposure_Mode")
+        setExposureTimeValue = "50"
+        obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetExposureTimeAnyValueAcq():
-#     obj = get_Web2Object()
+def test_SetExposureTimeAnyValueAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         setExposureTimeValue = "650"
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
-#         SleepWaitForMachine()
-#         obj.click("Button_PlayPause")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Exposure_Mode")
+        setExposureTimeValue = "650"
+        obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
+        SleepWaitForMachine()
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetAutoExposureAcq(): 
-#     obj = get_Web2Object()
+def test_SetAutoExposureAcq(): 
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Switch_Auto_Exposure_Time") 
-#         setAEMinValue = "2000"
-#         setAEMaxValue = "8500"
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Switch_Auto_Exposure_Time") 
+        setAEMinValue = "2000"
+        setAEMaxValue = "8500"
+        obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
+        obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)
   
-#         obj.click("Button_Auto_Exposure_Time_Confirm")
+        obj.click("Button_Auto_Exposure_Time_Confirm")
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Tab_Generic_Settings")
 
-# def test_ResetAutoExposureAcq():
-#     obj = get_Web2Object()
+def test_ResetAutoExposureAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Switch_Auto_Exposure_Time") 
-#         setAEMinValue = "3000"
-#         setAEMaxValue = "6000"
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
-#         obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)  
-#         obj.click("Button_Auto_Exposure_Time_Confirm")      
-#         obj.click("Button_PlayPause")
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Switch_Auto_Exposure_Time") 
+        setAEMinValue = "3000"
+        setAEMaxValue = "6000"
+        obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
+        obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)  
+        obj.click("Button_Auto_Exposure_Time_Confirm")      
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
-#         obj.click("Button_Auto_Exposure_Time_Reset")
-#         minText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Min")
-#         maxText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Max")
-#         obj.click("Button_PlayPause")  
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
+        obj.click("Button_Auto_Exposure_Time_Reset")
+        minText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Min")
+        maxText = obj.GetInputBoxText("Input_Auto_Exposure_Time_Max")
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and minText == "50" and maxText == "10000" ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Auto_Exposure_Mode")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and minText == "50" and maxText == "10000" ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Auto_Exposure_Mode")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGainMinAcq():
-#     obj = get_Web2Object()
+def test_SetGainMinAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Gain_Mode_Intensity")
-#         setGainValue = "0"
-#         obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", setGainValue)  
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        setGainValue = "0"
+        obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", setGainValue)  
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Auto_Gain_Mode_Intensity")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGainMaxAcq():
-#     obj = get_Web2Object()
+def test_SetGainMaxAcq():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Gain_Mode_Intensity")
-#         setGainValue = "24"
-#         obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", setGainValue)  
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        setGainValue = "24"
+        obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", setGainValue)  
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", "0")  
-#         obj.click("Tab_Auto_Gain_Mode_Intensity")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", "0")  
+        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetGainSliderAcq(): 
-#     obj = get_Web2Object()
+def test_SetGainSliderAcq(): 
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Generic_Settings")
-#         obj.click("Tab_Auto_Gain_Mode_Intensity")
-#         movePos = obj.GetCalSliderMovePos("Label_Gain_Min","Label_Gain_Max")
-#         obj.MoveUp("Slider_Auto_Gain_Mode_Intensity",movePos*10,0)        
+        obj.click("Tab_Generic_Settings")
+        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        movePos = obj.GetCalSliderMovePos("Label_Gain_Min","Label_Gain_Max")
+        obj.MoveUp("Slider_Auto_Gain_Mode_Intensity",movePos*10,0)        
       
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Image_Adjustments")
-#         obj.click("Tab_Generic_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Image_Adjustments")
+        obj.click("Tab_Generic_Settings")
 
-# def test_SetStrobeMode():
-#     obj = get_Web2Object()
+def test_SetStrobeMode():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Lighting_Settings")
-#         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
-#         obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
-#         SleepWaitForMachine()
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Lighting_Settings")
+        movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
+        obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
+        SleepWaitForMachine()
         
-#         obj.click("Button_PlayPause")
-#         SleepAfterPlayPause()
+        obj.click("Button_PlayPause")
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Lighting_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Lighting_Settings")
+        obj.click("Tab_CameraAcq_Settings")
     
-# def test_SetStrobeGainMode():
-#     obj = get_Web2Object()
+def test_SetStrobeGainMode():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_CameraAcq_Settings")
-#         obj.click("Tab_Lighting_Settings")
-#         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
-#         obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
-#         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Gain_Min","Label_Flash_LED_Gain_Max")
-#         obj.MoveUp("Slider_Flash_LED_Gain",movePos*10,0)        
-#         SleepWaitForMachine()
+        obj.click("Tab_CameraAcq_Settings")
+        obj.click("Tab_Lighting_Settings")
+        movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
+        obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
+        movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Gain_Min","Label_Flash_LED_Gain_Max")
+        obj.MoveUp("Slider_Flash_LED_Gain",movePos*10,0)        
+        SleepWaitForMachine()
         
-#         obj.click("Button_PlayPause")
-#         SleepAfterPlayPause()
+        obj.click("Button_PlayPause")
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_Lighting_Settings")
-#         obj.click("Tab_CameraAcq_Settings")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_Lighting_Settings")
+        obj.click("Tab_CameraAcq_Settings")
 
-# #Set LED Color Green
-# def test_SetLEDColorGreen():
-#     obj = get_Web2Object()
+#Set LED Color Green
+def test_SetLEDColorGreen():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Platform_LED")
-#         obj.click("Switch_SYSLED")
-#         obj.click("Radio_SYSLED_Green")
+        obj.click("Tab_Platform_LED")
+        obj.click("Switch_SYSLED")
+        obj.click("Radio_SYSLED_Green")
 
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Switch_SYSLED")
-#         obj.click("Tab_Platform_LED")
-#         #obj.click("Button_DisconnectConnect")
-#         #obj.click("Button_Popup_Window_Ok")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Switch_SYSLED")
+        obj.click("Tab_Platform_LED")
+        #obj.click("Button_DisconnectConnect")
+        #obj.click("Button_Popup_Window_Ok")
 
 
-# #Set LED Color Orange
-# def test_SetLEDColorOrange():
-#     obj = get_Web2Object()
+#Set LED Color Orange
+def test_SetLEDColorOrange():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Platform_LED")
-#         obj.click("Switch_SYSLED")
-#         obj.click("Radio_SYSLED_Orange")
+        obj.click("Tab_Platform_LED")
+        obj.click("Switch_SYSLED")
+        obj.click("Radio_SYSLED_Orange")
 
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         #obj.click("Button_DisconnectConnect")
-#         #obj.click("Button_Popup_Window_Ok")
-#         obj.click("Switch_SYSLED")
-#         obj.click("Tab_Platform_LED")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        #obj.click("Button_DisconnectConnect")
+        #obj.click("Button_Popup_Window_Ok")
+        obj.click("Switch_SYSLED")
+        obj.click("Tab_Platform_LED")
 
-# #Set LED Color Yellow
-# def test_SetLEDColorYellow():
-#     obj = get_Web2Object()
+#Set LED Color Yellow
+def test_SetLEDColorYellow():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_Platform_LED")
-#         obj.click("Switch_SYSLED")
-#         obj.click("Radio_SYSLED_Yellow")
+        obj.click("Tab_Platform_LED")
+        obj.click("Switch_SYSLED")
+        obj.click("Radio_SYSLED_Yellow")
 
-#         obj.click("Button_PlayPause")
+        obj.click("Button_PlayPause")
 
-#         SleepAfterPlayPause()
+        SleepAfterPlayPause()
                 
-#         fpsText = obj.GetInputBoxText("InputBox_FPS")   
-#         CameraState = obj.GetText("Label_CameraState")        
-#         ButtonState = obj.GetText("Button_PlayPause")
-#         before = CameraState
-#         after  = ''
-#         if("Playing"==before and ButtonState=="Pause"):
-#             after  =  "Paused"
-#         elif(("Paused"==before  or "Connected"==before )and ButtonState=="Play"):
-#             after  =  "Playing"
-#         else:
-#             logging.warning("按鈕與設備狀態不匹配")
+        fpsText = obj.GetInputBoxText("InputBox_FPS")   
+        CameraState = obj.GetText("Label_CameraState")        
+        ButtonState = obj.GetText("Button_PlayPause")
+        before = CameraState
+        after  = ''
+        if(before==CameraStatus_Playing and ButtonState=="Pause"):
+            after  =  CameraStatus_Paused
+        elif((before==CameraStatus_Paused  or before==CameraStatus_Connected )and ButtonState=="Play"):
+            after  =  CameraStatus_Playing
+        else:
+            logging.warning("按鈕與設備狀態不匹配")
 
-#         obj.click("Button_PlayPause")  
+        obj.click("Button_PlayPause")  
   
-#         result = obj.GetText("Label_CameraState")
+        result = obj.GetText("Label_CameraState")
         
-#         if( after == result and fpsText != '' ):
-#             logging.info( "FPS:" + fpsText )
-#             assert True
-#         else:
-#             assert False,Exception("result different")                
-#     except Exception:
-#         assert False        
-#     finally:
-#         #obj.click("Button_DisconnectConnect")
-#         #obj.click("Button_Popup_Window_Ok")
-#         obj.click("Switch_SYSLED")
-#         obj.click("Tab_Platform_LED")
+        if( after == result and fpsText != '' ):
+            logging.info( "FPS:" + fpsText )
+            assert True
+        else:
+            assert False,Exception("result different")                
+    except Exception:
+        assert False        
+    finally:
+        #obj.click("Button_DisconnectConnect")
+        #obj.click("Button_Popup_Window_Ok")
+        obj.click("Switch_SYSLED")
+        obj.click("Tab_Platform_LED")
 
 
-# #DIO Setting
-# def test_DO0UserOutput():
-#     obj = get_Web2Object()
+#DIO Setting
+def test_DO0UserOutput():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_IO_Settings")
-#         obj.click("Tab_DI1")
-#         obj.click("Tab_DO1")
-#         obj.click("Tab_DO1_Parameters")
+        obj.click("Tab_IO_Settings")
+        obj.click("Tab_DI1")
+        obj.click("Tab_DO1")
+        obj.click("Tab_DO1_Parameters")
         
-#         obj.click("Button_DO1_Output_High")
-#         SleepWaitForMachine()
+        obj.click("Button_DO1_Output_High")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI1_Status")
-#         if( diStatus ==  '(H)' ):
-#             logging.info( "DI0 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")
+        diStatus = obj.GetText("Label_DI1_Status")
+        if( diStatus ==  '(H)' ):
+            logging.info( "DI0 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")
 
-#         obj.click("Button_DO1_Output_Low")
-#         SleepWaitForMachine()
+        obj.click("Button_DO1_Output_Low")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI1_Status")
-#         if( diStatus ==  '(L)' ):
-#             logging.info( "DI0 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")        
+        diStatus = obj.GetText("Label_DI1_Status")
+        if( diStatus ==  '(L)' ):
+            logging.info( "DI0 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")        
            
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_DO1_Parameters")
-#         obj.click("Tab_DI1")
-#         obj.click("Tab_DO1")
-#         obj.click("Tab_IO_Settings")
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_DO1_Parameters")
+        obj.click("Tab_DI1")
+        obj.click("Tab_DO1")
+        obj.click("Tab_IO_Settings")
 
-# def test_DO1UserOutput():
-#     obj = get_Web2Object()
+def test_DO1UserOutput():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_IO_Settings")
-#         obj.click("Tab_DI2")
-#         obj.click("Tab_DO2")
-#         obj.click("Tab_DO2_Parameters")
+        obj.click("Tab_IO_Settings")
+        obj.click("Tab_DI2")
+        obj.click("Tab_DO2")
+        obj.click("Tab_DO2_Parameters")
         
-#         obj.click("Button_DO2_Output_High")
-#         SleepWaitForMachine()
+        obj.click("Button_DO2_Output_High")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI2_Status")
-#         if( diStatus ==  '(H)' ):
-#             logging.info( "DI1 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")
+        diStatus = obj.GetText("Label_DI2_Status")
+        if( diStatus ==  '(H)' ):
+            logging.info( "DI1 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")
 
-#         obj.click("Button_DO2_Output_Low")
-#         SleepWaitForMachine()
+        obj.click("Button_DO2_Output_Low")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI2_Status")
-#         if( diStatus ==  '(L)' ):
-#             logging.info( "DI1 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")        
+        diStatus = obj.GetText("Label_DI2_Status")
+        if( diStatus ==  '(L)' ):
+            logging.info( "DI1 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")        
            
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Tab_DO2_Parameters")
-#         obj.click("Tab_DI2")
-#         obj.click("Tab_DO2")
-#         obj.click("Tab_IO_Settings")
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Tab_DO2_Parameters")
+        obj.click("Tab_DI2")
+        obj.click("Tab_DO2")
+        obj.click("Tab_IO_Settings")
 
-# def test_DO0InvertUserOutput():
-#     obj = get_Web2Object()
+def test_DO0InvertUserOutput():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_IO_Settings")
-#         obj.click("Tab_DI1")
-#         obj.click("Tab_DO1")
-#         obj.click("Tab_DO1_Parameters")
-#         obj.click("Radio_DO1_Reverse_On")
+        obj.click("Tab_IO_Settings")
+        obj.click("Tab_DI1")
+        obj.click("Tab_DO1")
+        obj.click("Tab_DO1_Parameters")
+        obj.click("Radio_DO1_Reverse_On")
         
-#         obj.click("Button_DO1_Output_High")
-#         SleepWaitForMachine()
+        obj.click("Button_DO1_Output_High")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI1_Status")
-#         if( diStatus ==  '(L)' ):
-#             logging.info( "DI0 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")
+        diStatus = obj.GetText("Label_DI1_Status")
+        if( diStatus ==  '(L)' ):
+            logging.info( "DI0 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")
 
-#         obj.click("Button_DO1_Output_Low")
-#         SleepWaitForMachine()
+        obj.click("Button_DO1_Output_Low")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI1_Status")
-#         if( diStatus ==  '(H)' ):
-#             logging.info( "DI0 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")        
+        diStatus = obj.GetText("Label_DI1_Status")
+        if( diStatus ==  '(H)' ):
+            logging.info( "DI0 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")        
            
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Radio_DO1_Reverse_Off")
-#         obj.click("Tab_DO1_Parameters")
-#         obj.click("Tab_DI1")
-#         obj.click("Tab_DO1")
-#         obj.click("Tab_IO_Settings")
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Radio_DO1_Reverse_Off")
+        obj.click("Tab_DO1_Parameters")
+        obj.click("Tab_DI1")
+        obj.click("Tab_DO1")
+        obj.click("Tab_IO_Settings")
 
-# def test_DO1InvertUserOutput():
-#     obj = get_Web2Object()
+def test_DO1InvertUserOutput():
+    obj = get_Web2Object()
     
     
-#     SleepAfterGetObj()
-#     try:   
-#         CameraState = obj.GetText("Label_CameraState")
-#         if(CameraState == "Disconnected"):
-#             obj.click("Button_DisconnectConnect")
-#             obj.click("Button_Popup_Window_Ok")
+    SleepAfterGetObj()
+    try:   
+        CameraState = obj.GetText("Label_CameraState")
+        if(CameraState == "Disconnected"):
+            obj.click("Button_DisconnectConnect")
+            obj.click("Button_Popup_Window_Ok")
 
-#         obj.click("Tab_IO_Settings")
-#         obj.click("Tab_DI2")
-#         obj.click("Tab_DO2")
-#         obj.click("Tab_DO2_Parameters")
-#         obj.click("Radio_DO2_Reverse_On")
-#         obj.click("Button_DO2_Output_High")
-#         SleepWaitForMachine()
+        obj.click("Tab_IO_Settings")
+        obj.click("Tab_DI2")
+        obj.click("Tab_DO2")
+        obj.click("Tab_DO2_Parameters")
+        obj.click("Radio_DO2_Reverse_On")
+        obj.click("Button_DO2_Output_High")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI2_Status")
-#         if( diStatus ==  '(L)' ):
-#             logging.info( "DI1 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")
+        diStatus = obj.GetText("Label_DI2_Status")
+        if( diStatus ==  '(L)' ):
+            logging.info( "DI1 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")
 
-#         obj.click("Button_DO2_Output_Low")
-#         SleepWaitForMachine()
+        obj.click("Button_DO2_Output_Low")
+        SleepWaitForMachine()
         
-#         diStatus = obj.GetText("Label_DI2_Status")
-#         if( diStatus ==  '(H)' ):
-#             logging.info( "DI1 Status:" + diStatus )
-#             assert True
-#         else:
-#             assert False,Exception("result different")        
-#     except Exception:
-#         assert False        
-#     finally:
-#         obj.click("Radio_DO2_Reverse_Off")
-#         obj.click("Tab_DO2_Parameters")
-#         obj.click("Tab_DI2")
-#         obj.click("Tab_DO2")
-#         obj.click("Tab_IO_Settings")
-#endregion ===============================page2===============================
+        diStatus = obj.GetText("Label_DI2_Status")
+        if( diStatus ==  '(H)' ):
+            logging.info( "DI1 Status:" + diStatus )
+            assert True
+        else:
+            assert False,Exception("result different")        
+    except Exception:
+        assert False        
+    finally:
+        obj.click("Radio_DO2_Reverse_Off")
+        obj.click("Tab_DO2_Parameters")
+        obj.click("Tab_DI2")
+        obj.click("Tab_DO2")
+        obj.click("Tab_IO_Settings")
+# endregion ===============================page2===============================
