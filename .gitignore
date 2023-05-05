@@ -19,4 +19,5 @@ report.html
 .pytest_cache/v/cache/lastfailed
 .pytest_cache/v/cache/nodeids
 .gitignore
-E2ETesting.log
+./testcase/E2ETesting.log
+./*/E2ETesting.log
