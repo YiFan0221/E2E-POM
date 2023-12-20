@@ -129,7 +129,7 @@ class BasePage:
 #==================================通用方法=========================================
 
     #CheckElemt方法
-    def check(self,UIInput):
+    def Check(self,UIInput):
         elemt = self.GetElementType(UIInput)
         
         #這邊添加前置動作後再check
@@ -148,7 +148,7 @@ class BasePage:
             return False
     
     #Click方法
-    def click(self,UIInput):
+    def Click(self,UIInput):
         #判定檢索方式    
         elemt = self.GetElementType(UIInput)
         if elemt== None:
@@ -220,7 +220,7 @@ class BasePage:
             logging.debug('GetText warning.')
             return None
 
-    def retry(self,exectimes,function,*arg):        
+    def Retry(self,exectimes,function,*arg):        
         for i in range(0,int(exectimes)):
             time.sleep(1)
             function(arg[0])

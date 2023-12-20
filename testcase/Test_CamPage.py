@@ -120,7 +120,7 @@ def test_ClicktoNextPage():
     obj = get_Web1Object()
         
     try:               
-        obj.click("Project_radio_0")        
+        obj.Click("Project_radio_0")        
         obj.click_Button_Next()   
     except Exception:
         assert False,Exception("Click to NextPage Fail.")              
@@ -154,26 +154,26 @@ def test_checkElemt():
     logging.info(st)
     print(st)
 
-    obj.click(obj.Tab_CameraAcq_Settings.elemt)
-    obj.click(obj.Tab_Trigger_Mode_Settings.elemt)
-    obj.click(obj.Tab_Focus_Settings.elemt)
-    obj.click(obj.Tab_Lighting_Settings.elemt)
-    obj.click(obj.Tab_Generic_Settings.elemt)
-    obj.click(obj.Tab_Pixel_Format.elemt)
-    obj.click(obj.Tab_Image_Parameters.elemt)
-    obj.click(obj.Tab_Auto_Exposure_Mode.elemt)
-    obj.click(obj.Tab_Gain.elemt)
-    obj.click(obj.Tab_Auto_White_Balance.elemt)
-    obj.click(obj.Tab_Color_Transformation.elemt)
-    obj.click(obj.Tab_ROI_Settings_Output_Resolution.elemt)
-    obj.click(obj.Tab_IO_Settings.elemt)
-    obj.click(obj.Tab_DI0.elemt)
-    obj.click(obj.Tab_DI1.elemt)
-    obj.click(obj.Tab_DO0.elemt)
-    obj.click(obj.Tab_DO0_Parameters.elemt)
-    obj.click(obj.Tab_DO1.elemt)
-    obj.click(obj.Tab_DO1_Parameters.elemt)
-    obj.click(obj.Tab_Platform_LED.elemt)
+    obj.Click(obj.Tab_CameraAcq_Settings.elemt)
+    obj.Click(obj.Tab_Trigger_Mode_Settings.elemt)
+    obj.Click(obj.Tab_Focus_Settings.elemt)
+    obj.Click(obj.Tab_Lighting_Settings.elemt)
+    obj.Click(obj.Tab_Generic_Settings.elemt)
+    obj.Click(obj.Tab_Pixel_Format.elemt)
+    obj.Click(obj.Tab_Image_Parameters.elemt)
+    obj.Click(obj.Tab_Auto_Exposure_Mode.elemt)
+    obj.Click(obj.Tab_Gain.elemt)
+    obj.Click(obj.Tab_Auto_White_Balance.elemt)
+    obj.Click(obj.Tab_Color_Transformation.elemt)
+    obj.Click(obj.Tab_ROI_Settings_Output_Resolution.elemt)
+    obj.Click(obj.Tab_IO_Settings.elemt)
+    obj.Click(obj.Tab_DI0.elemt)
+    obj.Click(obj.Tab_DI1.elemt)
+    obj.Click(obj.Tab_DO0.elemt)
+    obj.Click(obj.Tab_DO0_Parameters.elemt)
+    obj.Click(obj.Tab_DO1.elemt)
+    obj.Click(obj.Tab_DO1_Parameters.elemt)
+    obj.Click(obj.Tab_Platform_LED.elemt)
     #巡訪Locator容器所有元件
     for i in range(number):
         oLocatorsObj = obj.UI_List[i]
@@ -181,33 +181,33 @@ def test_checkElemt():
         mElemt = oLocatorsObj.elemt
         st = "["+str(i)+"]:"+mInfoJson["Name"]    
         
-        if obj.check(mElemt)==True:
+        if obj.Check(mElemt)==True:
             st="[O]"+st
             logging.info(st)
         else:
             st="[X]"+st
             logging.info(st)
                    
-    obj.click(obj.Tab_Platform_LED.elemt)            
-    obj.click(obj.Tab_DO1_Parameters.elemt) 
-    obj.click(obj.Tab_DO1.elemt)
-    obj.click(obj.Tab_DO0_Parameters.elemt)
-    obj.click(obj.Tab_DO0.elemt)
-    obj.click(obj.Tab_DI1.elemt)
-    obj.click(obj.Tab_DI0.elemt)
-    obj.click(obj.Tab_IO_Settings.elemt)
-    obj.click(obj.Tab_ROI_Settings_Output_Resolution.elemt)
-    obj.click(obj.Tab_Color_Transformation.elemt)
-    obj.click(obj.Tab_Auto_White_Balance.elemt)
-    obj.click(obj.Tab_Gain.elemt)
-    obj.click(obj.Tab_Auto_Exposure_Mode.elemt)
-    obj.click(obj.Tab_Image_Parameters.elemt)
-    obj.click(obj.Tab_Pixel_Format.elemt)
-    obj.click(obj.Tab_Generic_Settings.elemt)
-    obj.click(obj.Tab_Lighting_Settings.elemt)
-    obj.click(obj.Tab_Focus_Settings.elemt)
-    obj.click(obj.Tab_Trigger_Mode_Settings.elemt)
-    obj.click(obj.Tab_CameraAcq_Settings.elemt)
+    obj.Click(obj.Tab_Platform_LED.elemt)            
+    obj.Click(obj.Tab_DO1_Parameters.elemt) 
+    obj.Click(obj.Tab_DO1.elemt)
+    obj.Click(obj.Tab_DO0_Parameters.elemt)
+    obj.Click(obj.Tab_DO0.elemt)
+    obj.Click(obj.Tab_DI1.elemt)
+    obj.Click(obj.Tab_DI0.elemt)
+    obj.Click(obj.Tab_IO_Settings.elemt)
+    obj.Click(obj.Tab_ROI_Settings_Output_Resolution.elemt)
+    obj.Click(obj.Tab_Color_Transformation.elemt)
+    obj.Click(obj.Tab_Auto_White_Balance.elemt)
+    obj.Click(obj.Tab_Gain.elemt)
+    obj.Click(obj.Tab_Auto_Exposure_Mode.elemt)
+    obj.Click(obj.Tab_Image_Parameters.elemt)
+    obj.Click(obj.Tab_Pixel_Format.elemt)
+    obj.Click(obj.Tab_Generic_Settings.elemt)
+    obj.Click(obj.Tab_Lighting_Settings.elemt)
+    obj.Click(obj.Tab_Focus_Settings.elemt)
+    obj.Click(obj.Tab_Trigger_Mode_Settings.elemt)
+    obj.Click(obj.Tab_CameraAcq_Settings.elemt)
     
     assert True
 #切換播放/暫停
@@ -219,15 +219,15 @@ def test_PlayPause():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected):
-            obj.click("Button_DisconnectConnect")
+            obj.Click("Button_DisconnectConnect")
             SleepWaitForMachine()
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_Popup_Window_Ok")
             SleepWaitForMachine()
-            obj.click("Button_DisconnectConnect")
+            obj.Click("Button_DisconnectConnect")
             SleepWaitForMachine()
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_Popup_Window_Ok")
         
-        obj.retry(2,obj.click,str("Button_PlayPause") )
+        obj.Retry(2,obj.Click,str("Button_PlayPause") )
         SleepAfterPlayPause()
         CameraState = obj.GetText("Label_CameraState")        
         ButtonState = obj.GetText("Button_PlayPause")
@@ -240,7 +240,7 @@ def test_PlayPause():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")        
+        obj.Click("Button_PlayPause")        
         result = obj.GetText("Label_CameraState")        
         if(after==result ):
             assert True
@@ -249,8 +249,8 @@ def test_PlayPause():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
         TargetWebAction.set_page_obj(obj)
 
 #Softtrigger Acquisition 
@@ -260,17 +260,17 @@ def test_SoftwareTriggerAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected): 
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Trigger_Mode_Settings")
-        obj.click("Radio_SW_Trigger_Mode")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Trigger_Mode_Settings")
+        obj.Click("Radio_SW_Trigger_Mode")
 
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Button_PlayPause")
-        obj.retry(10, obj.click,str("Button_SW_Trigger_Trigger"))
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Button_PlayPause")
+        obj.Retry(10, obj.Click,str("Button_SW_Trigger_Trigger"))
 
         fpsText = obj.GetInputBoxText("InputBox_FPS")  
         CameraState = obj.GetText("Label_CameraState")        
@@ -285,7 +285,7 @@ def test_SoftwareTriggerAcq():
             logging.warning("按鈕與設備狀態不匹配")
 
     
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
         result = obj.GetText("Label_CameraState")
         
         if( after == result and fpsText != '' ):
@@ -296,11 +296,11 @@ def test_SoftwareTriggerAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Radio_Continuous_Mode")
-        obj.click("Tab_Trigger_Mode_Settings")
-        obj.click("Tab_CameraAcq_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Radio_Continuous_Mode")
+        obj.Click("Tab_Trigger_Mode_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
 
 #Hardware Trigger
 def test_HardwareTriggerAcq(): 
@@ -309,26 +309,26 @@ def test_HardwareTriggerAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Trigger_Mode_Settings")
-        obj.click("Radio_HW_Trigger_Mode")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Trigger_Mode_Settings")
+        obj.Click("Radio_HW_Trigger_Mode")
 
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_IO_Settings")
-        obj.click("Tab_DO1")
-        obj.click("Tab_DO1_Parameters")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_IO_Settings")
+        obj.Click("Tab_DO1")
+        obj.Click("Tab_DO1_Parameters")
         
 
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         times = 10
         for i in range(times):
-            obj.click("Button_DO1_Output_High")
-            obj.click("Button_DO1_Output_Low")       
+            obj.Click("Button_DO1_Output_High")
+            obj.Click("Button_DO1_Output_Low")       
         
         
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
@@ -343,7 +343,7 @@ def test_HardwareTriggerAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -355,14 +355,14 @@ def test_HardwareTriggerAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Radio_Continuous_Mode")
-        obj.click("Tab_Trigger_Mode_Settings")
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_DO1_Parameters")
-        obj.click("Tab_DO1")
-        obj.click("Tab_IO_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Radio_Continuous_Mode")
+        obj.Click("Tab_Trigger_Mode_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_DO1_Parameters")
+        obj.Click("Tab_DO1")
+        obj.Click("Tab_IO_Settings")
 
 #Set Focus Acquisition
 def test_SetFocusAcq(): 
@@ -371,14 +371,14 @@ def test_SetFocusAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
         
-        obj.click("Button_PlayPause")
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Focus_Settings")
+        obj.Click("Button_PlayPause")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Focus_Settings")
         obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
-        obj.click("Button_ZoomIn")
+        obj.Click("Button_ZoomIn")
         SleepWaitForMachine()
 
         focusText = obj.GetInputBoxText("InputBox_Focus") 
@@ -388,7 +388,7 @@ def test_SetFocusAcq():
         else:
             assert False,Exception("result different")      
 
-        obj.click("Button_ZoomOut")
+        obj.Click("Button_ZoomOut")
         SleepWaitForMachine()
 
         focusText = obj.GetInputBoxText("InputBox_Focus") 
@@ -398,14 +398,14 @@ def test_SetFocusAcq():
         else:
             assert False,Exception("result different")      
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Focus_Settings")
-        obj.click("Tab_CameraAcq_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Focus_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
 
 #Reset Focus Acquisition
 def test_ResetFocusAcq(): 
@@ -414,14 +414,14 @@ def test_ResetFocusAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
         
-        obj.click("Button_PlayPause")
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Focus_Settings")
+        obj.Click("Button_PlayPause")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Focus_Settings")
         obj.SetInputBoxText("Input_Focus_Step_Distance", "300")
-        obj.retry(4,obj.click,str("Button_ZoomIn") )        
+        obj.Retry(4,obj.Click,str("Button_ZoomIn") )        
         SleepWaitForMachine()
 
         focusText = obj.GetInputBoxText("InputBox_Focus") 
@@ -431,7 +431,7 @@ def test_ResetFocusAcq():
         else:
             assert False,Exception("result different")      
 
-        obj.click("Button_Reset_to_Zero_Position")
+        obj.Click("Button_Reset_to_Zero_Position")
         SleepWaitForMachine()
         focusText = obj.GetInputBoxText("InputBox_Focus") 
         if( focusText == "0" ):
@@ -439,14 +439,14 @@ def test_ResetFocusAcq():
             assert True
         else:
             assert False,Exception("result different")  
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Focus_Settings")
-        obj.click("Tab_CameraAcq_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Focus_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
 
 #Set FPS and Acquisition
 def test_SetFPSAcq():
@@ -455,17 +455,17 @@ def test_SetFPSAcq():
 
     try:   
         CameraState = obj.GetText("Label_CameraState")
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Trigger_Mode_Settings")
-        obj.click("Radio_Continuous_Mode")   
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Trigger_Mode_Settings")
+        obj.Click("Radio_Continuous_Mode")   
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
         setFPSValue = "10"
         obj.SetInputBoxText("Input_Sensor_Frame_Rate", setFPSValue)
         
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
         SleepWaitForMachine()
         fpsText = obj.GetInputBoxText("InputBox_FPS")      
         CameraState = obj.GetText("Label_CameraState")        
@@ -479,7 +479,7 @@ def test_SetFPSAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
         SleepAfterPlayPause()  
         result = obj.GetText("Label_CameraState")
         
@@ -490,10 +490,10 @@ def test_SetFPSAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Trigger_Mode_Settings")
-        obj.click("Tab_CameraAcq_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Trigger_Mode_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
 
 #Set ROI 1280*960 Acquisition
 def test_SetROI1280Acq():
@@ -502,17 +502,17 @@ def test_SetROI1280Acq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_ROI_Settings_Output_Resolution")
-        obj.click("Radio_1280x960")
+        obj.Click("Tab_ROI_Settings_Output_Resolution")
+        obj.Click("Radio_1280x960")
 
 
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
         SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
@@ -527,7 +527,7 @@ def test_SetROI1280Acq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -539,9 +539,9 @@ def test_SetROI1280Acq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_ROI_Settings_Output_Resolution")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_ROI_Settings_Output_Resolution")
 
 #Set ROI 640*480 Acquisition
 def test_SetROI640Acq():
@@ -551,17 +551,17 @@ def test_SetROI640Acq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_ROI_Settings_Output_Resolution")
-        obj.click("Radio_640x480")
+        obj.Click("Tab_ROI_Settings_Output_Resolution")
+        obj.Click("Radio_640x480")
 
 
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -577,7 +577,7 @@ def test_SetROI640Acq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -589,9 +589,9 @@ def test_SetROI640Acq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_ROI_Settings_Output_Resolution")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_ROI_Settings_Output_Resolution")
 
 #Set ROI 320*240 Acquisition
 def test_SetROI320Acq():
@@ -601,17 +601,17 @@ def test_SetROI320Acq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Connected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_ROI_Settings_Output_Resolution")
-        obj.click("Radio_320x240")
+        obj.Click("Tab_ROI_Settings_Output_Resolution")
+        obj.Click("Radio_320x240")
 
 
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -627,7 +627,7 @@ def test_SetROI320Acq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -639,9 +639,9 @@ def test_SetROI320Acq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_ROI_Settings_Output_Resolution")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_ROI_Settings_Output_Resolution")
 
 def test_SetBrightnessMAXInputAcq():
     obj = get_Web2Object()
@@ -651,14 +651,14 @@ def test_SetBrightnessMAXInputAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         obj.SetInputBoxText("Input_Brightness","255")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -674,7 +674,7 @@ def test_SetBrightnessMAXInputAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -686,10 +686,10 @@ def test_SetBrightnessMAXInputAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetBrightnessMiniInputAcq():
     obj = get_Web2Object()
@@ -699,14 +699,14 @@ def test_SetBrightnessMiniInputAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         obj.SetInputBoxText("Input_Brightness","0")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -722,7 +722,7 @@ def test_SetBrightnessMiniInputAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -734,10 +734,10 @@ def test_SetBrightnessMiniInputAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetBrightnessAnyInputAcq():
     obj = get_Web2Object()
@@ -747,14 +747,14 @@ def test_SetBrightnessAnyInputAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         obj.SetInputBoxText("Input_Brightness","120")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -770,7 +770,7 @@ def test_SetBrightnessAnyInputAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -782,10 +782,10 @@ def test_SetBrightnessAnyInputAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 # def test_SetSharpnessMAXInputAcq(): #此元件從介面取消  
 #     obj = get_Web2Object()
@@ -939,14 +939,14 @@ def test_SetGammaMAXInputAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         obj.SetInputBoxText("Input_Gamma","0")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -962,7 +962,7 @@ def test_SetGammaMAXInputAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -974,10 +974,10 @@ def test_SetGammaMAXInputAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetGammaMiniInputAcq():
     obj = get_Web2Object()
@@ -987,14 +987,14 @@ def test_SetGammaMiniInputAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         obj.SetInputBoxText("Input_Gamma","400")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1010,7 +1010,7 @@ def test_SetGammaMiniInputAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1022,10 +1022,10 @@ def test_SetGammaMiniInputAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetGammaAnyInputAcq():
     obj = get_Web2Object()
@@ -1035,14 +1035,14 @@ def test_SetGammaAnyInputAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         obj.SetInputBoxText("Input_Gamma","333")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1058,7 +1058,7 @@ def test_SetGammaAnyInputAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1070,10 +1070,10 @@ def test_SetGammaAnyInputAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Button_DisconnectConnect")
-        obj.click("Button_Popup_Window_Ok")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Button_DisconnectConnect")
+        obj.Click("Button_Popup_Window_Ok")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetBrightnessSliderAcq():
     obj = get_Web2Object()
@@ -1083,15 +1083,15 @@ def test_SetBrightnessSliderAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         movePos = obj.GetCalSliderMovePos("Label_Brightness_Min","Label_Brightness_Max")
         obj.MoveUp("Slider_Brightness",movePos*50,0)        
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1107,7 +1107,7 @@ def test_SetBrightnessSliderAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1119,8 +1119,8 @@ def test_SetBrightnessSliderAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 # def test_SetSharpnessSliderAcq(): #此元件從介面取消  
 #     obj = get_Web2Object()
@@ -1177,15 +1177,15 @@ def test_SetGammaSliderAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
         movePos = obj.GetCalSliderMovePos("Label_Gamma_Min","Label_Gamma_Max")
         obj.MoveUp("Slider_Gamma",movePos*70,0)        
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1201,7 +1201,7 @@ def test_SetGammaSliderAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1213,8 +1213,8 @@ def test_SetGammaSliderAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetMirrorXAcq():
     obj = get_Web2Object()
@@ -1224,14 +1224,14 @@ def test_SetMirrorXAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Button_MirrorX")     
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Button_MirrorX")     
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1247,7 +1247,7 @@ def test_SetMirrorXAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1259,8 +1259,8 @@ def test_SetMirrorXAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetExposureTimeMaxAcq():
     obj = get_Web2Object()
@@ -1270,15 +1270,15 @@ def test_SetExposureTimeMaxAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
         setExposureTimeValue = "10000"
         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1294,7 +1294,7 @@ def test_SetExposureTimeMaxAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1306,8 +1306,8 @@ def test_SetExposureTimeMaxAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetExposureTimeMinAcq():
     obj = get_Web2Object()
@@ -1317,15 +1317,15 @@ def test_SetExposureTimeMinAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
         setExposureTimeValue = "50"
         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1341,7 +1341,7 @@ def test_SetExposureTimeMinAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1353,8 +1353,8 @@ def test_SetExposureTimeMinAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetExposureTimeAnyValueAcq():
     obj = get_Web2Object()
@@ -1364,15 +1364,15 @@ def test_SetExposureTimeAnyValueAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
         setExposureTimeValue = "650"
         obj.SetInputBoxText("Input_Auto_Exposure_Time", setExposureTimeValue)  
         SleepWaitForMachine()
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1388,7 +1388,7 @@ def test_SetExposureTimeAnyValueAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1400,8 +1400,8 @@ def test_SetExposureTimeAnyValueAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetAutoExposureAcq(): 
     obj = get_Web2Object()
@@ -1411,20 +1411,20 @@ def test_SetAutoExposureAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Switch_Auto_Exposure_Time") 
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
+        obj.Click("Switch_Auto_Exposure_Time") 
         setAEMinValue = "2000"
         setAEMaxValue = "8500"
         obj.SetInputBoxText("Input_Auto_Exposure_Time_Min", setAEMinValue)
         obj.SetInputBoxText("Input_Auto_Exposure_Time_Max", setAEMaxValue)
   
-        obj.click("Button_Auto_Exposure_Time_Confirm")
+        obj.Click("Button_Auto_Exposure_Time_Confirm")
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1440,7 +1440,7 @@ def test_SetAutoExposureAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1452,8 +1452,8 @@ def test_SetAutoExposureAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Auto_Exposure_Mode")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Exposure_Mode")
+        obj.Click("Tab_Generic_Settings")
 
 # def test_ResetAutoExposureAcq(): #此元件從介面取消  
 #     obj = get_Web2Object()
@@ -1515,15 +1515,15 @@ def test_SetGainMinAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Gain_Mode_Intensity")
         setGainValue = "0"
         obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", setGainValue)  
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1539,7 +1539,7 @@ def test_SetGainMinAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1551,8 +1551,8 @@ def test_SetGainMinAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Auto_Gain_Mode_Intensity")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Gain_Mode_Intensity")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetGainMaxAcq():
     obj = get_Web2Object()
@@ -1562,15 +1562,15 @@ def test_SetGainMaxAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Gain_Mode_Intensity")
         setGainValue = "24"
         obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", setGainValue)  
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1586,7 +1586,7 @@ def test_SetGainMaxAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1599,8 +1599,8 @@ def test_SetGainMaxAcq():
         assert False        
     finally:
         obj.SetInputBoxText("Input_Auto_Gain_Mode_Intensity", "0")  
-        obj.click("Tab_Auto_Gain_Mode_Intensity")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Gain_Mode_Intensity")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetGainSliderAcq(): 
     obj = get_Web2Object()
@@ -1610,15 +1610,15 @@ def test_SetGainSliderAcq():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Generic_Settings")
-        obj.click("Tab_Auto_Gain_Mode_Intensity")
+        obj.Click("Tab_Generic_Settings")
+        obj.Click("Tab_Auto_Gain_Mode_Intensity")
         movePos = obj.GetCalSliderMovePos("Label_Gain_Min","Label_Gain_Max")
         obj.MoveUp("Slider_Auto_Gain_Mode_Intensity",movePos*10,0)        
       
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1634,7 +1634,7 @@ def test_SetGainSliderAcq():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1646,8 +1646,8 @@ def test_SetGainSliderAcq():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Image_Adjustments")
-        obj.click("Tab_Generic_Settings")
+        obj.Click("Tab_Image_Adjustments")
+        obj.Click("Tab_Generic_Settings")
 
 def test_SetStrobeMode():
     obj = get_Web2Object()
@@ -1657,16 +1657,16 @@ def test_SetStrobeMode():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Lighting_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Lighting_Settings")
         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
         obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
         SleepWaitForMachine()
         
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
         SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
@@ -1681,7 +1681,7 @@ def test_SetStrobeMode():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1693,8 +1693,8 @@ def test_SetStrobeMode():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Lighting_Settings")
-        obj.click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Lighting_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
     
 def test_SetStrobeGainMode():
     obj = get_Web2Object()
@@ -1704,18 +1704,18 @@ def test_SetStrobeGainMode():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_CameraAcq_Settings")
-        obj.click("Tab_Lighting_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Lighting_Settings")
         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Mode_Min","Label_Flash_LED_Mode_Max")
         obj.MoveUp("Slider_Flash_LED_Mode",movePos*5,0)        
         movePos = obj.GetCalSliderMovePos("Label_Flash_LED_Gain_Min","Label_Flash_LED_Gain_Max")
         obj.MoveUp("Slider_Flash_LED_Gain",movePos*10,0)        
         SleepWaitForMachine()
         
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
         SleepAfterPlayPause()
                 
         fpsText = obj.GetInputBoxText("InputBox_FPS")   
@@ -1730,7 +1730,7 @@ def test_SetStrobeGainMode():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1742,8 +1742,8 @@ def test_SetStrobeGainMode():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_Lighting_Settings")
-        obj.click("Tab_CameraAcq_Settings")
+        obj.Click("Tab_Lighting_Settings")
+        obj.Click("Tab_CameraAcq_Settings")
 
 #Set LED Color Green
 def test_SetLEDColorGreen():
@@ -1754,14 +1754,14 @@ def test_SetLEDColorGreen():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Platform_LED")
-        obj.click("Switch_SYSLED")
-        obj.click("Radio_SYSLED_Green")
+        obj.Click("Tab_Platform_LED")
+        obj.Click("Switch_SYSLED")
+        obj.Click("Radio_SYSLED_Green")
 
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1777,7 +1777,7 @@ def test_SetLEDColorGreen():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1789,8 +1789,8 @@ def test_SetLEDColorGreen():
     except Exception:
         assert False        
     finally:
-        obj.click("Switch_SYSLED")
-        obj.click("Tab_Platform_LED")
+        obj.Click("Switch_SYSLED")
+        obj.Click("Tab_Platform_LED")
         #obj.click("Button_DisconnectConnect")
         #obj.click("Button_Popup_Window_Ok")
 
@@ -1804,14 +1804,14 @@ def test_SetLEDColorOrange():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Platform_LED")
-        obj.click("Switch_SYSLED")
-        obj.click("Radio_SYSLED_Orange")
+        obj.Click("Tab_Platform_LED")
+        obj.Click("Switch_SYSLED")
+        obj.Click("Radio_SYSLED_Orange")
 
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1827,7 +1827,7 @@ def test_SetLEDColorOrange():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1841,8 +1841,8 @@ def test_SetLEDColorOrange():
     finally:
         #obj.click("Button_DisconnectConnect")
         #obj.click("Button_Popup_Window_Ok")
-        obj.click("Switch_SYSLED")
-        obj.click("Tab_Platform_LED")
+        obj.Click("Switch_SYSLED")
+        obj.Click("Tab_Platform_LED")
 
 #Set LED Color Yellow
 def test_SetLEDColorYellow():
@@ -1853,14 +1853,14 @@ def test_SetLEDColorYellow():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_Platform_LED")
-        obj.click("Switch_SYSLED")
-        obj.click("Radio_SYSLED_Yellow")
+        obj.Click("Tab_Platform_LED")
+        obj.Click("Switch_SYSLED")
+        obj.Click("Radio_SYSLED_Yellow")
 
-        obj.click("Button_PlayPause")
+        obj.Click("Button_PlayPause")
 
         SleepAfterPlayPause()
                 
@@ -1876,7 +1876,7 @@ def test_SetLEDColorYellow():
         else:
             logging.warning("按鈕與設備狀態不匹配")
 
-        obj.click("Button_PlayPause")  
+        obj.Click("Button_PlayPause")  
   
         result = obj.GetText("Label_CameraState")
         
@@ -1890,8 +1890,8 @@ def test_SetLEDColorYellow():
     finally:
         #obj.click("Button_DisconnectConnect")
         #obj.click("Button_Popup_Window_Ok")
-        obj.click("Switch_SYSLED")
-        obj.click("Tab_Platform_LED")
+        obj.Click("Switch_SYSLED")
+        obj.Click("Tab_Platform_LED")
 
 
 #DIO Setting
@@ -1903,15 +1903,15 @@ def test_DO0UserOutput():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_IO_Settings")
-        obj.click("Tab_DI1")
-        obj.click("Tab_DO1")
-        obj.click("Tab_DO1_Parameters")
+        obj.Click("Tab_IO_Settings")
+        obj.Click("Tab_DI1")
+        obj.Click("Tab_DO1")
+        obj.Click("Tab_DO1_Parameters")
         
-        obj.click("Button_DO1_Output_High")
+        obj.Click("Button_DO1_Output_High")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI1_Status")
@@ -1921,7 +1921,7 @@ def test_DO0UserOutput():
         else:
             assert False,Exception("result different")
 
-        obj.click("Button_DO1_Output_Low")
+        obj.Click("Button_DO1_Output_Low")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI1_Status")
@@ -1934,10 +1934,10 @@ def test_DO0UserOutput():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_DO1_Parameters")
-        obj.click("Tab_DI1")
-        obj.click("Tab_DO1")
-        obj.click("Tab_IO_Settings")
+        obj.Click("Tab_DO1_Parameters")
+        obj.Click("Tab_DI1")
+        obj.Click("Tab_DO1")
+        obj.Click("Tab_IO_Settings")
 
 def test_DO1UserOutput():
     obj = get_Web2Object()
@@ -1947,15 +1947,15 @@ def test_DO1UserOutput():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_IO_Settings")
-        obj.click("Tab_DI2")
-        obj.click("Tab_DO2")
-        obj.click("Tab_DO2_Parameters")
+        obj.Click("Tab_IO_Settings")
+        obj.Click("Tab_DI2")
+        obj.Click("Tab_DO2")
+        obj.Click("Tab_DO2_Parameters")
         
-        obj.click("Button_DO2_Output_High")
+        obj.Click("Button_DO2_Output_High")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI2_Status")
@@ -1965,7 +1965,7 @@ def test_DO1UserOutput():
         else:
             assert False,Exception("result different")
 
-        obj.click("Button_DO2_Output_Low")
+        obj.Click("Button_DO2_Output_Low")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI2_Status")
@@ -1978,10 +1978,10 @@ def test_DO1UserOutput():
     except Exception:
         assert False        
     finally:
-        obj.click("Tab_DO2_Parameters")
-        obj.click("Tab_DI2")
-        obj.click("Tab_DO2")
-        obj.click("Tab_IO_Settings")
+        obj.Click("Tab_DO2_Parameters")
+        obj.Click("Tab_DI2")
+        obj.Click("Tab_DO2")
+        obj.Click("Tab_IO_Settings")
 
 def test_DO0InvertUserOutput():
     obj = get_Web2Object()
@@ -1991,16 +1991,16 @@ def test_DO0InvertUserOutput():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_IO_Settings")
-        obj.click("Tab_DI1")
-        obj.click("Tab_DO1")
-        obj.click("Tab_DO1_Parameters")
-        obj.click("Radio_DO1_Reverse_On")
+        obj.Click("Tab_IO_Settings")
+        obj.Click("Tab_DI1")
+        obj.Click("Tab_DO1")
+        obj.Click("Tab_DO1_Parameters")
+        obj.Click("Radio_DO1_Reverse_On")
         
-        obj.click("Button_DO1_Output_High")
+        obj.Click("Button_DO1_Output_High")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI1_Status")
@@ -2010,7 +2010,7 @@ def test_DO0InvertUserOutput():
         else:
             assert False,Exception("result different")
 
-        obj.click("Button_DO1_Output_Low")
+        obj.Click("Button_DO1_Output_Low")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI1_Status")
@@ -2024,10 +2024,10 @@ def test_DO0InvertUserOutput():
         assert False        
     finally:
         # obj.click("Radio_DO1_Reverse_Off")#此元件從介面取消   
-        obj.click("Tab_DO1_Parameters")
-        obj.click("Tab_DI1")
-        obj.click("Tab_DO1")
-        obj.click("Tab_IO_Settings")
+        obj.Click("Tab_DO1_Parameters")
+        obj.Click("Tab_DI1")
+        obj.Click("Tab_DO1")
+        obj.Click("Tab_IO_Settings")
 
 def test_DO1InvertUserOutput():
     obj = get_Web2Object()
@@ -2037,15 +2037,15 @@ def test_DO1InvertUserOutput():
     try:   
         CameraState = obj.GetText("Label_CameraState")
         if(CameraState == CameraStatus_Disconnected):
-            obj.click("Button_DisconnectConnect")
-            obj.click("Button_Popup_Window_Ok")
+            obj.Click("Button_DisconnectConnect")
+            obj.Click("Button_Popup_Window_Ok")
 
-        obj.click("Tab_IO_Settings")
-        obj.click("Tab_DI2")
-        obj.click("Tab_DO2")
-        obj.click("Tab_DO2_Parameters")
-        obj.click("Radio_DO2_Reverse_On")
-        obj.click("Button_DO2_Output_High")
+        obj.Click("Tab_IO_Settings")
+        obj.Click("Tab_DI2")
+        obj.Click("Tab_DO2")
+        obj.Click("Tab_DO2_Parameters")
+        obj.Click("Radio_DO2_Reverse_On")
+        obj.Click("Button_DO2_Output_High")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI2_Status")
@@ -2055,7 +2055,7 @@ def test_DO1InvertUserOutput():
         else:
             assert False,Exception("result different")
 
-        obj.click("Button_DO2_Output_Low")
+        obj.Click("Button_DO2_Output_Low")
         SleepWaitForMachine()
         
         diStatus = obj.GetText("Label_DI2_Status")
@@ -2067,9 +2067,9 @@ def test_DO1InvertUserOutput():
     except Exception:
         assert False        
     finally:
-        obj.click("Radio_DO2_Reverse_Off")
-        obj.click("Tab_DO2_Parameters")
-        obj.click("Tab_DI2")
-        obj.click("Tab_DO2")
-        obj.click("Tab_IO_Settings")
+        obj.Click("Radio_DO2_Reverse_Off")
+        obj.Click("Tab_DO2_Parameters")
+        obj.Click("Tab_DI2")
+        obj.Click("Tab_DO2")
+        obj.Click("Tab_IO_Settings")
 # endregion ===============================page2===============================
