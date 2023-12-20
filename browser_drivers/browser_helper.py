@@ -16,7 +16,7 @@ def get_this_path():
     return str(pathlib.Path(__file__).parent.absolute())
 
 
-def get_chrome_driver():
+def Get_chrome_driver():
     #https://chromedriver.chromium.org/home
     #可以針對三種OS去取用
     driver_bin_map = {
@@ -37,7 +37,7 @@ def get_chrome_driver():
     return driver
 
 
-def get_firefox_driver():
+def Get_firefox_driver():
     driver_bin_map = {
         "Windows": "geckodriver.exe",
         "Darwin": "geckodriver",

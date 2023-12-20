@@ -46,8 +46,8 @@ def get_page_obj()->(cProjectPage):
 #Launch
 def Init_page(browser_type)->(cProjectPage):
     browser_map = {
-        "chrome": get_chrome_driver,
-        "firefox": get_firefox_driver
+        "chrome": Get_chrome_driver,
+        "firefox": Get_firefox_driver
     }
     if browser_type not in browser_map:
         raise ValueError("Browser type error")
