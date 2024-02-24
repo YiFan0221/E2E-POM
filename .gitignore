@@ -20,4 +20,5 @@ report.html
 .pytest_cache/v/cache/nodeids
 .gitignore
 ./testcase/E2ETesting.log
-./*/E2ETesting.log
+E2ETesting.log
+*/__pycache__/*
