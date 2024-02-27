@@ -13,10 +13,12 @@ def get_this_path():
 
 
 def Get_chrome_driver():
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    ChromeDriverManager().install()
+    driver = webdriver.Chrome()
     return driver
 
 
 def Get_firefox_driver():
-    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+    GeckoDriverManager().install()
+    driver = webdriver.Firefox()
     return driver

@@ -51,7 +51,7 @@ def Init_page(browser_type)->(cProjectPage):
     }
     if browser_type not in browser_map:
         raise ValueError("Browser type error")
-    Project_driver = browser_map[browser_type]() #這邊就是要這樣寫才會載入driver
+    Project_driver = browser_map[browser_type]()
     Project_page_obj = cProjectPage(Project_driver)
     set_Browser_driver(Project_driver)
     set_page_obj(Project_page_obj)
