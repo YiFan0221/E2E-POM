@@ -19,6 +19,7 @@ class EnumUIType(Enum):
     Label   =7
     ComboBox=8
     Table   =9
+    Link    =10
   
   
 global RecvType 
