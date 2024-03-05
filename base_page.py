@@ -2,7 +2,6 @@ import time
 import logging
 import sys,os
 sys.path.append(os.getcwd())
-
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 from robot_data import RobotDataStore
@@ -156,7 +155,7 @@ class BasePage:
             return False
         try:            
             elemt = self.GetElementType(UIInput)
-            logging.warning('click : ['+UIInput[1]+']')
+            logging.warning(f'click : [{self.Get_locator_name(UIInput)}]')
             self.basefunc_find_element(elemt).click()            
             self.basefunc_wait_page_until_loading()        
             return True
@@ -196,7 +195,7 @@ class BasePage:
         if elemt== None:
             return False
         try:
-            logging.warning('MoveUp : [moveposX:'+moveposX+' moveposY:'+moveposY+']['+UIInput[1]+']')
+            logging.warning(f'MoveUp : [moveposX:{moveposX} moveposY:{moveposY}][{self.Get_locator_name(UIInput)}]')
             move = ActionChains(get_Browser_driver())
             Slider = self.basefunc_find_element(elemt)            
             move.click_and_hold(Slider).move_by_offset(moveposX, moveposY).release().perform()
@@ -207,16 +206,25 @@ class BasePage:
             logging.debug('MoveUp warning.')
             return False
 
+    def Get_locator_name(self,UIInput)->(str):
+        if isinstance(UIInput, tuple):
+            return UIInput[1]
+        elif isinstance(UIInput, str):
+            return UIInput
+        else:
+            return UIInput.elemt[1]
+            
     def GetText(self,UIInput)->(str):
         elemt = self.GetElementType(UIInput)
         if elemt== None:
             return False
         try:            
             text = self.basefunc_find_element(elemt).text
-            logging.warning('GetText : ['+text+']['+UIInput[1]+']')
+            logging.warning(f'GetText: [{text}][{self.Get_locator_name(UIInput)}]')
             self.basefunc_wait_page_until_loading()
             return text 
-        except:
+        except Exception as e:
+            logging.debug(e)
             logging.debug('GetText warning.')
             return None
 
@@ -231,7 +239,7 @@ class BasePage:
             return False
         try:
             text = self.basefunc_find_element(elemt).get_attribute('value')
-            logging.warning('GetInputBoxText : ['+text+']['+UIInput[1]+']')
+            logging.warning(f'GetInputBoxText : [{text}][{self.Get_locator_name(UIInput)}]')
             self.basefunc_wait_page_until_loading()
             return text
         except:
@@ -243,7 +251,7 @@ class BasePage:
         if elemt== None:
             return False
         try:           
-            logging.warning('SetInputBoxText : ['+text+']['+UIInput[1]+']')
+            logging.warning(f'SetInputBoxText : [{text}][{self.Get_locator_name(UIInput)}]')
             inputtext = self.basefunc_find_element(elemt)
             inputtext.send_keys(Keys.CONTROL+'a')
             #inputtext.send_keys(Keys.DELETE)
@@ -260,7 +268,7 @@ class BasePage:
         if elemt== None:
             return False
         try:
-            logging.warning('GetTableRows :['+UIInput[1]+']')
+            logging.warning(f'GetTableRows :[{self.Get_locator_name(UIInput)}]')
             rows = self.driver.find_elements_by_xpath(elemt[1]+'/tr')
             cols = self.driver.find_elements_by_xpath(elemt[1]+'/tr[1]/td')
             # rows = len(table)
@@ -274,7 +282,7 @@ class BasePage:
         if self== None:
             return False
         try:
-            logging.warning('MouseClick :[PosX:'+PosX+', PosY:'+PosY+']')
+            logging.warning(f'MouseClick :[PosX:{PosX}, PosY:{PosY}]')
             move = ActionChains(get_Browser_driver())      
             move.move_by_offset(PosX, PosX)
             move.click().release().perform()
@@ -290,7 +298,7 @@ class BasePage:
         if elemt== None:
             return False
         try:           
-            logging.warning('SelectList :[index: '+index+'] ['+UIInput[1]+']')
+            logging.warning(f'SelectList :[index: {index}] [{self.Get_locator_name(UIInput)}]')
             lstSelect = self.basefunc_find_element(elemt)
             lstSelect.select_by_index(index)
             
