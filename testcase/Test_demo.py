@@ -47,20 +47,33 @@ log_filename = "E2ETesting.log"
 fh = logging.FileHandler(log_filename)
 fh.setLevel(logging.INFO)
 fh.setFormatter(formatter)
-logger.addHandler(ch).v
+logger.addHandler(ch)
 #endregion ===============================Logger===============================
 
 #region ===============================page1===============================
-def test_turnOnBrowser():    
-    obj = get_Web1Object()      
-    assert True  
+def test_turnOnBrowser():
+    obj = get_Web1Object()
+    assert True
 
-def test_login():
+def test_login_and_logout():
     obj = get_Web1Object()
     obj.SetInputBoxText("user-name", "standard_user")
     obj.SetInputBoxText("password", "secret_sauce")
     obj.Click("login-button")
     assert True
+
+#Products page operations
+# def test_product_page():
+        # add_item_to_cart
+        # prev page
+
+#cart and buy
+# def test_add_item_to_cart():
+# def test_checkout_information():
+# def test_checkout_overview():
+# def test_checkout_Finish_and_return():
+
+
 # def test_checkElemt():                
 #     #依序檢查每個Elemt是否能夠找到?
 #     obj = get_Web1Object()
