@@ -5,7 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "相機測試",
+            "name": "DemoTest",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                        "./testcase/Test_demo.py",
+                        "-s","--html=report.html", 
+                        "--self-contained-html"
+                    ]
+        },
+        {
+            "name": "CamPagetest",
             "type": "python",
             "request": "launch",
             "module": "pytest",
