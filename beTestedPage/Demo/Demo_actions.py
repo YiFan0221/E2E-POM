@@ -52,3 +52,9 @@ def setup_page():
     Project_driver = get_Browser_driver()
     DemoPage_obj = cDemoPage(Project_driver)
     set_page_obj(DemoPage_obj)    
+
+def login():
+    obj = get_page_obj()
+    obj.SetInputBoxText("user-name", "standard_user")
+    obj.SetInputBoxText("password", "secret_sauce")
+    obj.Click("login-button")

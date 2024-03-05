@@ -9,6 +9,7 @@ sys.path.append('..\\beTestedPage')
 
 from base_locators import *
 import beTestedPage.Demo.Demo_actions as TargetWeb1Action
+import beTestedPage.Demo.Demo_locators as locators
 
 #region ===============================Enable Function===============================
 #各測試個別產生瀏覽器，或一個瀏覽器走到底
@@ -26,7 +27,10 @@ def get_Web1Object(): #寫成單例 取得目前網頁資訊
         obj=TargetWeb1Action.setup_page()
         obj=TargetWeb1Action.get_page_obj()    
     TargetWeb1Action.set_page_obj(obj)   
-    return obj        
+    return obj
+
+def login():
+    TargetWeb1Action.login()
 #endregion ===============================Enable Function===============================        
 
 #region ===============================Logger===============================
@@ -57,21 +61,34 @@ def test_turnOnBrowser():
 
 def test_login_and_logout():
     obj = get_Web1Object()
-    obj.SetInputBoxText("user-name", "standard_user")
-    obj.SetInputBoxText("password", "secret_sauce")
+    obj.SetInputBoxText(obj.user_name,"standard_user")
+    obj.SetInputBoxText(obj.password, "secret_sauce")
     obj.Click("login-button")
     assert True
 
 #Products page operations
-# def test_product_page():
-        # add_item_to_cart
-        # prev page
+def test_product_page():
+    obj = get_Web1Object()
+    login()
+    text = obj.GetText(obj.link_item0)
+    assert text == "Sauce Labs Bike Light"
+    obj.Click(obj.bt_addToCart0)
+    assert "Remove" == obj.GetText(obj.bt_addToCart0)
+    assert "1" == obj.GetText(obj.cart_badge)
+    
+    
+    # add_item_to_cart
+    # prev page
 
 #cart and buy
-# def test_add_item_to_cart():
-# def test_checkout_information():
-# def test_checkout_overview():
-# def test_checkout_Finish_and_return():
+def test_add_item_to_cart():
+    obj = get_Web1Object()
+def test_checkout_information():
+    obj = get_Web1Object()
+def test_checkout_overview():
+    obj = get_Web1Object()
+def test_checkout_Finish_and_return():
+    obj = get_Web1Object()
 
 
 # def test_checkElemt():                

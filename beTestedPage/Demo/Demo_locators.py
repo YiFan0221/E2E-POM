@@ -66,7 +66,8 @@ class cDemoLocators:
     
     
         # cart
-        self.bt_Cart           = LocatorsObj(self.UI_List,"shopping_cart_container",EnumUIType.Button,By.ID)
+        self.bt_Cart                = LocatorsObj(self.UI_List,"shopping_cart_container",EnumUIType.Button,By.ID)
+        self.cart_badge             = LocatorsObj(self.UI_List,"shopping_cart_container",EnumUIType.Label,By.XPATH,"/html/body/div/div/div/div[1]/div[1]/div[3]/a/span")
         self.bt_continue_shopping   = LocatorsObj(self.UI_List,"continue-shopping",EnumUIType.Button,By.ID)
         
 
