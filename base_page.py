@@ -1,3 +1,4 @@
+import json
 import time
 import logging
 import sys,os
@@ -208,12 +209,11 @@ class BasePage:
             return False
 
     def Get_locator_name(self,UIInput)->(str):
-        if isinstance(UIInput, tuple):
-            return UIInput[1]
-        elif isinstance(UIInput, str):
+        if isinstance(UIInput, str):
             return UIInput
         else:
-            return UIInput.elemt[1]
+            UIInputJson = json.loads(UIInput.InfoJson)
+            return UIInputJson["Name"]
             
     def GetText(self,UIInput)->(str):
         elemt = self.GetElementType(UIInput)
