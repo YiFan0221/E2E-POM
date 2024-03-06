@@ -67,7 +67,7 @@ def test_login_and_logout():
     assert True
 
 #Products page operations
-def test_product_page():
+def test_products_page():
     obj = get_Web1Object()
     login()
     text = obj.GetText(obj.link_item0)
@@ -76,10 +76,29 @@ def test_product_page():
     assert "Remove" == obj.GetText(obj.bt_addToCart0)
     assert "1" == obj.GetText(obj.cart_badge)
     
-    
-    # add_item_to_cart
+    obj.Click(obj.bt_addToCart1)
+    assert "Remove" == obj.GetText(obj.bt_addToCart1)
+    assert "2" == obj.GetText(obj.cart_badge)
     # prev page
-
+    
+def test_detail_page():
+    obj = get_Web1Object()
+    login()
+    obj.Click(obj.link_item0)
+    assert "Sauce Labs Bike Light" == obj.GetText(obj.lab_detail_item0)
+    assert "$9.99" == obj.GetText(obj.lab_detail_item0_price)
+    if obj.Check(obj.bt_detail_item0_add):
+        obj.Click(obj.bt_detail_item0_add)
+        assert "Remove" == obj.GetText(obj.bt_detail_item0_remove)
+        obj.Click(obj.bt_detail_item0_remove)
+    else:
+        obj.Click(obj.bt_detail_item0_remove)
+        assert "Add to cart" == obj.GetText(obj.bt_detail_item0_add)
+        obj.Click(obj.bt_detail_item0_add)
+    obj.Click(obj.bt_detail_BackToProduct)
+    
+    
+    
 #cart and buy
 def test_add_item_to_cart():
     obj = get_Web1Object()
