@@ -247,7 +247,7 @@ class BasePage:
             logging.debug('GetInputBoxText warning.')
             return None
 
-    def SetInputBoxText(self, UIInput, text):
+    def SetInputBoxTextAndEnter(self, UIInput, text):
         elemt = self.GetElementType(UIInput)
         if elemt== None:
             return False
@@ -258,6 +258,21 @@ class BasePage:
             #inputtext.send_keys(Keys.DELETE)
             inputtext.send_keys(text)
             inputtext.send_keys(Keys.ENTER)
+            self.basefunc_wait_page_until_loading()
+            return True
+        except:
+            logging.debug('SetInputBoxTextAndEnter warning.')
+            return None
+
+    def SetInputBoxText(self, UIInput, text):
+        elemt = self.GetElementType(UIInput)
+        if elemt== None:
+            return False
+        try:           
+            logging.warning(f'SetInputBoxText : [{text}][{self.Get_locator_name(UIInput)}]')
+            inputtext = self.basefunc_find_element(elemt)
+            inputtext.send_keys(Keys.CONTROL+'a')
+            inputtext.send_keys(text)
             self.basefunc_wait_page_until_loading()
             return True
         except:
