@@ -162,7 +162,7 @@ class BasePage:
             self.basefunc_wait_page_until_loading()        
             return True
         except:
-            logging.Info('Click fail !')
+            logging.info('Click fail !')
             return False
     
     def GetCalSliderMovePos(self,UI_Min,UI_Max)->(int):
