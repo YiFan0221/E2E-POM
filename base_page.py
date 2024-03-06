@@ -41,7 +41,8 @@ class BasePage:
 
     def basefunc_find_element(self, locator: tuple):
         logging.debug("Find Element: %s", locator)
-        _element = self.wait.until(ec.presence_of_element_located(locator))
+        elemt = self.GetElementType(locator)
+        _element = self.wait.until(ec.presence_of_element_located(elemt))
         return _element
 
     def basefunc_wait_for_browser_title(self, exp_title: str, timeout=60):
