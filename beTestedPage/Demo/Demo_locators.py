@@ -26,7 +26,7 @@ class cDemoLocators:
         self.UI_List.clear()
         self.UI_dict.clear()
             
-        
+        self.login_logo             = LocatorsObj(self.UI_List,"login-button",EnumUIType.Label,By.XPATH,"/html/body/div/div/div[1]")
         self.user_name              = LocatorsObj(self.UI_List,"user-name",EnumUIType.Input,By.ID)
         self.password               = LocatorsObj(self.UI_List,"password",EnumUIType.Input,By.ID)
         self.login_button               = LocatorsObj(self.UI_List,"login-button",EnumUIType.Button,By.ID)

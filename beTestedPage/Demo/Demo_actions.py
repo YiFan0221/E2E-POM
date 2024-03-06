@@ -55,6 +55,9 @@ def setup_page():
 
 def login():
     obj = get_page_obj()
-    obj.SetInputBoxText("user-name", "standard_user")
-    obj.SetInputBoxText("password", "secret_sauce")
-    obj.Click("login-button")
+    if obj.Check(obj.login_logo):
+        obj.SetInputBoxText("user-name", "standard_user")
+        obj.SetInputBoxText("password", "secret_sauce")
+        obj.Click("login-button")
+    else:
+        return

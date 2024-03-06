@@ -29,7 +29,7 @@ def get_Web1Object(): #寫成單例 取得目前網頁資訊
     TargetWeb1Action.set_page_obj(obj)   
     return obj
 
-def login():
+def CheckAndlogin():
     TargetWeb1Action.login()
 #endregion ===============================Enable Function===============================        
 
@@ -69,7 +69,7 @@ def test_login_and_logout():
 #Products page operations
 def test_products_page():
     obj = get_Web1Object()
-    login()
+    CheckAndlogin()
     text = obj.GetText(obj.link_item0)
     assert text == "Sauce Labs Bike Light"
     obj.Click(obj.bt_addToCart0)
@@ -83,7 +83,7 @@ def test_products_page():
     
 def test_detail_page():
     obj = get_Web1Object()
-    login()
+    CheckAndlogin()
     obj.Click(obj.link_item0)
     assert "Sauce Labs Bike Light" == obj.GetText(obj.lab_detail_item0)
     assert "$9.99" == obj.GetText(obj.lab_detail_item0_price)
