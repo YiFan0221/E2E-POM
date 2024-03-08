@@ -27,8 +27,8 @@ def set_page_obj(SrcObj):
 
 def get_page_obj()->(cDemoPage):
     try:
-        project_page = RobotDataStore.get_env_var("DemoPage_obj")        
-        return project_page 
+        test_page = RobotDataStore.get_env_var("DemoPage_obj")
+        return test_page
     except KeyError:
         return False
 
