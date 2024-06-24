@@ -8,7 +8,7 @@ Increase code accessibility and readability and reduce writing time.
 ### on windows
 install necessary lib
 ```
- .\install_lib.sh
+ .\install_lib.bat
 ``` 
  - Launch on VS Code
  - Run and Debug(Ctrl+Shift+D)

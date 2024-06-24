@@ -22,3 +22,4 @@ report.html
 ./testcase/E2ETesting.log
 E2ETesting.log
 */__pycache__/*
+/tutorial-env/*

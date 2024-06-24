@@ -1,5 +1,3 @@
-pip install pytest 
-pip install pytest-html
-pip install selenium
-pip install pyyaml
-pip install webdriver-manager
+python -m venv tutorial-env
+source ./venv/bin/activate
+pip install -r requirements.txt
