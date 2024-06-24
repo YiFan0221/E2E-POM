@@ -41,8 +41,8 @@ class cDemoLocators:
 
         self.lab_detail_item0           = LocatorsObj(self.UI_List,"lab_detail_item0",EnumUIType.Label,By.XPATH,"/html/body/div/div/div/div[2]/div/div/div[2]/div[1]")
         self.lab_detail_item0_price     = LocatorsObj(self.UI_List,"lab_detail_item0_price",EnumUIType.Label,By.XPATH,"/html/body/div/div/div/div[2]/div/div/div[2]/div[3]")
-        self.bt_detail_item0_add        = LocatorsObj(self.UI_List,"add-to-cart-sauce-labs-bike-light",EnumUIType.Button,By.ID)
-        self.bt_detail_item0_remove     = LocatorsObj(self.UI_List,"remove-sauce-labs-bike-light",EnumUIType.Button,By.ID)              
+        self.bt_detail_item0_add        = LocatorsObj(self.UI_List,"add-to-cart",EnumUIType.Button,By.ID)
+        self.bt_detail_item0_remove     = LocatorsObj(self.UI_List,"remove",EnumUIType.Button,By.ID)              
 
         self.link_item1                 = LocatorsObj(self.UI_List,"item_1_title_link",EnumUIType.Link,By.ID)
         self.image_item1                = LocatorsObj(self.UI_List,"item_1_img_link",EnumUIType.Link,By.ID)

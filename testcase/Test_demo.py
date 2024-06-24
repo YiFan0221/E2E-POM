@@ -12,10 +12,6 @@ import beTestedPage.Demo.Demo_actions as TargetWeb1Action
 import beTestedPage.Demo.Demo_locators as locators
 
 #region ===============================Enable Function===============================
-#各測試個別產生瀏覽器，或一個瀏覽器走到底
-Flg_KeepBrowser =True
-#False : 個別開啟瀏覽器
-#True  : 維持同個瀏覽器，則須從Testcase:test_turnOnBrowser()開始執行起
     
 def get_Web1Object(): #寫成單例 取得目前網頁資訊
     global obj;
@@ -30,7 +26,11 @@ def get_Web1Object(): #寫成單例 取得目前網頁資訊
     return obj
 
 def CheckAndlogin():
-    TargetWeb1Action.login()
+    if obj.Check(obj.login_logo):
+        TargetWeb1Action.login()
+    else:
+        return
+        
 #endregion ===============================Enable Function===============================        
 
 #region ===============================Logger===============================
