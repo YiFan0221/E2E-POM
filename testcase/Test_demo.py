@@ -26,7 +26,7 @@ def get_Web1Object(): #寫成單例 取得目前網頁資訊
     return obj
 
 def CheckAndlogin():
-    if obj.Check(obj.login_logo):
+    if obj.Check(obj.bt_login_button):
         TargetWeb1Action.login()
     else:
         return
